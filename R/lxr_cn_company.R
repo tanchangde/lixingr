@@ -51,5 +51,5 @@ lxr_cn_company <-
     ) %>%
       magrittr::use_series("data") %>%
       tibble::as_tibble() %>%
-      tidyr::unnest_longer(col = .data$mutualMarkets)
+      tidyr::unnest_longer(col = "mutualMarkets")
   }
