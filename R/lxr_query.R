@@ -12,6 +12,15 @@
 #' @param stock_codes Optional stock codes to query, as a vector.
 #' @param include_delisted Optional flag to include delisted stocks.
 #' @param timeout Optional API request timeout in seconds, defaults to 9.
+#' @param date Optional specific date for the data retrieval in 'YYYY-MM-DD' format
+#'        or 'latest'. When not specified, defaults to 'latest'. If 'date' is provided,
+#'        'start_date' and 'end_date' should not be provided, and vice versa.
+#' @param start_date Optional starting date for the data range in 'YYYY-MM-DD' format.
+#'        Must be used in conjunction with end_date.
+#' @param end_date Optional ending date for the data range in 'YYYY-MM-DD' format.
+#'        Must be used in conjunction with start_date.
+#' @param metrics Optional character vector representing the metrics to be retrieved,
+#'        each formatted as 'granularity.tableName.fieldName.expressionCalculateType'.
 #' @param max_tries Optional number of retry attempts, defaults to 5.
 #'
 #' @return A list structure containing the Lixinger API response in a parsed JSON format.
@@ -39,6 +48,10 @@ lxr_query <- function(url = NULL,
                       mutual_markets = NULL,
                       stock_codes = NULL,
                       include_delisted = NULL,
+                      date = NULL,
+                      start_date = NULL,
+                      end_date = NULL,
+                      metrics = NULL,
                       timeout = 9,
                       max_tries = 5) {
   query_body <- list()
@@ -58,6 +71,18 @@ lxr_query <- function(url = NULL,
   }
   if (!is.null(include_delisted)) {
     query_body$includeDelisted <- jsonlite::unbox(include_delisted)
+  }
+  if (!is.null(date)) {
+    query_body$date <- jsonlite::unbox(date)
+  }
+  if (!is.null(start_date)) {
+    query_body$startDate <- jsonlite::unbox(start_date)
+  }
+  if (!is.null(end_date)) {
+    query_body$endDate <- jsonlite::unbox(end_date)
+  }
+  if (!is.null(metrics)) {
+    query_body$metricsList <- metrics
   }
 
   tryCatch({
