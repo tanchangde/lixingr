@@ -13,17 +13,17 @@ lxr_cn_company(
 )
 }
 \arguments{
-\item{token}{Mandatory API token for authentication.}
+\item{token}{(Required) Mandatory API token for authentication.}
 
-\item{fs_type}{Type of financial statements to query (optional). Options:
+\item{fs_type}{(Optional) Type of financial statements to query. Options:
 'non_financial', 'bank', 'insurance', 'security', 'other_financial'.}
 
-\item{mutual_markets}{Markets to include in the query (optional). Options: 'ha'.}
+\item{mutual_markets}{(Optional) Markets to include in the query. Options: 'ha'.}
 
-\item{stock_codes}{Vector of stock codes to query (optional).}
+\item{stock_codes}{(Optional) Vector of stock codes to query.}
 
-\item{include_delisted}{Boolean indicating whether to include delisted
-companies in the results (optional, defaults to FALSE).}
+\item{include_delisted}{(Optional) Boolean indicating whether to include delisted
+companies in the results.}
 }
 \value{
 A tibble with the requested company data, with each market provided by

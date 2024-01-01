@@ -11,6 +11,10 @@ lxr_query(
   mutual_markets = NULL,
   stock_codes = NULL,
   include_delisted = NULL,
+  date = NULL,
+  start_date = NULL,
+  end_date = NULL,
+  metrics = NULL,
   timeout = 9,
   max_tries = 5
 )
@@ -28,6 +32,19 @@ lxr_query(
 \item{stock_codes}{Optional stock codes to query, as a vector.}
 
 \item{include_delisted}{Optional flag to include delisted stocks.}
+
+\item{date}{Optional specific date for the data retrieval in 'YYYY-MM-DD' format
+or 'latest'. When not specified, defaults to 'latest'. If 'date' is provided,
+'start_date' and 'end_date' should not be provided, and vice versa.}
+
+\item{start_date}{Optional starting date for the data range in 'YYYY-MM-DD' format.
+Must be used in conjunction with end_date.}
+
+\item{end_date}{Optional ending date for the data range in 'YYYY-MM-DD' format.
+Must be used in conjunction with start_date.}
+
+\item{metrics}{Optional character vector representing the metrics to be retrieved,
+each formatted as 'granularity.tableName.fieldName.expressionCalculateType'.}
 
 \item{timeout}{Optional API request timeout in seconds, defaults to 9.}
 

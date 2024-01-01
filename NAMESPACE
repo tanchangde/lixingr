@@ -2,6 +2,7 @@
 
 export("%>%")
 export(lxr_cn_company)
+export(lxr_cn_company_fs)
 export(lxr_query)
 importFrom(httr2,req_body_json)
 importFrom(httr2,req_headers)
