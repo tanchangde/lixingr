@@ -9,13 +9,13 @@
 #' that this function interfaces with, please visit the Lixinger API documentation:
 #' \url{https://www.lixinger.com/open/api/doc?api-key=cn/company}
 #'
-#' @param token Mandatory API token for authentication.
-#' @param fs_type Type of financial statements to query (optional). Options:
+#' @param token (Required) Mandatory API token for authentication.
+#' @param fs_type (Optional) Type of financial statements to query. Options:
 #'        'non_financial', 'bank', 'insurance', 'security', 'other_financial'.
-#' @param mutual_markets Markets to include in the query (optional). Options: 'ha'.
-#' @param stock_codes Vector of stock codes to query (optional).
-#' @param include_delisted Boolean indicating whether to include delisted
-#'        companies in the results (optional, defaults to FALSE).
+#' @param mutual_markets (Optional) Markets to include in the query. Options: 'ha'.
+#' @param stock_codes (Optional) Vector of stock codes to query.
+#' @param include_delisted (Optional) Boolean indicating whether to include delisted
+#'        companies in the results.
 #'
 #' @return A tibble with the requested company data, with each market provided by
 #'         mutualMarkets unnested into longer format.
