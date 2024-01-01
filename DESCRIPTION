@@ -1,11 +1,15 @@
 Package: lixingr
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: R wrapper for Lixinger's Web API
+Version: 0.0.0.9001
+Description: In the vision of its creator, Lixinger is both excellent code and 
+    product, designed to serve investors in Mainland China and Hong Kong by 
+    providing data services. It stands out for its competitive pricing compared
+    to peers. This package encapsulates the Lixinger Open Platform API,
+    facilitating the efficient writing of repeatable and thorough analytical
+    reports.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Authors@R: 
+    person("Changde", "Tan", , "tanchangde@gmail.com", role = c("aut", "cre"))
