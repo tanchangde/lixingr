@@ -62,11 +62,3 @@ and whether to include delisted stocks.
 An API token is required to access Lixinger services. A valid API endpoint
       URL is also needed. Providing an invalid `token` or `url` will cause an error.
 }
-\examples{
-\dontrun{
-lxr_query(url = "https://open.lixinger.com/api/cn/company",
-          token = "your_api_token",
-          stock_codes = c("300750", "600519", "600157"))
-}
-
-}

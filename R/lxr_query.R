@@ -25,15 +25,6 @@
 #'
 #' @return A list structure containing the Lixinger API response in a parsed JSON format.
 #'
-#' @examples
-#' \dontrun{
-#' lxr_query(url = "https://open.lixinger.com/api/cn/company",
-#'           token = "your_api_token",
-#'           stock_codes = c("300750", "600519", "600157"))
-#'}
-#'
-#' @export
-#'
 #' @importFrom jsonlite unbox
 #' @importFrom httr2 request req_timeout req_retry req_headers req_body_json
 #' req_perform resp_body_json
