@@ -2,7 +2,7 @@
 #'
 #' Fetches financial statement data for Chinese companies from Lixinger API.
 #'
-#' @details fs_type should be one of the following: 'bank', 'insurance',
+#' @details fsType should be one of the following: 'bank', 'insurance',
 #' 'security', 'non_financial', 'reit', 'other_financial'.
 #'
 #' @references
@@ -11,10 +11,10 @@
 #' \url{https://www.lixinger.com/open/api/doc?api-key=cn/company/fs/non_financial}
 #'
 #' @param token Character string, API access authentication token.
-#' @param fsType (Optional) Character string, type of financial statements, see Details.
-#' @param date (Optional) Character string, specific date or "latest" in "YYYY-MM-DD" format.
-#' @param startDate (Optional) Character string, start date in "YYYY-MM-DD" format.
-#' @param endDate (Optional) Character string, end date in "YYYY-MM-DD" format.
+#' @param fsType Character string, type of financial statements, see Details.
+#' @param date Character string, specific date or "latest" in "YYYY-MM-DD" format.
+#' @param startDate Character string, start date in "YYYY-MM-DD" format.
+#' @param endDate Character string, end date in "YYYY-MM-DD" format.
 #' @param stockCodes Character vector, stock codes for data retrieval (max 100).
 #' @param metricsList Character vector, metrics to retrieve.
 #' @return A tibble of the flattened financial data.
@@ -36,13 +36,13 @@
 #'   metricsList = "q.ps.toi.t"
 #' )
 lxr_cn_company_fs <-
-  function(token = NULL,
+  function(token = Sys.getenv("TOKEN_LIXINGER"),
            fsType = "non_financial",
            date = NULL,
            startDate = NULL,
            endDate = NULL,
-           stockCodes = NULL,
-           metricsList = NULL) {
+           stockCodes,
+           metricsList) {
     valid_fs_types <- c("bank", "insurance", "security",
                         "non_financial", "reit", "other_financial")
     if(!fsType %in% valid_fs_types) {

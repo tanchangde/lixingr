@@ -5,7 +5,7 @@
 \title{Query Lixinger Chinese Company Data}
 \usage{
 lxr_cn_company(
-  token = NULL,
+  token = Sys.getenv("TOKEN_LIXINGER"),
   fsType = NULL,
   mutualMarkets = NULL,
   stockCodes = NULL,
@@ -13,26 +13,29 @@ lxr_cn_company(
 )
 }
 \arguments{
-\item{token}{API token for authentication.}
+\item{token}{Character string, API access authentication token.}
 
-\item{fsType}{(Optional) Type of financial statements to query. Options:
-'non_financial', 'bank', 'insurance', 'security', 'other_financial'.}
+\item{fsType}{Character string, type of financial statements, see Details.}
 
-\item{mutualMarkets}{(Optional) Markets to include in the query. Options: 'ha'.}
+\item{mutualMarkets}{Markets to include in the query. Options: 'ha'.}
 
-\item{stockCodes}{(Optional) Vector of stock codes to query.}
+\item{stockCodes}{Character vector, stock codes for data retrieval.}
 
-\item{includeDelisted}{(Optional) Boolean indicating whether to include delisted
-companies in the results.}
+\item{includeDelisted}{A Boolean value indicating whether to include delisted
+companies in the results. If not provided, the API defaults to false.}
 }
 \value{
 A tibble with the requested company data, with each market provided by
-        mutualMarkets unnested into longer format.
+  mutualMarkets unnested into longer format.
 }
 \description{
 Retrieves company data from the Lixinger API for Chinese companies. It allows
 for specification of financial statement types, markets, stock codes, and the
 option to include delisted companies in the results.
+}
+\details{
+fsType should be one of the following: 'bank', 'insurance',
+'security', 'non_financial', 'reit', 'other_financial'.
 }
 \examples{
 # Retrieve information for all stocks

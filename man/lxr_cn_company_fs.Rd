@@ -5,25 +5,25 @@
 \title{Query Financial Statements}
 \usage{
 lxr_cn_company_fs(
-  token = NULL,
+  token = Sys.getenv("TOKEN_LIXINGER"),
   fsType = "non_financial",
   date = NULL,
   startDate = NULL,
   endDate = NULL,
-  stockCodes = NULL,
-  metricsList = NULL
+  stockCodes,
+  metricsList
 )
 }
 \arguments{
 \item{token}{Character string, API access authentication token.}
 
-\item{fsType}{(Optional) Character string, type of financial statements, see Details.}
+\item{fsType}{Character string, type of financial statements, see Details.}
 
-\item{date}{(Optional) Character string, specific date or "latest" in "YYYY-MM-DD" format.}
+\item{date}{Character string, specific date or "latest" in "YYYY-MM-DD" format.}
 
-\item{startDate}{(Optional) Character string, start date in "YYYY-MM-DD" format.}
+\item{startDate}{Character string, start date in "YYYY-MM-DD" format.}
 
-\item{endDate}{(Optional) Character string, end date in "YYYY-MM-DD" format.}
+\item{endDate}{Character string, end date in "YYYY-MM-DD" format.}
 
 \item{stockCodes}{Character vector, stock codes for data retrieval (max 100).}
 
@@ -36,7 +36,7 @@ A tibble of the flattened financial data.
 Fetches financial statement data for Chinese companies from Lixinger API.
 }
 \details{
-fs_type should be one of the following: 'bank', 'insurance',
+fsType should be one of the following: 'bank', 'insurance',
 'security', 'non_financial', 'reit', 'other_financial'.
 }
 \examples{

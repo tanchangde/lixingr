@@ -5,10 +5,10 @@
 #'
 #' @param token API token for authentication (string).
 #' @param startDate Start date for the query in "YYYY-MM-DD" format (string).
-#' @param endDate Optional end date for the query in "YYYY-MM-DD" format. If
+#' @param endDate End date for the query in "YYYY-MM-DD" format. If
 #'   not provided, the API defaults to the last Monday (string). The time span
 #'   between `startDate` and `endDate` must not exceed 10 years.
-#' @param limit Optional integer specifying the maximum number of records to
+#' @param limit Integer specifying the maximum number of records to
 #'   return.
 #' @param stockCode The stock code of the company (string).
 #'
@@ -20,11 +20,11 @@
 #'                              limit = 20,
 #'                              stockCode = "002352")
 lxr_cn_company_equity_change <-
-  function(token = NULL,
-           startDate = NULL,
+  function(token = Sys.getenv("TOKEN_LIXINGER"),
+           startDate,
            endDate = NULL,
            limit = NULL,
-           stockCode = NULL) {
+           stockCode) {
     url <- "https://open.lixinger.com/api/cn/company/equity-change"
 
     lxr_query(

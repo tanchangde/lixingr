@@ -5,11 +5,11 @@
 \title{Query Equity Change Data for Chinese Companies}
 \usage{
 lxr_cn_company_equity_change(
-  token = NULL,
-  startDate = NULL,
+  token = Sys.getenv("TOKEN_LIXINGER"),
+  startDate,
   endDate = NULL,
   limit = NULL,
-  stockCode = NULL
+  stockCode
 )
 }
 \arguments{
@@ -17,11 +17,11 @@ lxr_cn_company_equity_change(
 
 \item{startDate}{Start date for the query in "YYYY-MM-DD" format (string).}
 
-\item{endDate}{Optional end date for the query in "YYYY-MM-DD" format. If
+\item{endDate}{End date for the query in "YYYY-MM-DD" format. If
 not provided, the API defaults to the last Monday (string). The time span
 between `startDate` and `endDate` must not exceed 10 years.}
 
-\item{limit}{Optional integer specifying the maximum number of records to
+\item{limit}{Integer specifying the maximum number of records to
 return.}
 
 \item{stockCode}{The stock code of the company (string).}

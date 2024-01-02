@@ -4,22 +4,24 @@
 #' for specification of financial statement types, markets, stock codes, and the
 #' option to include delisted companies in the results.
 #'
+#' @details fsType should be one of the following: 'bank', 'insurance',
+#' 'security', 'non_financial', 'reit', 'other_financial'.
+#'
 #' @references
 #' For more detailed information about the parameters and usage of the Lixinger API
 #' that this function interfaces with, please visit the Lixinger API documentation:
 #' \url{https://www.lixinger.com/open/api/doc?api-key=cn/company}
 #'
 #' @export
-#' @param token API token for authentication.
-#' @param fsType (Optional) Type of financial statements to query. Options:
-#'        'non_financial', 'bank', 'insurance', 'security', 'other_financial'.
-#' @param mutualMarkets (Optional) Markets to include in the query. Options: 'ha'.
-#' @param stockCodes (Optional) Vector of stock codes to query.
-#' @param includeDelisted (Optional) Boolean indicating whether to include delisted
-#'        companies in the results.
+#' @param token Character string, API access authentication token.
+#' @param fsType Character string, type of financial statements, see Details.
+#' @param mutualMarkets Markets to include in the query. Options: 'ha'.
+#' @param stockCodes Character vector, stock codes for data retrieval.
+#' @param includeDelisted A Boolean value indicating whether to include delisted
+#'   companies in the results. If not provided, the API defaults to false.
 #'
 #' @return A tibble with the requested company data, with each market provided by
-#'         mutualMarkets unnested into longer format.
+#'   mutualMarkets unnested into longer format.
 #'
 #' @importFrom magrittr use_series
 #' @importFrom tibble as_tibble
@@ -37,7 +39,7 @@
 #' # Retrieve data for stocks in the Shanghai-Hong Kong Stock Connect (Shanghai segment)
 #' lxr_cn_company(mutualMarkets = "ha")
 lxr_cn_company <-
-  function(token = NULL,
+  function(token = Sys.getenv("TOKEN_LIXINGER"),
            fsType = NULL,
            mutualMarkets = NULL,
            stockCodes = NULL,

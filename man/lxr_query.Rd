@@ -4,7 +4,13 @@
 \alias{lxr_query}
 \title{Lixinger API Query}
 \usage{
-lxr_query(url = NULL, token = NULL, timeout = 9, maxTries = 5, ...)
+lxr_query(
+  url,
+  token = Sys.getenv("TOKEN_LIXINGER"),
+  timeout = 9,
+  maxTries = 5,
+  ...
+)
 }
 \arguments{
 \item{url}{API endpoint URL for the Lixinger service.}
@@ -12,11 +18,11 @@ lxr_query(url = NULL, token = NULL, timeout = 9, maxTries = 5, ...)
 \item{token}{API authentication token. If not provided, the function will
 attempt to use the 'TOKEN_LIXINGER' environment variable.}
 
-\item{timeout}{Optional timeout for the request, in seconds. Defaults to 9
+\item{timeout}{Timeout for the request, in seconds. Defaults to 9
 seconds.}
 
-\item{maxTries}{Optional number of retry attempts in case of request failure.
-Defaults to 5 attempts.}
+\item{maxTries}{Number of retry attempts in case of request failure, defaults
+to 5 attempts.}
 
 \item{...}{Additional parameters for the query.}
 }

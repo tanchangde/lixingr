@@ -10,10 +10,10 @@
 #' @param url API endpoint URL for the Lixinger service.
 #' @param token API authentication token. If not provided, the function will
 #' attempt to use the 'TOKEN_LIXINGER' environment variable.
-#' @param timeout Optional timeout for the request, in seconds. Defaults to 9
+#' @param timeout Timeout for the request, in seconds. Defaults to 9
 #' seconds.
-#' @param maxTries Optional number of retry attempts in case of request failure.
-#' Defaults to 5 attempts.
+#' @param maxTries Number of retry attempts in case of request failure, defaults
+#'   to 5 attempts.
 #' @param ... Additional parameters for the query.
 #'
 #' @return A list containing the Lixinger API response in a parsed JSON format.
@@ -24,9 +24,8 @@
 #' @importFrom magrittr "%>%"
 #' @importFrom rlang list2
 #' @importFrom purrr imap discard
-lxr_query <- function(url = NULL, token = NULL, timeout = 9, maxTries = 5, ...) {
+lxr_query <- function(url, token = Sys.getenv("TOKEN_LIXINGER"), timeout = 9, maxTries = 5, ...) {
   array_params <- c("stockCodes", "mutualMarkets", "metricsList")
-  token <- if (is.null(token)) Sys.getenv("TOKEN_LIXINGER") else token
 
   query_params <- rlang::list2(token = token, ...) %>%
     purrr::discard(is.null) %>%
