@@ -2,57 +2,64 @@
 #'
 #' Fetches financial statement data for Chinese companies from Lixinger API.
 #'
+#' @details fs_type should be one of the following: 'bank', 'insurance',
+#' 'security', 'non_financial', 'reit', 'other_financial'.
+#'
 #' @references
 #' For more detailed information about the parameters and usage of the Lixinger API
 #' that this function interfaces with, please visit the Lixinger API documentation:
 #' \url{https://www.lixinger.com/open/api/doc?api-key=cn/company/fs/non_financial}
 #'
-#' @param token (Required) Character string, API access authentication token.
-#' @param fs_type (Optional) Character string, type of financial statements, see Details.
-#' @param date (Optional) Date or character string, specific date or "latest" in "YYYY-MM-DD".
-#' @param start_date (Optional) Date or character string, start date in "YYYY-MM-DD".
-#' @param end_date (Optional) Date or character string, end date in "YYYY-MM-DD".
-#' @param stock_codes (Required) Character vector, stock codes for data retrieval (max 100).
-#' @param metrics (Required) Character vector, metrics to retrieve, as 'metricsList' in API.
+#' @param token Character string, API access authentication token.
+#' @param fsType (Optional) Character string, type of financial statements, see Details.
+#' @param date (Optional) Character string, specific date or "latest" in "YYYY-MM-DD" format.
+#' @param startDate (Optional) Character string, start date in "YYYY-MM-DD" format.
+#' @param endDate (Optional) Character string, end date in "YYYY-MM-DD" format.
+#' @param stockCodes Character vector, stock codes for data retrieval (max 100).
+#' @param metricsList Character vector, metrics to retrieve.
 #' @return A tibble of the flattened financial data.
 #' @export
-#' @details fs_type should be one of the following: 'bank', 'insurance',
-#' 'security', 'non_financial', 'reit', 'other_financial'.
+#'
 #' @examples
-#' \dontrun{
-#' lxr_cn_company_fs(token = "your_token",
-#'                   fs_type = "non_financial",
-#'                   date = "latest",
-#'                   start_date = "2020-01-01",
-#'                   end_date = "2020-12-31",
-#'                   stock_codes = c("300750", "600519"),
-#'                   metrics = c("q.ps.to.it", "q.bs.ar.c.y2"))
-#'}
+#' # Fetch data for a specific date
+#' lxr_cn_company_fs(
+#'   date = "2023-09-30",
+#'   stockCodes = c("300750", "600519", "600157"),
+#'   metricsList = c("q.ps.toi.t")
+#' )
+#'
+#' # Fetch data over a date range
+#' lxr_cn_company_fs(
+#'   startDate = "2022-09-30",
+#'   endDate = "2023-09-30",
+#'   stockCodes = "300750",
+#'   metricsList = "q.ps.toi.t"
+#' )
 lxr_cn_company_fs <-
   function(token = NULL,
-           fs_type = "non_financial",
+           fsType = "non_financial",
            date = NULL,
-           start_date = NULL,
-           end_date = NULL,
-           stock_codes = NULL,
-           metrics = NULL) {
+           startDate = NULL,
+           endDate = NULL,
+           stockCodes = NULL,
+           metricsList = NULL) {
     valid_fs_types <- c("bank", "insurance", "security",
                         "non_financial", "reit", "other_financial")
-    if(!fs_type %in% valid_fs_types) {
+    if(!fsType %in% valid_fs_types) {
       stop("Unknown `financial_report_type`")
     }
 
     url_base <- "https://open.lixinger.com/api/cn/company/fs/"
-    url = paste0(url_base, fs_type)
+    url = paste0(url_base, fsType)
 
     lxr_query(
       url = url,
       token = token,
       date = date,
-      start_date = start_date,
-      end_date = end_date,
-      stock_codes = stock_codes,
-      metrics = metrics
+      startDate = startDate,
+      endDate = endDate,
+      stockCodes = stockCodes,
+      metricsList = metricsList
     ) %>%
       magrittr::use_series("data") %>%
       jsonlite::flatten() %>%

@@ -6,28 +6,28 @@
 \usage{
 lxr_cn_company_fs(
   token = NULL,
-  fs_type = "non_financial",
+  fsType = "non_financial",
   date = NULL,
-  start_date = NULL,
-  end_date = NULL,
-  stock_codes = NULL,
-  metrics = NULL
+  startDate = NULL,
+  endDate = NULL,
+  stockCodes = NULL,
+  metricsList = NULL
 )
 }
 \arguments{
-\item{token}{(Required) Character string, API access authentication token.}
+\item{token}{Character string, API access authentication token.}
 
-\item{fs_type}{(Optional) Character string, type of financial statements, see Details.}
+\item{fsType}{(Optional) Character string, type of financial statements, see Details.}
 
-\item{date}{(Optional) Date or character string, specific date or "latest" in "YYYY-MM-DD".}
+\item{date}{(Optional) Character string, specific date or "latest" in "YYYY-MM-DD" format.}
 
-\item{start_date}{(Optional) Date or character string, start date in "YYYY-MM-DD".}
+\item{startDate}{(Optional) Character string, start date in "YYYY-MM-DD" format.}
 
-\item{end_date}{(Optional) Date or character string, end date in "YYYY-MM-DD".}
+\item{endDate}{(Optional) Character string, end date in "YYYY-MM-DD" format.}
 
-\item{stock_codes}{(Required) Character vector, stock codes for data retrieval (max 100).}
+\item{stockCodes}{Character vector, stock codes for data retrieval (max 100).}
 
-\item{metrics}{(Required) Character vector, metrics to retrieve, as 'metricsList' in API.}
+\item{metricsList}{Character vector, metrics to retrieve.}
 }
 \value{
 A tibble of the flattened financial data.
@@ -40,15 +40,20 @@ fs_type should be one of the following: 'bank', 'insurance',
 'security', 'non_financial', 'reit', 'other_financial'.
 }
 \examples{
-\dontrun{
-lxr_cn_company_fs(token = "your_token",
-                  fs_type = "non_financial",
-                  date = "latest",
-                  start_date = "2020-01-01",
-                  end_date = "2020-12-31",
-                  stock_codes = c("300750", "600519"),
-                  metrics = c("q.ps.to.it", "q.bs.ar.c.y2"))
-}
+# Fetch data for a specific date
+lxr_cn_company_fs(
+  date = "2023-09-30",
+  stockCodes = c("300750", "600519", "600157"),
+  metricsList = c("q.ps.toi.t")
+)
+
+# Fetch data over a date range
+lxr_cn_company_fs(
+  startDate = "2022-09-30",
+  endDate = "2023-09-30",
+  stockCodes = "300750",
+  metricsList = "q.ps.toi.t"
+)
 }
 \references{
 For more detailed information about the parameters and usage of the Lixinger API
