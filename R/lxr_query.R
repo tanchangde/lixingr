@@ -1,93 +1,56 @@
 #' Lixinger API Query
 #'
-#' Sends a request to the Lixinger API to retrieve financial data based on user-
-#' specified parameters, such as financial statement type, market, stock codes,
-#' and whether to include delisted stocks.
+#' Sends a request to the Lixinger API to retrieve financial data.
+#'
+#' @details
+#' The function constructs an HTTP request to the specified Lixinger API endpoint.
+#' It supports automatic retries and timeout settings. The function also handles
+#' the conversion of additional query parameters to the required JSON format.
 #'
 #' @param url API endpoint URL for the Lixinger service.
-#' @param token Mandatory API authentication token.
-#' @param fs_type Optional type of financial statements to retrieve ('non_financial',
-#'        'bank', 'insurance', 'security', 'other_financial').
-#' @param mutual_markets Optional markets to include, e.g., 'ha'.
-#' @param stock_codes Optional stock codes to query, as a vector.
-#' @param include_delisted Optional flag to include delisted stocks.
-#' @param timeout Optional API request timeout in seconds, defaults to 9.
-#' @param date Optional specific date for the data retrieval in 'YYYY-MM-DD' format
-#'        or 'latest'. When not specified, defaults to 'latest'. If 'date' is provided,
-#'        'start_date' and 'end_date' should not be provided, and vice versa.
-#' @param start_date Optional starting date for the data range in 'YYYY-MM-DD' format.
-#'        Must be used in conjunction with end_date.
-#' @param end_date Optional ending date for the data range in 'YYYY-MM-DD' format.
-#'        Must be used in conjunction with start_date.
-#' @param metrics Optional character vector representing the metrics to be retrieved,
-#'        each formatted as 'granularity.tableName.fieldName.expressionCalculateType'.
-#' @param max_tries Optional number of retry attempts, defaults to 5.
+#' @param token API authentication token. If not provided, the function will
+#' attempt to use the 'TOKEN_LIXINGER' environment variable.
+#' @param timeout Optional timeout for the request, in seconds. Defaults to 9
+#' seconds.
+#' @param maxTries Optional number of retry attempts in case of request failure.
+#' Defaults to 5 attempts.
+#' @param ... Additional parameters for the query.
 #'
-#' @return A list structure containing the Lixinger API response in a parsed JSON format.
+#' @return A list containing the Lixinger API response in a parsed JSON format.
 #'
 #' @importFrom jsonlite unbox
 #' @importFrom httr2 request req_timeout req_retry req_headers req_body_json
 #' req_perform resp_body_json
 #' @importFrom magrittr "%>%"
-#'
-#' @note An API token is required to access Lixinger services. A valid API endpoint
-#'       URL is also needed. Providing an invalid `token` or `url` will cause an error.
-#'
-lxr_query <- function(url = NULL,
-                      token = NULL,
-                      fs_type = NULL,
-                      mutual_markets = NULL,
-                      stock_codes = NULL,
-                      include_delisted = NULL,
-                      date = NULL,
-                      start_date = NULL,
-                      end_date = NULL,
-                      metrics = NULL,
-                      timeout = 9,
-                      max_tries = 5) {
-  query_body <- list()
-  if (is.null(token)) {
-    query_body$token <- unbox(Sys.getenv("TOKEN_LIXINGER"))
-  } else {
-    query_body$token <- unbox(token)
-  }
-  if (!is.null(fs_type)) {
-    query_body$fsType <- jsonlite::unbox(fs_type)
-  }
-  if (!is.null(mutual_markets)) {
-    query_body$mutualMarkets <- mutual_markets
-  }
-  if (!is.null(stock_codes)) {
-    query_body$stockCodes <- stock_codes
-  }
-  if (!is.null(include_delisted)) {
-    query_body$includeDelisted <- jsonlite::unbox(include_delisted)
-  }
-  if (!is.null(date)) {
-    query_body$date <- jsonlite::unbox(date)
-  }
-  if (!is.null(start_date)) {
-    query_body$startDate <- jsonlite::unbox(start_date)
-  }
-  if (!is.null(end_date)) {
-    query_body$endDate <- jsonlite::unbox(end_date)
-  }
-  if (!is.null(metrics)) {
-    query_body$metricsList <- metrics
-  }
+#' @importFrom rlang list2
+#' @importFrom purrr imap discard
+lxr_query <- function(url = NULL, token = NULL, timeout = 9, maxTries = 5, ...) {
+  array_params <- c("stockCodes", "mutualMarkets", "metricsList")
+  token <- if (is.null(token)) Sys.getenv("TOKEN_LIXINGER") else token
+
+  query_params <- rlang::list2(token = token, ...) %>%
+    purrr::discard(is.null) %>%
+    purrr::imap( ~ {
+      param_name <- .y
+      if (!param_name %in% array_params) {
+        jsonlite::unbox(.x)
+      } else {
+        .x
+      }
+    })
 
   tryCatch({
     response <- httr2::request(url) %>%
       httr2::req_timeout(timeout) %>%
-      httr2::req_retry(max_tries) %>%
+      httr2::req_retry(maxTries) %>%
       httr2::req_headers("Content-Type" = "application/json") %>%
-      httr2::req_body_json(query_body, auto_unbox = FALSE) %>%
+      httr2::req_body_json(data = query_params, auto_unbox = FALSE) %>%
       httr2::req_perform()
   }, error = function(e) {
     stop("REQUEST ERROR:", e$message, call. = FALSE)
   })
 
   content <- httr2::resp_body_json(response, simplifyVector = TRUE)
-
   return(content)
 }
+

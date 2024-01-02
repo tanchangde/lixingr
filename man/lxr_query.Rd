@@ -4,61 +4,30 @@
 \alias{lxr_query}
 \title{Lixinger API Query}
 \usage{
-lxr_query(
-  url = NULL,
-  token = NULL,
-  fs_type = NULL,
-  mutual_markets = NULL,
-  stock_codes = NULL,
-  include_delisted = NULL,
-  date = NULL,
-  start_date = NULL,
-  end_date = NULL,
-  metrics = NULL,
-  timeout = 9,
-  max_tries = 5
-)
+lxr_query(url = NULL, token = NULL, timeout = 9, maxTries = 5, ...)
 }
 \arguments{
 \item{url}{API endpoint URL for the Lixinger service.}
 
-\item{token}{Mandatory API authentication token.}
+\item{token}{API authentication token. If not provided, the function will
+attempt to use the 'TOKEN_LIXINGER' environment variable.}
 
-\item{fs_type}{Optional type of financial statements to retrieve ('non_financial',
-'bank', 'insurance', 'security', 'other_financial').}
+\item{timeout}{Optional timeout for the request, in seconds. Defaults to 9
+seconds.}
 
-\item{mutual_markets}{Optional markets to include, e.g., 'ha'.}
+\item{maxTries}{Optional number of retry attempts in case of request failure.
+Defaults to 5 attempts.}
 
-\item{stock_codes}{Optional stock codes to query, as a vector.}
-
-\item{include_delisted}{Optional flag to include delisted stocks.}
-
-\item{date}{Optional specific date for the data retrieval in 'YYYY-MM-DD' format
-or 'latest'. When not specified, defaults to 'latest'. If 'date' is provided,
-'start_date' and 'end_date' should not be provided, and vice versa.}
-
-\item{start_date}{Optional starting date for the data range in 'YYYY-MM-DD' format.
-Must be used in conjunction with end_date.}
-
-\item{end_date}{Optional ending date for the data range in 'YYYY-MM-DD' format.
-Must be used in conjunction with start_date.}
-
-\item{metrics}{Optional character vector representing the metrics to be retrieved,
-each formatted as 'granularity.tableName.fieldName.expressionCalculateType'.}
-
-\item{timeout}{Optional API request timeout in seconds, defaults to 9.}
-
-\item{max_tries}{Optional number of retry attempts, defaults to 5.}
+\item{...}{Additional parameters for the query.}
 }
 \value{
-A list structure containing the Lixinger API response in a parsed JSON format.
+A list containing the Lixinger API response in a parsed JSON format.
 }
 \description{
-Sends a request to the Lixinger API to retrieve financial data based on user-
-specified parameters, such as financial statement type, market, stock codes,
-and whether to include delisted stocks.
+Sends a request to the Lixinger API to retrieve financial data.
 }
-\note{
-An API token is required to access Lixinger services. A valid API endpoint
-      URL is also needed. Providing an invalid `token` or `url` will cause an error.
+\details{
+The function constructs an HTTP request to the specified Lixinger API endpoint.
+It supports automatic retries and timeout settings. The function also handles
+the conversion of additional query parameters to the required JSON format.
 }

@@ -6,23 +6,23 @@
 \usage{
 lxr_cn_company(
   token = NULL,
-  fs_type = NULL,
-  mutual_markets = NULL,
-  stock_codes = NULL,
-  include_delisted = NULL
+  fsType = NULL,
+  mutualMarkets = NULL,
+  stockCodes = NULL,
+  includeDelisted = NULL
 )
 }
 \arguments{
-\item{token}{(Required) Mandatory API token for authentication.}
+\item{token}{API token for authentication.}
 
-\item{fs_type}{(Optional) Type of financial statements to query. Options:
+\item{fsType}{(Optional) Type of financial statements to query. Options:
 'non_financial', 'bank', 'insurance', 'security', 'other_financial'.}
 
-\item{mutual_markets}{(Optional) Markets to include in the query. Options: 'ha'.}
+\item{mutualMarkets}{(Optional) Markets to include in the query. Options: 'ha'.}
 
-\item{stock_codes}{(Optional) Vector of stock codes to query.}
+\item{stockCodes}{(Optional) Vector of stock codes to query.}
 
-\item{include_delisted}{(Optional) Boolean indicating whether to include delisted
+\item{includeDelisted}{(Optional) Boolean indicating whether to include delisted
 companies in the results.}
 }
 \value{
@@ -35,13 +35,17 @@ for specification of financial statement types, markets, stock codes, and the
 option to include delisted companies in the results.
 }
 \examples{
-\dontrun{
-lxr_cn_company(
-  token = "your_api_token",
-  stock_codes = c("300750", "600519", "600157")
-  )
-}
+# Retrieve information for all stocks
+lxr_cn_company()
 
+# Retrieve information for all stocks with a specific type of financial statements
+lxr_cn_company(fsType = "non_financial")
+
+# Retrieve information for specific stocks
+lxr_cn_company(stockCodes = c("300750", "600519", "600157"))
+
+# Retrieve data for stocks in the Shanghai-Hong Kong Stock Connect (Shanghai segment)
+lxr_cn_company(mutualMarkets = "ha")
 }
 \references{
 For more detailed information about the parameters and usage of the Lixinger API
