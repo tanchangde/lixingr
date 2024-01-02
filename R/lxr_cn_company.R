@@ -24,7 +24,6 @@
 #' @importFrom magrittr use_series
 #' @importFrom tibble as_tibble
 #' @importFrom tidyr unnest_longer
-#' @importFrom rlang .data
 #' @examples
 #' # Retrieve information for all stocks
 #' lxr_cn_company()
