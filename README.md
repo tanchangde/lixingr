@@ -7,8 +7,8 @@ An R language wrapper for the Lixinger API.
 
 ### Prerequisites
 
-Basic knowledge of R and RStudio is required. If lacking, it is
-recommended to quickly get started using [this
+Basic knowledge of R is required. If lacking, it is recommended to
+quickly get started using [this
 material](https://tshi.page/r-and-tidyverse-book/index.html), estimated
 to take one or two hours.
 
