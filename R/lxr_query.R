@@ -27,7 +27,6 @@
 #' @importFrom stringr str_sub str_replace_all
 lxr_query <- function(url, token = Sys.getenv("TOKEN_LIXINGER"), timeout = 9,
                       max_tries = 5, ...) {
-
   query_params <- rlang::list2(...) %>% purrr::discard(is.null)
   names(query_params) <- purrr::map_chr(
     names(query_params),
