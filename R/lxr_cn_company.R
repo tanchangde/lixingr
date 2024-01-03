@@ -44,6 +44,7 @@ lxr_cn_company <-
            mutual_markets = NULL,
            stock_codes = NULL,
            include_delisted = NULL) {
+
     url <- "https://open.lixinger.com/api/cn/company"
     lxr_query(
       url = url,
