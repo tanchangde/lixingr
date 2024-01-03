@@ -7,12 +7,6 @@
 #' @details fs_type should be one of the following: 'bank', 'insurance',
 #' 'security', 'non_financial', 'reit', 'other_financial'.
 #'
-#' @references
-#' For more detailed information about the parameters and usage of the Lixinger API
-#' that this function interfaces with, please visit the Lixinger API documentation:
-#' \url{https://www.lixinger.com/open/api/doc?api-key=cn/company}
-#'
-#' @export
 #' @param token Character string, API access authentication token.
 #' @param fs_type Character string, type of financial statements, see Details.
 #' @param mutual_markets Markets to include in the query. Options: 'ha'.
@@ -23,9 +17,11 @@
 #' @return A tibble with the requested company data, with each market provided by
 #'   mutual_markets unnested into longer format.
 #'
-#' @importFrom magrittr use_series
-#' @importFrom tibble as_tibble
-#' @importFrom tidyr unnest_longer
+#' @references
+#' For more detailed information about the parameters and usage of the Lixinger API
+#' that this function interfaces with, please visit the Lixinger
+#' [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company).
+#'
 #' @examples
 #' # Retrieve information for all stocks
 #' lxr_cn_company()
@@ -38,6 +34,12 @@
 #'
 #' # Retrieve data for stocks in the Shanghai-Hong Kong Stock Connect (Shanghai segment)
 #' lxr_cn_company(mutual_markets = "ha")
+#'
+#' @importFrom magrittr use_series
+#' @importFrom tibble as_tibble
+#' @importFrom tidyr unnest_longer
+#'
+#' @export
 lxr_cn_company <-
   function(token = Sys.getenv("TOKEN_LIXINGER"),
            fs_type = NULL,

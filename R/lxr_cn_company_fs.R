@@ -5,11 +5,6 @@
 #' @details fs_type should be one of the following: 'bank', 'insurance',
 #' 'security', 'non_financial', 'reit', 'other_financial'.
 #'
-#' @references
-#' For more detailed information about the parameters and usage of the Lixinger API
-#' that this function interfaces with, please visit the Lixinger API documentation:
-#' \url{https://www.lixinger.com/open/api/doc?api-key=cn/company/fs/non_financial}
-#'
 #' @param token Character string, API access authentication token.
 #' @param fs_type Character string, type of financial statements, see Details.
 #' @param date Character string, specific date or "latest" in "YYYY-MM-DD" format.
@@ -17,8 +12,13 @@
 #' @param end_date Character string, end date in "YYYY-MM-DD" format.
 #' @param stock_codes Character vector, stock codes for data retrieval (max 100).
 #' @param metrics_list Character vector, metrics to retrieve.
+#'
 #' @return A tibble of the flattened financial data.
-#' @export
+#'
+#' @references
+#' For more detailed information about the parameters and usage of the Lixinger API
+#' that this function interfaces with, please visit the Lixinger
+#' [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/fs/non_financial).
 #'
 #' @examples
 #' # Fetch data for a specific date
@@ -35,6 +35,8 @@
 #'   stock_codes = "300750",
 #'   metrics_list = "q.ps.toi.t"
 #' )
+#'
+#' @export
 lxr_cn_company_fs <-
   function(token = Sys.getenv("TOKEN_LIXINGER"),
            fs_type = "non_financial",

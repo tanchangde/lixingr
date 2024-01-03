@@ -54,9 +54,10 @@ lxr_cn_company_fs(
   stock_codes = "300750",
   metrics_list = "q.ps.toi.t"
 )
+
 }
 \references{
 For more detailed information about the parameters and usage of the Lixinger API
-that this function interfaces with, please visit the Lixinger API documentation:
-\url{https://www.lixinger.com/open/api/doc?api-key=cn/company/fs/non_financial}
+that this function interfaces with, please visit the Lixinger
+\href{https://www.lixinger.com/open/api/doc?api-key=cn/company/fs/non_financial}{API documentation}.
 }

@@ -26,7 +26,7 @@ companies in the results. If not provided, the API defaults to false.}
 }
 \value{
 A tibble with the requested company data, with each market provided by
-  mutual_markets unnested into longer format.
+mutual_markets unnested into longer format.
 }
 \description{
 Retrieves company data from the Lixinger API for Chinese companies. It allows
@@ -49,9 +49,10 @@ lxr_cn_company(stock_codes = c("300750", "600519", "600157"))
 
 # Retrieve data for stocks in the Shanghai-Hong Kong Stock Connect (Shanghai segment)
 lxr_cn_company(mutual_markets = "ha")
+
 }
 \references{
 For more detailed information about the parameters and usage of the Lixinger API
-that this function interfaces with, please visit the Lixinger API documentation:
-\url{https://www.lixinger.com/open/api/doc?api-key=cn/company}
+that this function interfaces with, please visit the Lixinger
+\href{https://www.lixinger.com/open/api/doc?api-key=cn/company}{API documentation}.
 }

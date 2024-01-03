@@ -19,7 +19,7 @@ lxr_cn_company_equity_change(
 
 \item{end_date}{End date for the query in "YYYY-MM-DD" format. If
 not provided, the API defaults to the last Monday (string). The time span
-between `start_date` and `end_date` must not exceed 10 years.}
+between \code{start_date} and \code{end_date} must not exceed 10 years.}
 
 \item{limit}{Integer specifying the maximum number of records to
 return.}
@@ -39,4 +39,10 @@ lxr_cn_company_equity_change(
   limit = 20,
   stock_code = "002352"
 )
+
+}
+\references{
+For more detailed information about the parameters and usage of the Lixinger API
+that this function interfaces with, please visit the Lixinger
+\href{https://www.lixinger.com/open/api/doc?api-key=cn/company/equity-change}{API documentation}.
 }

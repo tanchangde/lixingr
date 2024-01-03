@@ -13,7 +13,11 @@
 #' @param stock_code The stock code of the company (string).
 #'
 #' @return A tibble with flattened API response data.
-#' @export
+#'
+#' @references
+#' For more detailed information about the parameters and usage of the Lixinger API
+#' that this function interfaces with, please visit the Lixinger
+#' [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/equity-change).
 #'
 #' @examples
 #' lxr_cn_company_equity_change(
@@ -21,6 +25,8 @@
 #'   limit = 20,
 #'   stock_code = "002352"
 #' )
+#'
+#' @export
 lxr_cn_company_equity_change <-
   function(token = Sys.getenv("TOKEN_LIXINGER"),
            start_date,

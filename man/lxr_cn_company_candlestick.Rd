@@ -23,8 +23,8 @@ The possible values are 'ex_rights', 'lxr_fc_rights', 'fc_rights', and
 'bc_rights'.}
 
 \item{start_date}{A Date object indicating the start date for data retrieval.
-Dates should be in 'YYYY-MM-DD' format.The time span between `start_date`
-and `end_date` must not exceed 10 years.}
+Dates should be in 'YYYY-MM-DD' format.The time span between \code{start_date}
+and \code{end_date} must not exceed 10 years.}
 
 \item{end_date}{End date for the query in "YYYY-MM-DD" format. If not provided,
 the API defaults to the last Monday.}
@@ -56,6 +56,6 @@ result <- lxr_cn_company_candlestick(
 }
 \references{
 For more detailed information about the parameters and usage of the Lixinger API
-that this function interfaces with, please visit the Lixinger API documentation:
-\url{https://www.lixinger.com/open/api/doc?api-key=cn/company/candlestick}
+that this function interfaces with, please visit the Lixinger
+\href{https://www.lixinger.com/open/api/doc?api-key=cn/company/candlestick}{API documentation}.
 }
