@@ -23,7 +23,8 @@
 #' req_perform resp_body_json
 #' @importFrom magrittr "%>%"
 #' @importFrom rlang list2
-#' @importFrom purrr imap discard
+#' @importFrom purrr imap discard map_chr
+#' @importFrom stringr str_sub str_replace_all
 lxr_query <- function(url, token = Sys.getenv("TOKEN_LIXINGER"), timeout = 9,
                       max_tries = 5, ...) {
 
