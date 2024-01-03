@@ -46,7 +46,7 @@ devtools::install_github('tanchangde/lixingr')
 - [x] Advanced Intermediate, package into an R package.
 - [ ] Advanced, provide interactive analysis services.
 
-## Why Choose Lixingren
+## Why Choose Lixinger
 
 - [Product, Code and Investment — Product
   Chapter](https://www.lixinger.com/marketing/about-us-product)
