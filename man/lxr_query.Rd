@@ -8,7 +8,7 @@ lxr_query(
   url,
   token = Sys.getenv("TOKEN_LIXINGER"),
   timeout = 9,
-  maxTries = 5,
+  max_tries = 5,
   ...
 )
 }
@@ -21,7 +21,7 @@ attempt to use the 'TOKEN_LIXINGER' environment variable.}
 \item{timeout}{Timeout for the request, in seconds. Defaults to 9
 seconds.}
 
-\item{maxTries}{Number of retry attempts in case of request failure, defaults
+\item{max_tries}{Number of retry attempts in case of request failure, defaults
 to 5 attempts.}
 
 \item{...}{Additional parameters for the query.}

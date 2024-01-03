@@ -6,25 +6,25 @@
 \usage{
 lxr_cn_company_equity_change(
   token = Sys.getenv("TOKEN_LIXINGER"),
-  startDate,
-  endDate = NULL,
+  start_date,
+  end_date = NULL,
   limit = NULL,
-  stockCode
+  stock_code
 )
 }
 \arguments{
 \item{token}{API token for authentication (string).}
 
-\item{startDate}{Start date for the query in "YYYY-MM-DD" format (string).}
+\item{start_date}{Start date for the query in "YYYY-MM-DD" format (string).}
 
-\item{endDate}{End date for the query in "YYYY-MM-DD" format. If
+\item{end_date}{End date for the query in "YYYY-MM-DD" format. If
 not provided, the API defaults to the last Monday (string). The time span
-between `startDate` and `endDate` must not exceed 10 years.}
+between `start_date` and `end_date` must not exceed 10 years.}
 
 \item{limit}{Integer specifying the maximum number of records to
 return.}
 
-\item{stockCode}{The stock code of the company (string).}
+\item{stock_code}{The stock code of the company (string).}
 }
 \value{
 A tibble with flattened API response data.
@@ -34,7 +34,7 @@ Retrieves changes in equity from the Lixinger API for listed Chinese
 companies.
 }
 \examples{
-lxr_cn_company_equity_change(startDate = "2022-09-20",
+lxr_cn_company_equity_change(start_date = "2022-09-20",
                              limit = 20,
-                             stockCode = "002352")
+                             stock_code = "002352")
 }

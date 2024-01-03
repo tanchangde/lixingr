@@ -6,27 +6,27 @@
 \usage{
 lxr_cn_company(
   token = Sys.getenv("TOKEN_LIXINGER"),
-  fsType = NULL,
-  mutualMarkets = NULL,
-  stockCodes = NULL,
-  includeDelisted = NULL
+  fs_type = NULL,
+  mutual_markets = NULL,
+  stock_codes = NULL,
+  include_delisted = NULL
 )
 }
 \arguments{
 \item{token}{Character string, API access authentication token.}
 
-\item{fsType}{Character string, type of financial statements, see Details.}
+\item{fs_type}{Character string, type of financial statements, see Details.}
 
-\item{mutualMarkets}{Markets to include in the query. Options: 'ha'.}
+\item{mutual_markets}{Markets to include in the query. Options: 'ha'.}
 
-\item{stockCodes}{Character vector, stock codes for data retrieval.}
+\item{stock_codes}{Character vector, stock codes for data retrieval.}
 
-\item{includeDelisted}{A Boolean value indicating whether to include delisted
+\item{include_delisted}{A Boolean value indicating whether to include delisted
 companies in the results. If not provided, the API defaults to false.}
 }
 \value{
 A tibble with the requested company data, with each market provided by
-  mutualMarkets unnested into longer format.
+  mutual_markets unnested into longer format.
 }
 \description{
 Retrieves company data from the Lixinger API for Chinese companies. It allows
@@ -34,7 +34,7 @@ for specification of financial statement types, markets, stock codes, and the
 option to include delisted companies in the results.
 }
 \details{
-fsType should be one of the following: 'bank', 'insurance',
+fs_type should be one of the following: 'bank', 'insurance',
 'security', 'non_financial', 'reit', 'other_financial'.
 }
 \examples{
@@ -42,13 +42,13 @@ fsType should be one of the following: 'bank', 'insurance',
 lxr_cn_company()
 
 # Retrieve information for all stocks with a specific type of financial statements
-lxr_cn_company(fsType = "non_financial")
+lxr_cn_company(fs_type = "non_financial")
 
 # Retrieve information for specific stocks
-lxr_cn_company(stockCodes = c("300750", "600519", "600157"))
+lxr_cn_company(stock_codes = c("300750", "600519", "600157"))
 
 # Retrieve data for stocks in the Shanghai-Hong Kong Stock Connect (Shanghai segment)
-lxr_cn_company(mutualMarkets = "ha")
+lxr_cn_company(mutual_markets = "ha")
 }
 \references{
 For more detailed information about the parameters and usage of the Lixinger API
