@@ -27,13 +27,16 @@
 #' @importFrom stringr str_sub str_replace_all
 lxr_query <- function(url, token = Sys.getenv("TOKEN_LIXINGER"), timeout = 9,
                       max_tries = 5, ...) {
-
   array_params <- c("stockCodes", "mutualMarkets", "metricsList")
 
   query_params <- rlang::list2(...) %>% purrr::discard(is.null)
-  names(query_params) <- purrr::map_chr(names(query_params),
-    ~ stringr::str_replace_all(.x, "_([a-z])",
-      ~ toupper(stringr::str_sub(.x, start = -1))))
+  names(query_params) <- purrr::map_chr(
+    names(query_params),
+    ~ stringr::str_replace_all(
+      .x, "_([a-z])",
+      ~ toupper(stringr::str_sub(.x, start = -1))
+    )
+  )
 
   request_params <- rlang::list2(token = token, !!!query_params) %>%
     purrr::imap(~ {
@@ -45,19 +48,21 @@ lxr_query <- function(url, token = Sys.getenv("TOKEN_LIXINGER"), timeout = 9,
       }
     })
 
-  tryCatch({
-    response <- httr2::request(url) %>%
-      httr2::req_timeout(timeout) %>%
-      httr2::req_retry(max_tries) %>%
-      httr2::req_headers("Content-Type" = "application/json") %>%
-      httr2::req_body_json(data = request_params, auto_unbox = FALSE) %>%
-      httr2::req_perform()
-  }, error = function(e) {
-    stop("REQUEST ERROR:", e$message, call. = FALSE)
-  })
+  tryCatch(
+    {
+      response <- httr2::request(url) %>%
+        httr2::req_timeout(timeout) %>%
+        httr2::req_retry(max_tries) %>%
+        httr2::req_headers("Content-Type" = "application/json") %>%
+        httr2::req_body_json(data = request_params, auto_unbox = FALSE) %>%
+        httr2::req_perform()
+    },
+    error = function(e) {
+      stop("REQUEST ERROR:", e$message, call. = FALSE)
+    }
+  )
 
   content <- httr2::resp_body_json(response, simplifyVector = TRUE)
 
   return(content)
 }
-

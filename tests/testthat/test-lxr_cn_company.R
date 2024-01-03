@@ -28,4 +28,3 @@ test_that("Error Handling Test", {
   expect_error(lxr_cn_company(fs_typefs_type = 123))
   expect_error(lxr_cn_company(stock_codes = "not_a_stock_code"))
 })
-

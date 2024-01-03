@@ -43,15 +43,16 @@ lxr_cn_company_fs <-
            end_date = NULL,
            stock_codes,
            metrics_list) {
-
-    valid_fs_types <- c("bank", "insurance", "security",
-                        "non_financial", "reit", "other_financial")
-    if(!fs_type %in% valid_fs_types) {
+    valid_fs_types <- c(
+      "bank", "insurance", "security",
+      "non_financial", "reit", "other_financial"
+    )
+    if (!fs_type %in% valid_fs_types) {
       stop("Unknown `financial_report_type`")
     }
 
     url_base <- "https://open.lixinger.com/api/cn/company/fs/"
-    url = paste0(url_base, fs_type)
+    url <- paste0(url_base, fs_type)
 
     lxr_query(
       url = url,

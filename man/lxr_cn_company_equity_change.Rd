@@ -34,7 +34,9 @@ Retrieves changes in equity from the Lixinger API for listed Chinese
 companies.
 }
 \examples{
-lxr_cn_company_equity_change(start_date = "2022-09-20",
-                             limit = 20,
-                             stock_code = "002352")
+lxr_cn_company_equity_change(
+  start_date = "2022-09-20",
+  limit = 20,
+  stock_code = "002352"
+)
 }
