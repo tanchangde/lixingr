@@ -33,7 +33,7 @@ lxr_query <- function(url, token = Sys.getenv("TOKEN_LIXINGER"), timeout = 9,
   names(query_params) <- purrr::map_chr(
     names(query_params),
     ~ stringr::str_replace_all(
-      .x, "_([a-z])",
+      .x, "_[a-z]",
       ~ toupper(stringr::str_sub(.x, start = -1))
     )
   )
