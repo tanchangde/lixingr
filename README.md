@@ -55,13 +55,10 @@ devtools::install_github('tanchangde/lixingr')
 
 ## References
 
-- [knitr and Reproducible Statistical Research (Extras) \| Statistics
-  Community](https://cosx.org/2012/06/reproducible-research-with-knitr/)
-- [Lixingren Open Platform API
+- [knitr and Reproducible Statistical
+  Research](https://cosx.org/2012/06/reproducible-research-with-knitr/)
+- [Lixinger Open Platform API
   Documentation](https://www.lixinger.com/open/api/doc)
-- [R Language in Data Science](https://bookdown.org/wangminjie/R4DS/)
-- [git - the simple guide - no deep
-  shit!](http://rogerdudler.github.io/git-guide/index.zh.html)
 
 ## ChangeLog
 
