@@ -19,7 +19,12 @@
 #' @param limit An integer specifying the maximum number of records to retrieve.
 #' @param stock_code A string representing the stock code to query.
 #'
-#' @return A tibble (tbl_df) containing the flattened candlestick data.
+#' @return A tibble containing the flattened candlestick data.
+#'
+#' @references
+#' For more detailed information about the parameters and usage of the Lixinger API
+#' that this function interfaces with, please visit the Lixinger API documentation:
+#' \url{https://www.lixinger.com/open/api/doc?api-key=cn/company/candlestick}
 #'
 #' @examples
 #' result <- lxr_cn_company_candlestick(

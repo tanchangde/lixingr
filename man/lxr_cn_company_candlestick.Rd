@@ -40,7 +40,7 @@ for backward adjustment of the data range.}
 \item{stock_code}{A string representing the stock code to query.}
 }
 \value{
-A tibble (tbl_df) containing the flattened candlestick data.
+A tibble containing the flattened candlestick data.
 }
 \description{
 This function queries the Lixinger API for candlestick data of Chinese companies.
@@ -48,8 +48,14 @@ This function queries the Lixinger API for candlestick data of Chinese companies
 \examples{
 result <- lxr_cn_company_candlestick(
   type = "lxr_fc_rights",
-  start_date = as.Date("2023-01-03"),
+  start_date = "2023-01-03",
+  end_date = "2024-01-03",
   stock_code = "300750"
 )
 
+}
+\references{
+For more detailed information about the parameters and usage of the Lixinger API
+that this function interfaces with, please visit the Lixinger API documentation:
+\url{https://www.lixinger.com/open/api/doc?api-key=cn/company/candlestick}
 }
