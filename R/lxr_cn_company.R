@@ -18,9 +18,10 @@
 #' @return A tibble with the requested company data, with each market provided
 #'   by mutual_markets unnested into longer format.
 #'
-#' @references For more detailed information about the parameters and usage of
-#'   the Lixinger API that this function interfaces with, please visit the Lixinger
-#'   [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company)
+#' @references
+#' For more detailed information about the parameters and usage of the Lixinger
+#' API that this function interfaces with, please visit the Lixinger
+#' [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company)
 #'   .
 #'
 #' @examples

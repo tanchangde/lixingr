@@ -54,8 +54,8 @@ lxr_cn_company(mutual_markets = "ha")
 
 }
 \references{
-For more detailed information about the parameters and usage of
-the Lixinger API that this function interfaces with, please visit the Lixinger
+For more detailed information about the parameters and usage of the Lixinger
+API that this function interfaces with, please visit the Lixinger
 \href{https://www.lixinger.com/open/api/doc?api-key=cn/company}{API documentation}
 .
 }
