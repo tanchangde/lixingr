@@ -3,6 +3,7 @@
 export("%>%")
 export(lxr_cn_company)
 export(lxr_cn_company_candlestick)
+export(lxr_cn_company_dividend)
 export(lxr_cn_company_equity_change)
 export(lxr_cn_company_fs)
 importFrom(httr2,req_body_json)
