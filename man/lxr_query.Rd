@@ -2,7 +2,7 @@
 % Please edit documentation in R/lxr_query.R
 \name{lxr_query}
 \alias{lxr_query}
-\title{Lixinger API Query}
+\title{Perform API Query}
 \usage{
 lxr_query(
   url,
@@ -21,8 +21,8 @@ attempt to use the 'TOKEN_LIXINGER' environment variable.}
 \item{timeout}{Timeout for the request, in seconds. Defaults to 9
 seconds.}
 
-\item{max_tries}{Number of retry attempts in case of request failure, defaults
-to 5 attempts.}
+\item{max_tries}{Number of retry attempts in case of request failure,
+defaults to 5 attempts.}
 
 \item{...}{Additional parameters for the query.}
 }
@@ -33,7 +33,8 @@ A list containing the Lixinger API response in a parsed JSON format.
 Sends a request to the Lixinger API to retrieve financial data.
 }
 \details{
-The function constructs an HTTP request to the specified Lixinger API endpoint.
-It supports automatic retries and timeout settings. The function also handles
-the conversion of additional query parameters to the required JSON format.
+The function constructs an HTTP request to the specified Lixinger API
+endpoint. It supports automatic retries and timeout settings. The function
+also handles the conversion of additional query parameters to the required
+JSON format.
 }

@@ -7,18 +7,21 @@
 #'
 #' @param token Character string, API access authentication token.
 #' @param fs_type Character string, type of financial statements, see Details.
-#' @param date Character string, specific date or "latest" in "YYYY-MM-DD" format.
+#' @param date Character string, specific date or "latest" in "YYYY-MM-DD"
+#'   format.
 #' @param start_date Character string, start date in "YYYY-MM-DD" format.
 #' @param end_date Character string, end date in "YYYY-MM-DD" format.
-#' @param stock_codes Character vector, stock codes for data retrieval (max 100).
+#' @param stock_codes Character vector, stock codes for data retrieval (max 100)
+#'   .
 #' @param metrics_list Character vector, metrics to retrieve.
 #'
 #' @return A tibble of the flattened financial data.
 #'
 #' @references
-#' For more detailed information about the parameters and usage of the Lixinger API
-#' that this function interfaces with, please visit the Lixinger
-#' [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/fs/non_financial).
+#' For more detailed information about the parameters and usage of the Lixinger
+#' API that this function interfaces with, please visit the Lixinger
+#' [Doc](https://www.lixinger.com/open/api/doc?api-key=cn/company/fs/non_financial)
+#' .
 #'
 #' @examples
 #' # Fetch data for a specific date

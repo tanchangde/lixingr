@@ -1,7 +1,8 @@
-#' Lixinger Chinese Company Candlestick Data
+#' Query Chinese Company Candlestick Data
 #'
 #' @description
-#' This function queries the Lixinger API for candlestick data of Chinese companies.
+#' This function queries the Lixinger API for candlestick data of Chinese
+#' companies.
 #'
 #' @param token A string specifying the authentication token for the API.
 #' @param type A string defining the type of candlestick data to retrieve.
@@ -10,21 +11,21 @@
 #' @param start_date A Date object indicating the start date for data retrieval.
 #'   Dates should be in 'YYYY-MM-DD' format.The time span between `start_date`
 #'   and `end_date` must not exceed 10 years.
-#' @param end_date End date for the query in "YYYY-MM-DD" format. If not provided,
-#'  the API defaults to the last Monday.
-#' @param adjust_forward_date A string representing the date in "YYYY-MM-DD" format
-#'   for forward adjustment of the data range.
-#' @param adjust_backward_date A string representing the date in "YYYY-MM-DD" format
-#'   for backward adjustment of the data range.
+#' @param end_date End date for the query in "YYYY-MM-DD" format. If not
+#'   provided, the API defaults to the last Monday.
+#' @param adjust_forward_date A string representing the date in "YYYY-MM-DD"
+#'   format for forward adjustment of the data range.
+#' @param adjust_backward_date A string representing the date in "YYYY-MM-DD"
+#'   format for backward adjustment of the data range.
 #' @param limit An integer specifying the maximum number of records to retrieve.
 #' @param stock_code A string representing the stock code to query.
 #'
 #' @return A tibble containing the flattened candlestick data.
 #'
 #' @references
-#' For more detailed information about the parameters and usage of the Lixinger API
-#' that this function interfaces with, please visit the Lixinger
-#' [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/candlestick).
+#' For more detailed information about the parameters and usage of the Lixinger
+#' API that this function interfaces with, please visit the Lixinger
+#' [Doc](https://www.lixinger.com/open/api/doc?api-key=cn/company/candlestick).
 #'
 #' @examples
 #' result <- lxr_cn_company_candlestick(

@@ -2,7 +2,7 @@
 % Please edit documentation in R/lxr_cn_company_candlestick.R
 \name{lxr_cn_company_candlestick}
 \alias{lxr_cn_company_candlestick}
-\title{Lixinger Chinese Company Candlestick Data}
+\title{Query Chinese Company Candlestick Data}
 \usage{
 lxr_cn_company_candlestick(
   token = Sys.getenv("TOKEN_LIXINGER"),
@@ -26,14 +26,14 @@ The possible values are 'ex_rights', 'lxr_fc_rights', 'fc_rights', and
 Dates should be in 'YYYY-MM-DD' format.The time span between \code{start_date}
 and \code{end_date} must not exceed 10 years.}
 
-\item{end_date}{End date for the query in "YYYY-MM-DD" format. If not provided,
-the API defaults to the last Monday.}
+\item{end_date}{End date for the query in "YYYY-MM-DD" format. If not
+provided, the API defaults to the last Monday.}
 
-\item{adjust_forward_date}{A string representing the date in "YYYY-MM-DD" format
-for forward adjustment of the data range.}
+\item{adjust_forward_date}{A string representing the date in "YYYY-MM-DD"
+format for forward adjustment of the data range.}
 
-\item{adjust_backward_date}{A string representing the date in "YYYY-MM-DD" format
-for backward adjustment of the data range.}
+\item{adjust_backward_date}{A string representing the date in "YYYY-MM-DD"
+format for backward adjustment of the data range.}
 
 \item{limit}{An integer specifying the maximum number of records to retrieve.}
 
@@ -43,7 +43,8 @@ for backward adjustment of the data range.}
 A tibble containing the flattened candlestick data.
 }
 \description{
-This function queries the Lixinger API for candlestick data of Chinese companies.
+This function queries the Lixinger API for candlestick data of Chinese
+companies.
 }
 \examples{
 result <- lxr_cn_company_candlestick(
@@ -55,7 +56,7 @@ result <- lxr_cn_company_candlestick(
 
 }
 \references{
-For more detailed information about the parameters and usage of the Lixinger API
-that this function interfaces with, please visit the Lixinger
-\href{https://www.lixinger.com/open/api/doc?api-key=cn/company/candlestick}{API documentation}.
+For more detailed information about the parameters and usage of the Lixinger
+API that this function interfaces with, please visit the Lixinger
+\href{https://www.lixinger.com/open/api/doc?api-key=cn/company/candlestick}{Doc}.
 }

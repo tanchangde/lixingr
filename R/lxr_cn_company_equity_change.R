@@ -15,9 +15,10 @@
 #' @return A tibble with flattened API response data.
 #'
 #' @references
-#' For more detailed information about the parameters and usage of the Lixinger API
-#' that this function interfaces with, please visit the Lixinger
-#' [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company/equity-change).
+#' For more detailed information about the parameters and usage of the Lixinger
+#' API that this function interfaces with, please visit the Lixinger
+#' [API](https://www.lixinger.com/open/api/doc?api-key=cn/company/equity-change)
+#' .
 #'
 #' @examples
 #' lxr_cn_company_equity_change(

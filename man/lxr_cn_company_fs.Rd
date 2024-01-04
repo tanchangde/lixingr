@@ -19,13 +19,15 @@ lxr_cn_company_fs(
 
 \item{fs_type}{Character string, type of financial statements, see Details.}
 
-\item{date}{Character string, specific date or "latest" in "YYYY-MM-DD" format.}
+\item{date}{Character string, specific date or "latest" in "YYYY-MM-DD"
+format.}
 
 \item{start_date}{Character string, start date in "YYYY-MM-DD" format.}
 
 \item{end_date}{Character string, end date in "YYYY-MM-DD" format.}
 
-\item{stock_codes}{Character vector, stock codes for data retrieval (max 100).}
+\item{stock_codes}{Character vector, stock codes for data retrieval (max 100)
+.}
 
 \item{metrics_list}{Character vector, metrics to retrieve.}
 }
@@ -57,7 +59,8 @@ lxr_cn_company_fs(
 
 }
 \references{
-For more detailed information about the parameters and usage of the Lixinger API
-that this function interfaces with, please visit the Lixinger
-\href{https://www.lixinger.com/open/api/doc?api-key=cn/company/fs/non_financial}{API documentation}.
+For more detailed information about the parameters and usage of the Lixinger
+API that this function interfaces with, please visit the Lixinger
+\href{https://www.lixinger.com/open/api/doc?api-key=cn/company/fs/non_financial}{Doc}
+.
 }

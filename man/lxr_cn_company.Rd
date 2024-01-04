@@ -2,7 +2,7 @@
 % Please edit documentation in R/lxr_cn_company.R
 \name{lxr_cn_company}
 \alias{lxr_cn_company}
-\title{Query Lixinger Chinese Company Data}
+\title{Query Chinese Company Data}
 \usage{
 lxr_cn_company(
   token = Sys.getenv("TOKEN_LIXINGER"),
@@ -21,12 +21,13 @@ lxr_cn_company(
 
 \item{stock_codes}{Character vector, stock codes for data retrieval.}
 
-\item{include_delisted}{A Boolean value indicating whether to include delisted
-companies in the results. If not provided, the API defaults to false.}
+\item{include_delisted}{A Boolean value indicating whether to include
+delisted companies in the results. If not provided, the API defaults to
+false.}
 }
 \value{
-A tibble with the requested company data, with each market provided by
-mutual_markets unnested into longer format.
+A tibble with the requested company data, with each market provided
+by mutual_markets unnested into longer format.
 }
 \description{
 Retrieves company data from the Lixinger API for Chinese companies. It allows
@@ -41,18 +42,20 @@ fs_type should be one of the following: 'bank', 'insurance',
 # Retrieve information for all stocks
 lxr_cn_company()
 
-# Retrieve information for all stocks with a specific type of financial statements
+# Retrieve information for all stocks with a specific type of financial
+# statements
 lxr_cn_company(fs_type = "non_financial")
 
 # Retrieve information for specific stocks
 lxr_cn_company(stock_codes = c("300750", "600519", "600157"))
 
-# Retrieve data for stocks in the Shanghai-Hong Kong Stock Connect (Shanghai segment)
+# Retrieve data for stocks in the Shanghai-Hong Kong Stock Connect
 lxr_cn_company(mutual_markets = "ha")
 
 }
 \references{
-For more detailed information about the parameters and usage of the Lixinger API
-that this function interfaces with, please visit the Lixinger
-\href{https://www.lixinger.com/open/api/doc?api-key=cn/company}{API documentation}.
+For more detailed information about the parameters and usage of
+the Lixinger API that this function interfaces with, please visit the Lixinger
+\href{https://www.lixinger.com/open/api/doc?api-key=cn/company}{API documentation}
+.
 }

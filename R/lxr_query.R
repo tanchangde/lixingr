@@ -1,26 +1,27 @@
-#' Lixinger API Query
+#' Perform API Query
 #'
 #' Sends a request to the Lixinger API to retrieve financial data.
 #'
 #' @details
-#' The function constructs an HTTP request to the specified Lixinger API endpoint.
-#' It supports automatic retries and timeout settings. The function also handles
-#' the conversion of additional query parameters to the required JSON format.
+#' The function constructs an HTTP request to the specified Lixinger API
+#' endpoint. It supports automatic retries and timeout settings. The function
+#' also handles the conversion of additional query parameters to the required
+#' JSON format.
 #'
 #' @param url API endpoint URL for the Lixinger service.
 #' @param token API authentication token. If not provided, the function will
-#' attempt to use the 'TOKEN_LIXINGER' environment variable.
+#'   attempt to use the 'TOKEN_LIXINGER' environment variable.
 #' @param timeout Timeout for the request, in seconds. Defaults to 9
-#' seconds.
-#' @param max_tries Number of retry attempts in case of request failure, defaults
-#'   to 5 attempts.
+#'   seconds.
+#' @param max_tries Number of retry attempts in case of request failure,
+#'   defaults to 5 attempts.
 #' @param ... Additional parameters for the query.
 #'
 #' @return A list containing the Lixinger API response in a parsed JSON format.
 #'
 #' @importFrom jsonlite unbox
 #' @importFrom httr2 request req_timeout req_retry req_headers req_body_json
-#' req_perform resp_body_json
+#'   req_perform resp_body_json
 #' @importFrom magrittr "%>%"
 #' @importFrom rlang list2
 #' @importFrom purrr imap discard map_chr

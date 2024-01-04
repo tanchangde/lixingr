@@ -42,7 +42,8 @@ lxr_cn_company_equity_change(
 
 }
 \references{
-For more detailed information about the parameters and usage of the Lixinger API
-that this function interfaces with, please visit the Lixinger
-\href{https://www.lixinger.com/open/api/doc?api-key=cn/company/equity-change}{API documentation}.
+For more detailed information about the parameters and usage of the Lixinger
+API that this function interfaces with, please visit the Lixinger
+\href{https://www.lixinger.com/open/api/doc?api-key=cn/company/equity-change}{API}
+.
 }
