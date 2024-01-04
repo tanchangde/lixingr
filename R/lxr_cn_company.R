@@ -22,7 +22,7 @@
 #' For more detailed information about the parameters and usage of the Lixinger
 #' API that this function interfaces with, please visit the Lixinger
 #' [API documentation](https://www.lixinger.com/open/api/doc?api-key=cn/company)
-#'   .
+#' .
 #'
 #' @examples
 #' # Retrieve information for all stocks
