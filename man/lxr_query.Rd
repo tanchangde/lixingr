@@ -37,7 +37,9 @@ Parameter names can be provided in either snake_case or camelCase format.
 For example, both 'stock_codes' and 'stockCodes' are acceptable.}
 }
 \value{
-A list containing the Lixinger API response in a parsed JSON format.
+If \code{flatten} is \code{TRUE} (default), the function returns a flattened
+data frame containing the Lixinger API response data. If \code{flatten} is
+\code{FALSE}, the function returns the raw JSON response.
 }
 \description{
 Sends a request to the Lixinger API to retrieve financial data.

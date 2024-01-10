@@ -26,7 +26,9 @@
 #'   Parameter names can be provided in either snake_case or camelCase format.
 #'   For example, both 'stock_codes' and 'stockCodes' are acceptable.
 #'
-#' @return A list containing the Lixinger API response in a parsed JSON format.
+#' @return If `flatten` is `TRUE` (default), the function returns a flattened 
+#'   data frame containing the Lixinger API response data. If `flatten` is 
+#'   `FALSE`, the function returns the raw JSON response.
 #'
 #' @references
 #' For more detailed information about the parameters and usage of the Lixinger
