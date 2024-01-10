@@ -2,21 +2,27 @@
 % Please edit documentation in R/lxr_query.R
 \name{lxr_query}
 \alias{lxr_query}
-\title{Perform API Query}
+\title{Perform Lixinger API Query}
 \usage{
 lxr_query(
-  url,
+  api_endpoint,
   token = Sys.getenv("TOKEN_LIXINGER"),
+  flatten = TRUE,
   timeout = 9,
   max_tries = 5,
   ...
 )
 }
 \arguments{
-\item{url}{API endpoint URL for the Lixinger service.}
+\item{api_endpoint}{API endpoint URL for the Lixinger service.}
 
 \item{token}{API authentication token. If not provided, the function will
 attempt to use the 'TOKEN_LIXINGER' environment variable.}
+
+\item{flatten}{Logical flag indicating whether to return the API response as
+a flattened data frame. If TRUE (default), the function will convert the
+nested JSON response into a flat data frame. If FALSE, the function will
+return the JSON response.}
 
 \item{timeout}{Timeout for the request, in seconds. Defaults to 9
 seconds.}
@@ -24,7 +30,9 @@ seconds.}
 \item{max_tries}{Number of retry attempts in case of request failure,
 defaults to 5 attempts.}
 
-\item{...}{Additional parameters for the query.}
+\item{...}{Additional parameters for the query. They are validated
+against the valid and required parameters for the specified
+API endpoint. Invalid or missing parameters will result in an error.}
 }
 \value{
 A list containing the Lixinger API response in a parsed JSON format.
@@ -34,7 +42,14 @@ Sends a request to the Lixinger API to retrieve financial data.
 }
 \details{
 The function constructs an HTTP request to the specified Lixinger API
-endpoint. It supports automatic retries and timeout settings. The function
-also handles the conversion of additional query parameters to the required
-JSON format.
+endpoint. It validates the query parameters against the parameters
+defined in 'lxr_request_params'. It supports automatic retries and
+timeout settings. The function also handles the conversion of
+additional query parameters to the required JSON format.
+}
+\references{
+For more detailed information about the parameters and usage of the Lixinger
+API that this function interfaces with, please visit the Lixinger
+\href{https://www.lixinger.com/open/api/}{API documentation}
+.
 }
