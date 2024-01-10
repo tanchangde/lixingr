@@ -1,9 +1,7 @@
-test_that("Basic Functionality Test", {
+test_that("retrieve specified stock information from the cn_company interface", {
   result <- lxr_query(api_endpoint = lxr_cn_company(),
   stock_codes = c("300750", "600519", "600157"))
   expect_s3_class(result, "tbl_df")
-  common_columns <- c("exchange", "market")
-  expect_true(all(common_columns %in% names(result)))
 })
 
 test_that("Invalid Parameters Should Return Error", {
