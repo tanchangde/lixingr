@@ -20,5 +20,6 @@ This function generates a list of valid and required parameters for the
 specified LXR API. The parameters are determined based on the API function.
 }
 \examples{
-lxr_request_params(lxr_cn_company())
+lxr_request_params(api_endpoint = lxr_cn_company())
+
 }
