@@ -14,7 +14,6 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    dplyr,
     glue,
     httr2,
     jsonlite,
