@@ -9,7 +9,7 @@
 #' 
 #' @importFrom magrittr extract2
 lxr_api_name <- function(api_endpoint) {
-  api_name <- stringr::str_match(api, "api/(.*$)") %>%
+  api_name <- stringr::str_match(api_endpoint, "api/(.*$)") %>%
     magrittr::extract2(2) %>%
     stringr::str_replace_all("/|-", "_")
 
