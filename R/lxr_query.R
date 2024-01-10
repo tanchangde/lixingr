@@ -23,14 +23,27 @@
 #' @param ... Additional parameters for the query. They are validated
 #'   against the valid and required parameters for the specified
 #'   API endpoint. Invalid or missing parameters will result in an error.
+#'   Parameter names can be provided in either camelCase or snake_case format.
+#'   For example, both 'stock_codes' and 'stockCodes' are acceptable.
 #'
 #' @return A list containing the Lixinger API response in a parsed JSON format.
 #'
 #' @references
 #' For more detailed information about the parameters and usage of the Lixinger
 #' API that this function interfaces with, please visit the Lixinger
-#' [API documentation](https://www.lixinger.com/open/api/)
-#' .
+#' [API documentation](https://www.lixinger.com/open/api/).
+#' 
+#' @examples
+#' # Retrieve information for all stocks
+#' lxr_query(api_endpoint = lxr_cn_company())
+#'
+#' # Retrieve information for all stocks with a specific type of financial
+#' # statements
+#' lxr_query(api_endpoint = lxr_cn_company(), fs_type = "non_financial")
+#'
+#' # Retrieve information for specific stocks
+#' lxr_query(api_endpoint = lxr_cn_company(), stock_codes = c("300750",
+#' "600519", "600157"))
 #'
 #' @importFrom jsonlite unbox
 #' @importFrom httr2 request req_timeout req_retry req_headers req_body_json

@@ -32,7 +32,9 @@ defaults to 5 attempts.}
 
 \item{...}{Additional parameters for the query. They are validated
 against the valid and required parameters for the specified
-API endpoint. Invalid or missing parameters will result in an error.}
+API endpoint. Invalid or missing parameters will result in an error.
+Parameter names can be provided in either camelCase or snake_case format.
+For example, both 'stock_codes' and 'stockCodes' are acceptable.}
 }
 \value{
 A list containing the Lixinger API response in a parsed JSON format.
@@ -47,9 +49,21 @@ defined in 'lxr_request_params'. It supports automatic retries and
 timeout settings. The function also handles the conversion of
 additional query parameters to the required JSON format.
 }
+\examples{
+# Retrieve information for all stocks
+lxr_query(api_endpoint = lxr_cn_company())
+
+# Retrieve information for all stocks with a specific type of financial
+# statements
+lxr_query(api_endpoint = lxr_cn_company(), fs_type = "non_financial")
+
+# Retrieve information for specific stocks
+lxr_query(api_endpoint = lxr_cn_company(), stock_codes = c("300750",
+"600519", "600157"))
+
+}
 \references{
 For more detailed information about the parameters and usage of the Lixinger
 API that this function interfaces with, please visit the Lixinger
-\href{https://www.lixinger.com/open/api/}{API documentation}
-.
+\href{https://www.lixinger.com/open/api/}{API documentation}.
 }
