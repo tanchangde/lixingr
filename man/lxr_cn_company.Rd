@@ -2,60 +2,38 @@
 % Please edit documentation in R/lxr_cn_company.R
 \name{lxr_cn_company}
 \alias{lxr_cn_company}
-\title{Query Chinese Company Data}
+\alias{lxr_cn_company_equity_change}
+\alias{lxr_cn_company_candlestick}
+\alias{lxr_cn_company_dividend}
+\alias{lxr_cn_company_fs_non_financial}
+\alias{lxr_cn_company_fs_bank}
+\alias{lxr_cn_company_fs_security}
+\alias{lxr_cn_company_fs_insurance}
+\alias{lxr_cn_company_fs_other_financial}
+\title{China Mainland company API endpoints}
 \usage{
-lxr_cn_company(
-  token = Sys.getenv("TOKEN_LIXINGER"),
-  fs_type = NULL,
-  mutual_markets = NULL,
-  stock_codes = NULL,
-  include_delisted = NULL
-)
-}
-\arguments{
-\item{token}{Character string, API access authentication token.}
-
-\item{fs_type}{Character string, type of financial statements, see Details.}
-
-\item{mutual_markets}{Markets to include in the query. Options: 'ha'.}
-
-\item{stock_codes}{Character vector, stock codes for data retrieval.}
-
-\item{include_delisted}{A Boolean value indicating whether to include
-delisted companies in the results. If not provided, the API defaults to
-false.}
-}
-\value{
-A tibble with the requested company data, with each market provided
-by mutual_markets unnested into longer format.
-}
-\description{
-Retrieves company data from the Lixinger API for Chinese companies. It allows
-for specification of financial statement types, markets, stock codes, and the
-option to include delisted companies in the results.
-}
-\details{
-fs_type should be one of the following: 'bank', 'insurance',
-'security', 'non_financial', 'reit', 'other_financial'.
-}
-\examples{
-# Retrieve information for all stocks
 lxr_cn_company()
 
-# Retrieve information for all stocks with a specific type of financial
-# statements
-lxr_cn_company(fs_type = "non_financial")
+lxr_cn_company_equity_change()
 
-# Retrieve information for specific stocks
-lxr_cn_company(stock_codes = c("300750", "600519", "600157"))
+lxr_cn_company_candlestick()
 
-# Retrieve data for stocks in the Shanghai-Hong Kong Stock Connect
-lxr_cn_company(mutual_markets = "ha")
+lxr_cn_company_dividend()
 
+lxr_cn_company_fs_non_financial()
+
+lxr_cn_company_fs_bank()
+
+lxr_cn_company_fs_security()
+
+lxr_cn_company_fs_insurance()
+
+lxr_cn_company_fs_other_financial()
 }
-\references{
-For more detailed information about the parameters and usage of the Lixinger
-API that this function interfaces with, please visit the Lixinger
-\href{https://www.lixinger.com/open/api/doc?api-key=cn/company}{API documentation}
-.
+\value{
+A string of the API endpoint.
+}
+\description{
+These functions return the API endpoints for different aspects of a Mainland
+company.
 }
