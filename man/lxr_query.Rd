@@ -33,7 +33,7 @@ defaults to 5 attempts.}
 \item{...}{Additional parameters for the query. They are validated
 against the valid and required parameters for the specified
 API endpoint. Invalid or missing parameters will result in an error.
-Parameter names can be provided in either camelCase or snake_case format.
+Parameter names can be provided in either snake_case or camelCase format.
 For example, both 'stock_codes' and 'stockCodes' are acceptable.}
 }
 \value{
