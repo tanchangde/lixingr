@@ -42,6 +42,10 @@ lxr_request_params <- function(api_endpoint) {
       ),
       required_params = c("type", "startDate", "stockCode")
     ),
+    cn_company_dividend = list(
+      valid_params = c("startDate", "endDate", "limit", "stockCode"),
+      required_params = c("startDate", "stockCode")
+    ),
     cn_company_fs_non_financial = fs_params,
     cn_company_fs_bank = fs_params,
     cn_company_fs_security = fs_params,
