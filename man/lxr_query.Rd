@@ -60,8 +60,10 @@ lxr_query(api_endpoint = lxr_cn_company())
 lxr_query(api_endpoint = lxr_cn_company(), fs_type = "non_financial")
 
 # Retrieve information for specific stocks
-lxr_query(api_endpoint = lxr_cn_company(), stock_codes = c("300750",
-"600519", "600157"))
+lxr_query(api_endpoint = lxr_cn_company(), stock_codes = c(
+  "300750",
+  "600519", "600157"
+))
 
 }
 \references{
