@@ -17,6 +17,10 @@
 lxr_request_params <- function(api_endpoint) {
   api_name <- lxr_api_name(api_endpoint)
 
+  common_params <- list(
+      valid_params = c("startDate", "endDate", "limit", "stockCode"),
+      required_params = c("startDate", "stockCode")
+    )
   fs_params <- list(
     valid_params = c(
       "date", "startDate", "endDate", "limit", "stockCodes",
@@ -32,10 +36,7 @@ lxr_request_params <- function(api_endpoint) {
       ),
       required_params = NULL
     ),
-    cn_company_equity_change = list(
-      valid_params = c("startDate", "endDate", "limit", "stockCode"),
-      required_params = c("startDate", "stockCode")
-    ),
+    cn_company_equity_change = common_params,
     cn_company_candlestick = list(
       valid_params = c(
         "type", "startDate", "endDate", "adjustForwardDate",
@@ -43,10 +44,13 @@ lxr_request_params <- function(api_endpoint) {
       ),
       required_params = c("type", "startDate", "stockCode")
     ),
-    cn_company_dividend = list(
-      valid_params = c("startDate", "endDate", "limit", "stockCode"),
-      required_params = c("startDate", "stockCode")
-    ),
+    cn_company_shareholders_num = common_params,
+    cn_company_senior_executive_shares_change = common_params,
+    cn_company_block_deal = common_params,
+    cn_company_pledge = common_params,
+    cn_company_operation_revenue_constitution = common_params,
+    cn_company_operating_data = common_params,
+    cn_company_dividend = common_params,
     cn_company_fs_non_financial = fs_params,
     cn_company_fs_bank = fs_params,
     cn_company_fs_security = fs_params,

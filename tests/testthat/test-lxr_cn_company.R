@@ -28,6 +28,63 @@ test_that("test cn_company_equity_change", {
   expect_s3_class(result, "tbl_df")
 })
 
+test_that("test cn_company_candlestick", {
+  result <- lxr_query(
+    api_endpoint = lxr_cn_company_candlestick(),
+    type = "lxr_fc_rights", start_date = "2022-09-20", end_date = "2023-09-20",
+    stock_code = "300750"
+  )
+  expect_s3_class(result, "tbl_df")
+})
+
+test_that("test cn_company_shareholders_num", {
+  result <- lxr_query(
+    api_endpoint = lxr_cn_company_shareholders_num(),
+    start_date = "2022-09-20", end_date = "2023-09-20", stock_code = "300750"
+  )
+  expect_s3_class(result, "tbl_df")
+})
+
+test_that("test cn_company_senior_executive_shares_change", {
+  result <- lxr_query(
+    api_endpoint = lxr_cn_company_senior_executive_shares_change(),
+    start_date = "2021-09-20", end_date = "2023-09-20", stock_code = "300750"
+  )
+  expect_s3_class(result, "tbl_df")
+})
+
+test_that("test cn_company_block_deal", {
+  result <- lxr_query(
+    api_endpoint = lxr_cn_company_block_deal(),
+    start_date = "2022-09-20", end_date = "2023-09-20", stock_code = "300750"
+  )
+  expect_s3_class(result, "tbl_df")
+})
+
+test_that("test cn_company_operation_revenue_constitution", {
+  result <- lxr_query(
+    api_endpoint = lxr_cn_company_operation_revenue_constitution(),
+    start_date = "2022-09-20", end_date = "2023-09-20", stock_code = "300750"
+  )
+  expect_s3_class(result, "tbl_df")
+})
+
+test_that("test cn_company_operating_data", {
+  result <- lxr_query(
+    api_endpoint = lxr_cn_company_operating_data(),
+    start_date = "2022-09-20", end_date = "2023-09-20", stock_code = "600157"
+  )
+  expect_s3_class(result, "tbl_df")
+})
+
+test_that("test cn_company_pledge", {
+  result <- lxr_query(
+    api_endpoint = lxr_cn_company_pledge(),
+    start_date = "2022-09-20", end_date = "2023-09-20", stock_code = "300750"
+  )
+  expect_s3_class(result, "tbl_df")
+})
+
 test_that("test cn_company_dividend", {
   result <- lxr_query(
     api_endpoint = lxr_cn_company_dividend(),

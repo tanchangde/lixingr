@@ -4,6 +4,12 @@
 \alias{lxr_cn_company}
 \alias{lxr_cn_company_equity_change}
 \alias{lxr_cn_company_candlestick}
+\alias{lxr_cn_company_shareholders_num}
+\alias{lxr_cn_company_senior_executive_shares_change}
+\alias{lxr_cn_company_block_deal}
+\alias{lxr_cn_company_pledge}
+\alias{lxr_cn_company_operation_revenue_constitution}
+\alias{lxr_cn_company_operating_data}
 \alias{lxr_cn_company_dividend}
 \alias{lxr_cn_company_fs_non_financial}
 \alias{lxr_cn_company_fs_bank}
@@ -17,6 +23,18 @@ lxr_cn_company()
 lxr_cn_company_equity_change()
 
 lxr_cn_company_candlestick()
+
+lxr_cn_company_shareholders_num()
+
+lxr_cn_company_senior_executive_shares_change()
+
+lxr_cn_company_block_deal()
+
+lxr_cn_company_pledge()
+
+lxr_cn_company_operation_revenue_constitution()
+
+lxr_cn_company_operating_data()
 
 lxr_cn_company_dividend()
 
