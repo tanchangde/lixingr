@@ -12,22 +12,23 @@
 #'
 #' @examples
 #' lxr_request_params(api_endpoint = lxr_cn_company())
-#' 
+#'
 #' @export
 lxr_request_params <- function(api_endpoint) {
   api_name <- lxr_api_name(api_endpoint)
 
   fs_params <- list(
-    valid_params = c("date", "startDate", "endDate", "limit", "stockCodes",
-      "metricsList"),
+    valid_params = c(
+      "date", "startDate", "endDate", "limit", "stockCodes",
+      "metricsList"
+    ),
     required_params = c("stockCodes", "metricsList")
   )
 
   switch(api_name,
     cn_company = list(
       valid_params = c(
-        "fsType", "mutualMarkets", "stockCodes",
-        "includeDelisted"
+        "fsType", "mutualMarkets", "stockCodes", "includeDelisted"
       ),
       required_params = NULL
     ),

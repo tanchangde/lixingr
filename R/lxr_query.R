@@ -26,15 +26,15 @@
 #'   Parameter names can be provided in either snake_case or camelCase format.
 #'   For example, both 'stock_codes' and 'stockCodes' are acceptable.
 #'
-#' @return If `flatten` is `TRUE` (default), the function returns a flattened 
-#'   data frame containing the Lixinger API response data. If `flatten` is 
+#' @return If `flatten` is `TRUE` (default), the function returns a flattened
+#'   data frame containing the Lixinger API response data. If `flatten` is
 #'   `FALSE`, the function returns the raw JSON response.
 #'
 #' @references
 #' For more detailed information about the parameters and usage of the Lixinger
 #' API that this function interfaces with, please visit the Lixinger
 #' [API documentation](https://www.lixinger.com/open/api/).
-#' 
+#'
 #' @examples
 #' # Retrieve information for all stocks
 #' lxr_query(api_endpoint = lxr_cn_company())
@@ -44,8 +44,10 @@
 #' lxr_query(api_endpoint = lxr_cn_company(), fs_type = "non_financial")
 #'
 #' # Retrieve information for specific stocks
-#' lxr_query(api_endpoint = lxr_cn_company(), stock_codes = c("300750",
-#' "600519", "600157"))
+#' lxr_query(api_endpoint = lxr_cn_company(), stock_codes = c(
+#'   "300750",
+#'   "600519", "600157"
+#' ))
 #'
 #' @importFrom jsonlite unbox
 #' @importFrom httr2 request req_timeout req_retry req_headers req_body_json
