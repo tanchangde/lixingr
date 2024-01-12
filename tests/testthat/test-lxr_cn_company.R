@@ -87,3 +87,11 @@ test_that("test cn_company_fs_non_financial", {
   )
   expect_s3_class(result, "tbl_df")
 })
+
+test_that("test cn_company_indices", {
+  result <- lxr_query(
+    api_endpoint = lxr_cn_company_indices(),
+    stock_code = "300750"
+  )
+  expect_s3_class(result, "tbl_df")
+})
