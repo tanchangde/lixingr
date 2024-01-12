@@ -1,7 +1,7 @@
-#' Generate request parameters for Lixinger API
+#' Generate query parameters for Lixinger API
 #'
 #' This function generates a list of valid and required parameters for the
-#' specified LXR API. The parameters are determined based on the API function.
+#' specified Lixinger API. The parameters are determined based on the API function.
 #'
 #' @param endpoint A function representing the Lixinger API.
 #'
@@ -14,7 +14,7 @@
 #' lxr_request_params(api_endpoint = lxr_cn_company())
 #'
 #' @export
-lxr_request_params <- function(endpoint) {
+lxr_query_params <- function(endpoint) {
   endpoint_name <- lxr_endpoint_name(endpoint)
 
   common_params <- list(

@@ -5,7 +5,7 @@
 #' @details
 #' The function constructs an HTTP request to the specified Lixinger API
 #' endpoint. It validates the query parameters against the parameters
-#' defined in 'lxr_request_params'. It supports automatic retries and
+#' defined in 'lxr_query_params'. It supports automatic retries and
 #' timeout settings. The function also handles the conversion of
 #' additional query parameters to the required JSON format.
 #'
@@ -72,7 +72,7 @@ lxr_query <- function(
     )
   )
 
-  endpoint_params <- lxr_request_params(api_endpoint)
+  endpoint_params <- lxr_query_params(api_endpoint)
   endpoint_valid_params <- endpoint_params$valid_params
   endpoint_required_params <- endpoint_params$required_params
   lxr_check_params(query_params, endpoint_valid_params, endpoint_required_params)
