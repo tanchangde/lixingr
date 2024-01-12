@@ -76,8 +76,7 @@ lxr_query <- function(
   endpoint_valid_params <- endpoint_params$valid_params
   endpoint_required_params <- endpoint_params$required_params
   lxr_check_query_params(
-    query_params, endpoint_valid_params,
-    endpoint_required_params
+    query_params, endpoint_valid_params, endpoint_required_params
   )
 
   array_params <- c("stockCodes", "mutualMarkets", "metricsList")
