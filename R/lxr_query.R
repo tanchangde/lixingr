@@ -9,7 +9,7 @@
 #' timeout settings. The function also handles the conversion of
 #' additional query parameters to the required JSON format.
 #'
-#' @param api_endpoint API endpoint URL for the Lixinger service.
+#' @param endpoint endpoint URL for the Lixinger API.
 #' @param token API authentication token. If not provided, the function will
 #'   attempt to use the 'TOKEN_LIXINGER' environment variable.
 #' @param flatten Logical flag indicating whether to return the API response as
@@ -37,14 +37,14 @@
 #'
 #' @examples
 #' # Retrieve information for all stocks
-#' lxr_query(api_endpoint = lxr_cn_company())
+#' lxr_query(endpoint = lxr_cn_company())
 #'
 #' # Retrieve information for all stocks with a specific type of financial
 #' # statements
-#' lxr_query(api_endpoint = lxr_cn_company(), fs_type = "non_financial")
+#' lxr_query(endpoint = lxr_cn_company(), fs_type = "non_financial")
 #'
 #' # Retrieve information for specific stocks
-#' lxr_query(api_endpoint = lxr_cn_company(), stock_codes = c(
+#' lxr_query(endpoint = lxr_cn_company(), stock_codes = c(
 #'   "300750",
 #'   "600519", "600157"
 #' ))
@@ -61,7 +61,7 @@
 #'
 #' @export
 lxr_query <- function(
-    api_endpoint, token = Sys.getenv("TOKEN_LIXINGER"),
+    endpoint, token = Sys.getenv("TOKEN_LIXINGER"),
     flatten = TRUE, timeout = 9, max_tries = 5, ...) {
   query_params <- rlang::list2(...) %>% purrr::discard(is.null)
   names(query_params) <- purrr::map_chr(
@@ -72,7 +72,7 @@ lxr_query <- function(
     )
   )
 
-  endpoint_params <- lxr_query_params(api_endpoint)
+  endpoint_params <- lxr_query_params(endpoint)
   endpoint_valid_params <- endpoint_params$valid_params
   endpoint_required_params <- endpoint_params$required_params
   lxr_check_query_params(
@@ -93,7 +93,7 @@ lxr_query <- function(
 
   tryCatch(
     {
-      response <- httr2::request(api_endpoint) %>%
+      response <- httr2::request(endpoint) %>%
         httr2::req_timeout(timeout) %>%
         httr2::req_retry(max_tries) %>%
         httr2::req_headers("Content-Type" = "application/json") %>%

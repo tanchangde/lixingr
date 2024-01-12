@@ -5,7 +5,7 @@
 \title{Perform Lixinger API Query}
 \usage{
 lxr_query(
-  api_endpoint,
+  endpoint,
   token = Sys.getenv("TOKEN_LIXINGER"),
   flatten = TRUE,
   timeout = 9,
@@ -14,7 +14,7 @@ lxr_query(
 )
 }
 \arguments{
-\item{api_endpoint}{API endpoint URL for the Lixinger service.}
+\item{endpoint}{endpoint URL for the Lixinger API.}
 
 \item{token}{API authentication token. If not provided, the function will
 attempt to use the 'TOKEN_LIXINGER' environment variable.}
@@ -53,14 +53,14 @@ additional query parameters to the required JSON format.
 }
 \examples{
 # Retrieve information for all stocks
-lxr_query(api_endpoint = lxr_cn_company())
+lxr_query(endpoint = lxr_cn_company())
 
 # Retrieve information for all stocks with a specific type of financial
 # statements
-lxr_query(api_endpoint = lxr_cn_company(), fs_type = "non_financial")
+lxr_query(endpoint = lxr_cn_company(), fs_type = "non_financial")
 
 # Retrieve information for specific stocks
-lxr_query(api_endpoint = lxr_cn_company(), stock_codes = c(
+lxr_query(endpoint = lxr_cn_company(), stock_codes = c(
   "300750",
   "600519", "600157"
 ))
