@@ -99,3 +99,9 @@ lxr_cn_company_fs_other_financial <- function() {
 lxr_cn_company_indices <- function() {
   "https://open.lixinger.com/api/cn/company/indices"
 }
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_industries <- function() {
+  "https://open.lixinger.com/api/cn/company/industries"
+}

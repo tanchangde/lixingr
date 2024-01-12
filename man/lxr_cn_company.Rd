@@ -17,6 +17,7 @@
 \alias{lxr_cn_company_fs_insurance}
 \alias{lxr_cn_company_fs_other_financial}
 \alias{lxr_cn_company_indices}
+\alias{lxr_cn_company_industries}
 \title{China Mainland company API endpoints}
 \usage{
 lxr_cn_company()
@@ -50,6 +51,8 @@ lxr_cn_company_fs_insurance()
 lxr_cn_company_fs_other_financial()
 
 lxr_cn_company_indices()
+
+lxr_cn_company_industries()
 }
 \value{
 A string of the API endpoint.
