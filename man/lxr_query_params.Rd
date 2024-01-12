@@ -17,7 +17,8 @@ the names of the required parameters for the API.
 }
 \description{
 This function generates a list of valid and required parameters for the
-specified Lixinger API. The parameters are determined based on the API function.
+specified Lixinger API. The parameters are determined based on the API
+function.
 }
 \examples{
 lxr_query_params(endpoint = lxr_cn_company())
