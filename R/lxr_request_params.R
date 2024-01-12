@@ -18,9 +18,9 @@ lxr_request_params <- function(api_endpoint) {
   api_name <- lxr_api_name(api_endpoint)
 
   common_params <- list(
-      valid_params = c("startDate", "endDate", "limit", "stockCode"),
-      required_params = c("startDate", "stockCode")
-    )
+    valid_params = c("startDate", "endDate", "limit", "stockCode"),
+    required_params = c("startDate", "stockCode")
+  )
   fs_params <- list(
     valid_params = c(
       "date", "startDate", "endDate", "limit", "stockCodes",

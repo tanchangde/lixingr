@@ -76,24 +76,7 @@ lxr_query <- function(
   valid_params <- params$valid_params
   required_params <- params$required_params
 
-  if (!all(names(query_params) %in% valid_params)) {
-    invalid_params <- setdiff(names(query_params), valid_params)
-    message <- glue::glue(
-      "Invalid parameters: {paste(invalid_params, collapse = ', ')} \n",
-      "Valid parameters are: {paste(valid_params, collapse = ', ')}"
-    )
-    usethis::ui_stop(message)
-  }
-
-  if (!is.null(required_params) &&
-    !all(required_params %in% names(query_params))) {
-    missing_required_params <- setdiff(required_params, names(query_params))
-    message <- glue::glue(
-      "Missing required parameters: ",
-      "{paste(missing_required_params, collapse = ', ')}."
-    )
-    usethis::ui_stop(message)
-  }
+  lxr_check_params(query_params, valid_params, required_params)
 
   array_params <- c("stockCodes", "mutualMarkets", "metricsList")
   request_params <- rlang::list2(token = token, !!!query_params) %>%
