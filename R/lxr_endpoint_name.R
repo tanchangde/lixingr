@@ -8,10 +8,10 @@
 #' @return A string of the API name.
 #'
 #' @importFrom magrittr extract2
-lxr_api_name <- function(api_endpoint) {
-  api_name <- stringr::str_match(api_endpoint, "api/(.*$)") %>%
+lxr_endpoint_name <- function(endpoint) {
+  endpoint_name <- stringr::str_match(endpoint, "api/(.*$)") %>%
     magrittr::extract2(2) %>%
     stringr::str_replace_all("/|-", "_")
 
-  return(api_name)
+  return(endpoint_name)
 }
