@@ -72,11 +72,10 @@ lxr_query <- function(
     )
   )
 
-  params <- lxr_request_params(api_endpoint)
-  valid_params <- params$valid_params
-  required_params <- params$required_params
-
-  lxr_check_params(query_params, valid_params, required_params)
+  endpoint_params <- lxr_request_params(api_endpoint)
+  endpoint_valid_params <- endpoint_params$valid_params
+  endpoint_required_params <- endpoint_params$required_params
+  lxr_check_params(query_params, endpoint_valid_params, endpoint_required_params)
 
   array_params <- c("stockCodes", "mutualMarkets", "metricsList")
   request_params <- rlang::list2(token = token, !!!query_params) %>%
