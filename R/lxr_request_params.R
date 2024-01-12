@@ -3,7 +3,7 @@
 #' This function generates a list of valid and required parameters for the
 #' specified LXR API. The parameters are determined based on the API function.
 #'
-#' @param api_endpoint A function representing the Lixinger API.
+#' @param endpoint A function representing the Lixinger API.
 #'
 #' @return A list containing two elements: 'valid_params' and 'required_params'.
 #' 'valid_params' is a vector of strings representing the names of the valid
@@ -14,8 +14,8 @@
 #' lxr_request_params(api_endpoint = lxr_cn_company())
 #'
 #' @export
-lxr_request_params <- function(api_endpoint) {
-  api_name <- lxr_api_name(api_endpoint)
+lxr_request_params <- function(endpoint) {
+  endpoint_name <- lxr_endpoint_name(endpoint)
 
   common_params <- list(
     valid_params = c("startDate", "endDate", "limit", "stockCode"),
@@ -29,7 +29,7 @@ lxr_request_params <- function(api_endpoint) {
     required_params = c("stockCodes", "metricsList")
   )
 
-  switch(api_name,
+  switch(endpoint_name,
     cn_company = list(
       valid_params = c(
         "fsType", "mutualMarkets", "stockCodes", "includeDelisted"

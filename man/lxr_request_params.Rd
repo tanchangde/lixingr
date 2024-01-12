@@ -4,10 +4,10 @@
 \alias{lxr_request_params}
 \title{Generate request parameters for Lixinger API}
 \usage{
-lxr_request_params(api_endpoint)
+lxr_request_params(endpoint)
 }
 \arguments{
-\item{api_endpoint}{A function representing the Lixinger API.}
+\item{endpoint}{A function representing the Lixinger API.}
 }
 \value{
 A list containing two elements: 'valid_params' and 'required_params'.
