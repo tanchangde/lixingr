@@ -11,7 +11,7 @@
 #' the names of the required parameters for the API.
 #'
 #' @examples
-#' lxr_request_params(api_endpoint = lxr_cn_company())
+#' lxr_query_params(endpoint = lxr_cn_company())
 #'
 #' @export
 lxr_query_params <- function(endpoint) {

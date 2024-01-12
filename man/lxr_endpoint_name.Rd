@@ -7,7 +7,7 @@
 lxr_endpoint_name(endpoint)
 }
 \arguments{
-\item{api_endpoint}{A string of the Lixinger API URL.}
+\item{endpoint}{A string of the Lixinger API URL.}
 }
 \value{
 A string of the API name.

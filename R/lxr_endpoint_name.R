@@ -4,7 +4,7 @@
 #' which is the part of the URL after "api/". All slashes ("/") in the API name
 #' are replaced with underscores ("_").
 #'
-#' @param api_endpoint A string of the Lixinger API URL.
+#' @param endpoint A string of the Lixinger API URL.
 #' @return A string of the API name.
 #'
 #' @importFrom magrittr extract2
