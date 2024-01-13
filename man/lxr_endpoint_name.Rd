@@ -2,18 +2,18 @@
 % Please edit documentation in R/lxr_endpoint_name.R
 \name{lxr_endpoint_name}
 \alias{lxr_endpoint_name}
-\title{Extract the API name from a Lixinger API URL}
+\title{Extract the endpoint name}
 \usage{
 lxr_endpoint_name(endpoint)
 }
 \arguments{
-\item{endpoint}{A string of the Lixinger API URL.}
+\item{endpoint}{A string of the Lixinger endpoint URL.}
 }
 \value{
-A string of the API name.
+A string of the endpoint name.
 }
 \description{
-This function takes a Lixinger API URL as input, and returns the API name,
-which is the part of the URL after "api/". All slashes ("/") in the API name
-are replaced with underscores ("_").
+This function takes a Lixinger endpoint URL as input, and returns the
+endpoint name, which is the part of the URL after "api/". All slashes ("/")
+in the endpoint name are replaced with underscores ("_").
 }
