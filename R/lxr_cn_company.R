@@ -105,3 +105,10 @@ lxr_cn_company_indices <- function() {
 lxr_cn_company_industries <- function() {
   "https://open.lixinger.com/api/cn/company/industries"
 }
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_fundamental_statistics <- function() {
+  "https://open.lixinger.com/api/cn/company/fundamental-statistics"
+}
+
