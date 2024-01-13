@@ -100,7 +100,7 @@ lxr_query <- function(
         httr2::req_perform()
     },
     error = function(e) {
-      message <- glue::glue("REQUEST ERROR: {e$message}")
+      message <- glue::glue("{e$message}")
       usethis::ui_stop(message)
     }
   )
@@ -113,7 +113,7 @@ lxr_query <- function(
         jsonlite::flatten() %>%
         tibble::as_tibble()
     } else {
-      usethis::ui_stop("ERROR: Query was successful, but no data returned.")
+      usethis::ui_stop("Query was successful, but no data returned.")
     }
   } else {
     result <- httr2::resp_body_json(response)
