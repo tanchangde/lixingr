@@ -106,8 +106,8 @@ lxr_query <- function(
   )
 
   if (flatten) {
-    resp_content <- httr2::resp_body_json(response, simplifyVector = TRUE)
-    resp_data <- resp_content$data
+    resp_data <- httr2::resp_body_json(response, simplifyVector = TRUE) %>%
+      magrittr::use_series("data")
     if (length(resp_data) > 0) {
       result <- resp_data %>%
         jsonlite::flatten() %>%
