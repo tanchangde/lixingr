@@ -105,15 +105,18 @@ lxr_query <- function(
     }
   )
 
-  content <- httr2::resp_body_json(response, simplifyVector = TRUE)
-
   if (flatten) {
-    result <- content %>%
-      magrittr::use_series("data") %>%
-      jsonlite::flatten() %>%
-      tibble::as_tibble()
+    resp_content <- httr2::resp_body_json(response, simplifyVector = TRUE)
+    resp_data <- resp_content$data
+    if (length(resp_data) > 0) {
+      result <- resp_data %>%
+        jsonlite::flatten() %>%
+        tibble::as_tibble()
+    } else {
+      usethis::ui_stop("ERROR: Query was successful, but no data returned.")
+    }
   } else {
-    result <- content
+    result <- httr2::resp_body_json(response)
   }
 
   return(result)

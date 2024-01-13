@@ -79,6 +79,16 @@ test_that("test cn_company_dividend", {
   expect_s3_class(result, "tbl_df")
 })
 
+test_that("error on no data after successful query", {
+  expect_error(
+    lxr_query(
+      endpoint = lxr_cn_company_dividend(),
+      start_date = "2023-11-13", end_date = "2024-01-13", stock_code = "300750",
+    ),
+    "ERROR: Query was successful, but no data returned."
+  )
+})
+
 test_that("test cn_company_fs_non_financial", {
   result <- lxr_query(
     endpoint = lxr_cn_company_fs_non_financial(),
