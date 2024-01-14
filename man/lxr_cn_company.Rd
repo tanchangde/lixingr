@@ -63,4 +63,29 @@ A string of the API endpoint.
 \description{
 These functions return the API endpoints for different aspects of a Mainland
 company.
+\itemize{
+\item \code{lxr_cn_company } gets stock detailed information.
+\item \code{lxr_cn_company_equity_change } gets equity change data.
+\item \code{lxr_cn_company_candlestick } gets stock K line data.
+\item \code{lxr_cn_company_shareholders_num } gets number of shareholders data.
+\item \code{lxr_cn_company_senior_executive_shares_change } gets senior executive
+shares change data.
+\item \code{lxr_cn_company_block_deal } gets block deal data.
+\item \code{lxr_cn_company_pledge } gets equity pledge data.
+\item \code{lxr_cn_company_operation_revenue_constitution } gets operation revenue
+constitution data.
+\item \code{lxr_cn_company_operating_data } gets operating data information.
+\item \code{lxr_cn_company_dividend } gets dividend information.
+\item \code{lxr_cn_company_fs_non_financial } gets non-financial listed company
+financial data.
+\item \code{lxr_cn_company_fs_bank } gets bank listed company financial data.
+\item \code{lxr_cn_company_fs_security } gets security listed company financial data.
+\item \code{lxr_cn_company_fs_insurance } gets insurance listed company financial data.
+\item \code{lxr_cn_company_fs_other_financial } gets other financial listed company
+financial data.
+\item \code{lxr_cn_company_indices } gets stock indices information.
+\item \code{lxr_cn_company_industries } gets stock industry information.
+\item \code{lxr_cn_company_fundamental_statistics } gets stock fundamental
+statistics data.
+}
 }
