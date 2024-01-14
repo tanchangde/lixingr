@@ -4,9 +4,9 @@
 #'   contain nested dataframes.
 #'
 #' @param df A dataframe with one or more list columns containing nested
-#' dataframes to be unnested.
+#'   dataframes to be unnested.
 #' @return A dataframe where each list column has been unnested into
-#' multiple rows.
+#'   multiple rows.
 #'
 #' @importFrom dplyr select full_join row_number mutate
 #' @importFrom tidyselect all_of
