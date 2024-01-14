@@ -111,6 +111,7 @@ lxr_query <- function(
     if (length(resp_data) > 0) {
       result <- resp_data %>%
         jsonlite::flatten() %>%
+        lxr_unnest() %>%
         tibble::as_tibble()
     } else {
       usethis::ui_stop("Query was successful, but no data returned.")
