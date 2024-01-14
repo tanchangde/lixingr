@@ -123,3 +123,11 @@ test_that("test cn_company_fundamental_statistics", {
   )
   expect_s3_class(result, "tbl_df")
 })
+
+test_that("test cn_company_trading_abnormal", {
+  result <- lxr_query(
+    endpoint = lxr_cn_company_trading_abnormal(),
+    start_date = "2014-09-20", end_date = "2023-09-20", stock_code = "300750"
+  )
+  expect_s3_class(result, "tbl_df")
+})

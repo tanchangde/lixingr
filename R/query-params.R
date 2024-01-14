@@ -69,5 +69,9 @@ lxr_query_params <- function(endpoint) {
       valid_params = c("stockCodes", "granularity", "metricsList"),
       required_params = c("stockCodes", "granularity", "metricsList")
     ),
+    cn_company_trading_abnormal = list(
+      valid_params = c("startDate", "endDate", "limit", "stockCode"),
+      required_params = c("startDate", "stockCode")
+    ),
   )
 }
