@@ -143,3 +143,9 @@ lxr_cn_company_fundamental_statistics <- function() {
 lxr_cn_company_trading_abnormal <- function() {
   "https://open.lixinger.com/api/cn/company/trading-abnormal"
 }
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_announcement <- function() {
+  "https://open.lixinger.com/api/cn/company/announcement"
+}

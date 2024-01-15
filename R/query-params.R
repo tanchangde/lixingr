@@ -73,5 +73,6 @@ lxr_query_params <- function(endpoint) {
       valid_params = c("startDate", "endDate", "limit", "stockCode"),
       required_params = c("startDate", "stockCode")
     ),
+    cn_company_announcement = common_params
   )
 }
