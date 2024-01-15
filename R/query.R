@@ -44,10 +44,9 @@
 #' lxr_query(endpoint = lxr_cn_company(), fs_type = "non_financial")
 #'
 #' # Retrieve information for specific stocks
-#' lxr_query(endpoint = lxr_cn_company(), stock_codes = c(
-#'   "300750",
-#'   "600519", "600157"
-#' ))
+#' lxr_query(
+#'   endpoint = lxr_cn_company(),
+#'   stock_codes = c("300750", "600519", "600157"))
 #'
 #' @importFrom jsonlite unbox
 #' @importFrom httr2 request req_timeout req_retry req_headers req_body_json
