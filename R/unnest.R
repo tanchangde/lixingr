@@ -25,7 +25,7 @@ lxr_unnest <- function(df) {
 
   df_result <- NULL
   for (col in list_cols) {
-    expanded_df <- df %>%
+    df_expanded <- df %>%
       dplyr::select(tidyselect::all_of(c(non_list_cols, col))) %>%
       dplyr::mutate(original_row_id = dplyr::row_number()) %>%
       tidyr::unnest(cols = tidyselect::all_of(col), names_sep = ".") %>%
@@ -34,11 +34,11 @@ lxr_unnest <- function(df) {
       dplyr::ungroup()
 
     if (is.null(df_result)) {
-      df_result <- expanded_df
+      df_result <- df_expanded
     } else {
       df_result <- dplyr::full_join(
         df_result,
-        expanded_df,
+        df_expanded,
         by = c("original_row_id", "grouped_row_id", non_list_cols)
       )
     }
