@@ -28,6 +28,7 @@
 #' * `lxr_cn_company_fundamental_statistics()` gets stock fundamental
 #'   statistics data.
 #' * `lxr_cn_company_trading_abnormal()` gets trading abnormal data.
+#' * `lxr_cn_company_announcement()` gets announcement data.
 #'
 #' @return A string of the API endpoint.
 #' @rdname lxr_cn_company

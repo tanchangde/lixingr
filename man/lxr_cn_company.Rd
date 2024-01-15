@@ -94,5 +94,6 @@ financial data.
 \item \code{lxr_cn_company_fundamental_statistics()} gets stock fundamental
 statistics data.
 \item \code{lxr_cn_company_trading_abnormal()} gets trading abnormal data.
+\item \code{lxr_cn_company_announcement()} gets announcement data.
 }
 }
