@@ -29,6 +29,7 @@
 #'   statistics data.
 #' * `lxr_cn_company_trading_abnormal()` gets trading abnormal data.
 #' * `lxr_cn_company_announcement()` gets announcement data.
+#' * `lxr_cn_company_measures()` gets regulatory measures information.
 #'
 #' @return A string of the API endpoint.
 #' @rdname lxr_cn_company
@@ -149,4 +150,10 @@ lxr_cn_company_trading_abnormal <- function() {
 #' @export
 lxr_cn_company_announcement <- function() {
   "https://open.lixinger.com/api/cn/company/announcement"
+}
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_measures <- function() {
+  "https://open.lixinger.com/api/cn/company/measures"
 }

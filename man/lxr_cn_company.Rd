@@ -21,6 +21,7 @@
 \alias{lxr_cn_company_fundamental_statistics}
 \alias{lxr_cn_company_trading_abnormal}
 \alias{lxr_cn_company_announcement}
+\alias{lxr_cn_company_measures}
 \title{China Mainland company API endpoints}
 \usage{
 lxr_cn_company()
@@ -62,6 +63,8 @@ lxr_cn_company_fundamental_statistics()
 lxr_cn_company_trading_abnormal()
 
 lxr_cn_company_announcement()
+
+lxr_cn_company_measures()
 }
 \value{
 A string of the API endpoint.
