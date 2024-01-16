@@ -34,14 +34,14 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Check commit message
-      run: |
-        commit_message=$(git log --format=%B -n 1)
-        if [[ "$commit_message" =~ ^(feat|fix|test)(\(.+\))?:.* ]]; then
-          echo "The commit message matches the pattern. Continue the job."
-        else
-          echo "The commit message does not match the pattern. Cancel the job."
-          exit 1
-        fi
+        run: |
+          commit_message=$(git log --format=%B -n 1)
+          if [[ "$commit_message" =~ ^(feat|fix|test)(\(.+\))?:.* ]]; then
+            echo "The commit message matches the pattern. Continue the job."
+          else
+            echo "The commit message does not match the pattern. Cancel the job."
+            exit 1
+          fi
 
       - uses: r-lib/actions/setup-pandoc@v2
 
