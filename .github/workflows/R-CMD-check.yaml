@@ -40,7 +40,7 @@ jobs:
             echo "The commit message matches the pattern. Continue the job."
           else
             echo "The commit message does not match the pattern. Cancel the job."
-            exit 1
+            echo "::set-output name=SKIP::true"
           fi
 
       - uses: r-lib/actions/setup-pandoc@v2
