@@ -11,6 +11,8 @@ name: R-CMD-check
 
 jobs:
   R-CMD-check:
+    if: contains(github.event.head_commit.message, 'feat')
+
     runs-on: ${{ matrix.config.os }}
 
     name: ${{ matrix.config.os }} (${{ matrix.config.r }})
@@ -32,16 +34,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
-      - name: Check commit message
-        run: |
-          commit_message=$(git log --format=%B -n 1)
-          if [[ "$commit_message" =~ ^(feat|fix|test)(\(.+\))?:.* ]]; then
-            echo "The commit message matches the pattern. Continue the job."
-          else
-            echo "The commit message does not match the pattern. Cancel the job."
-            echo "::set-output name=SKIP::true"
-          fi
 
       - uses: r-lib/actions/setup-pandoc@v2
 
