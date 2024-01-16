@@ -2,7 +2,10 @@
 # lixingr
 
 <!-- badges: start -->
+
 [![R-CMD-check](https://github.com/tanchangde/lixingr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/tanchangde/lixingr/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/tanchangde/lixingr/branch/main/graph/badge.svg)](https://app.codecov.io/gh/tanchangde/lixingr?branch=main)
 <!-- badges: end -->
 
 An R language wrapper for the Lixinger API.
