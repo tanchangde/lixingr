@@ -23,6 +23,7 @@
 \alias{lxr_cn_company_announcement}
 \alias{lxr_cn_company_measures}
 \alias{lxr_cn_company_inquiry}
+\alias{lxr_cn_company_majority_shareholders}
 \title{China Mainland company API endpoints}
 \usage{
 lxr_cn_company()
@@ -68,6 +69,8 @@ lxr_cn_company_announcement()
 lxr_cn_company_measures()
 
 lxr_cn_company_inquiry()
+
+lxr_cn_company_majority_shareholders()
 }
 \value{
 A string of the API endpoint.
@@ -103,5 +106,7 @@ statistics data.
 \item \code{lxr_cn_company_announcement()} gets announcement data.
 \item \code{lxr_cn_company_measures()} gets regulatory measures information.
 \item \code{lxr_cn_company_inquiry()} gets inquiry information.
+\item \code{lxr_cn_company_majority_shareholders()} gets information on the top ten
+shareholders' holdings.
 }
 }

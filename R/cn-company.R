@@ -31,6 +31,8 @@
 #' * `lxr_cn_company_announcement()` gets announcement data.
 #' * `lxr_cn_company_measures()` gets regulatory measures information.
 #' * `lxr_cn_company_inquiry()` gets inquiry information.
+#' * `lxr_cn_company_majority_shareholders()` gets information on the top ten
+#'   shareholders' holdings.
 #'
 #' @return A string of the API endpoint.
 #' @rdname lxr_cn_company
@@ -164,3 +166,10 @@ lxr_cn_company_measures <- function() {
 lxr_cn_company_inquiry <- function() {
   "https://open.lixinger.com/api/cn/company/inquiry"
 }
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_majority_shareholders <- function() {
+  "https://open.lixinger.com/api/cn/company/majority-shareholders"
+}
+
