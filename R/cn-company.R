@@ -33,6 +33,8 @@
 #' * `lxr_cn_company_inquiry()` gets inquiry information.
 #' * `lxr_cn_company_majority_shareholders()` gets information on the top ten
 #'   shareholders' holdings.
+#' * `lxr_cn_company_nolimit_shareholders()` gets the holding
+#'   information of the top ten circulating shareholders
 #'
 #' @return A string of the API endpoint.
 #' @rdname lxr_cn_company
@@ -173,3 +175,8 @@ lxr_cn_company_majority_shareholders <- function() {
   "https://open.lixinger.com/api/cn/company/majority-shareholders"
 }
 
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_nolimit_shareholders <- function() {
+  "https://open.lixinger.com/api/cn/company/nolimit-shareholders"
+}
