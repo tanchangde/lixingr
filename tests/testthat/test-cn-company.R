@@ -148,3 +148,10 @@ test_that("test cn_company_measures", {
   expect_s3_class(result, "tbl_df")
 })
 
+test_that("test cn_company_inquiry", {
+  result <- lxr_query(
+    endpoint = lxr_cn_company_inquiry(),
+    start_date = "2023-01-17", end_date = "2024-01-17", stock_code = "688337"
+  )
+  expect_s3_class(result, "tbl_df")
+})

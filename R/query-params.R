@@ -74,6 +74,7 @@ lxr_query_params <- function(endpoint) {
       required_params = c("startDate", "stockCode")
     ),
     cn_company_announcement = common_params,
-    cn_company_measures = common_params
+    cn_company_measures = common_params,
+    cn_company_inquiry = common_params
   )
 }
