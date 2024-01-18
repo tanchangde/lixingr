@@ -34,7 +34,9 @@
 #' * `lxr_cn_company_majority_shareholders()` gets information on the top ten
 #'   shareholders' holdings.
 #' * `lxr_cn_company_nolimit_shareholders()` gets the holding
-#'   information of the top ten circulating shareholders
+#'   information of the top ten circulating shareholders.
+#' * `lxr_cn_company_fund_shareholders()` gets publicly offered fund
+#'   shareholding information.
 #'
 #' @return A string of the API endpoint.
 #' @rdname lxr_cn_company
@@ -179,4 +181,10 @@ lxr_cn_company_majority_shareholders <- function() {
 #' @export
 lxr_cn_company_nolimit_shareholders <- function() {
   "https://open.lixinger.com/api/cn/company/nolimit-shareholders"
+}
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_fund_shareholders <- function() {
+  "https://open.lixinger.com/api/cn/company/fund-shareholders"
 }

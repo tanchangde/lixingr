@@ -25,6 +25,7 @@
 \alias{lxr_cn_company_inquiry}
 \alias{lxr_cn_company_majority_shareholders}
 \alias{lxr_cn_company_nolimit_shareholders}
+\alias{lxr_cn_company_fund_shareholders}
 \title{China Mainland company API endpoints}
 \usage{
 lxr_cn_company()
@@ -74,6 +75,8 @@ lxr_cn_company_inquiry()
 lxr_cn_company_majority_shareholders()
 
 lxr_cn_company_nolimit_shareholders()
+
+lxr_cn_company_fund_shareholders()
 }
 \value{
 A string of the API endpoint.
@@ -112,6 +115,8 @@ statistics data.
 \item \code{lxr_cn_company_majority_shareholders()} gets information on the top ten
 shareholders' holdings.
 \item \code{lxr_cn_company_nolimit_shareholders()} gets the holding
-information of the top ten circulating shareholders
+information of the top ten circulating shareholders.
+\item \code{lxr_cn_company_fund_shareholders()} gets publicly offered fund
+shareholding information.
 }
 }
