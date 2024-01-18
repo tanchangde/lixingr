@@ -11,6 +11,7 @@
 \alias{lxr_cn_company_operation_revenue_constitution}
 \alias{lxr_cn_company_operating_data}
 \alias{lxr_cn_company_dividend}
+\alias{lxr_cn_company_allotment}
 \alias{lxr_cn_company_fs_non_financial}
 \alias{lxr_cn_company_fs_bank}
 \alias{lxr_cn_company_fs_security}
@@ -48,6 +49,8 @@ lxr_cn_company_operation_revenue_constitution()
 lxr_cn_company_operating_data()
 
 lxr_cn_company_dividend()
+
+lxr_cn_company_allotment()
 
 lxr_cn_company_fs_non_financial()
 
@@ -123,5 +126,6 @@ information of the top ten circulating shareholders.
 shareholding information.
 \item \code{lxr_cn_company_fund_collection_shareholders()} gets fund company's
 shareholding information.
+\item \code{lxr_cn_company_allotment()} gets allotment information.
 }
 }

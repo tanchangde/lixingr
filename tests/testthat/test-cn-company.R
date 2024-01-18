@@ -187,3 +187,11 @@ test_that("test cn_company_fund_collection_shareholders", {
   )
   expect_s3_class(result, "tbl_df")
 })
+
+test_that("test cn_company_allotment", {
+  result <- lxr_query(
+    endpoint = lxr_cn_company_allotment(),
+    start_date = "2022-01-18", end_date = "2024-01-18", stock_code = "600958"
+  )
+  expect_s3_class(result, "tbl_df")
+})

@@ -39,6 +39,7 @@
 #'   shareholding information.
 #' * `lxr_cn_company_fund_collection_shareholders()` gets fund company's
 #'   shareholding information.
+#' * `lxr_cn_company_allotment()` gets allotment information.
 #'
 #' @return A string of the API endpoint.
 #' @rdname lxr_cn_company
@@ -99,6 +100,12 @@ lxr_cn_company_operating_data <- function() {
 #' @export
 lxr_cn_company_dividend <- function() {
   "https://open.lixinger.com/api/cn/company/dividend"
+}
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_allotment <- function() {
+  "https://open.lixinger.com/api/cn/company/allotment"
 }
 
 #' @rdname lxr_cn_company

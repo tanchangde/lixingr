@@ -2,6 +2,7 @@
 
 export("%>%")
 export(lxr_cn_company)
+export(lxr_cn_company_allotment)
 export(lxr_cn_company_announcement)
 export(lxr_cn_company_block_deal)
 export(lxr_cn_company_candlestick)
