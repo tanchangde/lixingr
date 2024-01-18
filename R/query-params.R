@@ -81,6 +81,7 @@ lxr_query_params <- function(endpoint) {
     cn_company_fund_shareholders = common_params,
     cn_company_fund_collection_shareholders = common_params,
     cn_company_allotment = common_params,
-    cn_company_customers = common_params
+    cn_company_customers = common_params,
+    cn_company_suppliers = common_params
   )
 }

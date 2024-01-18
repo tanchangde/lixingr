@@ -29,6 +29,7 @@
 \alias{lxr_cn_company_fund_shareholders}
 \alias{lxr_cn_company_fund_collection_shareholders}
 \alias{lxr_cn_company_customers}
+\alias{lxr_cn_company_suppliers}
 \title{China Mainland company API endpoints}
 \usage{
 lxr_cn_company()
@@ -86,6 +87,8 @@ lxr_cn_company_fund_shareholders()
 lxr_cn_company_fund_collection_shareholders()
 
 lxr_cn_company_customers()
+
+lxr_cn_company_suppliers()
 }
 \value{
 A string of the API endpoint.
@@ -131,5 +134,6 @@ shareholding information.
 shareholding information.
 \item \code{lxr_cn_company_allotment()} gets allotment information.
 \item \code{lxr_cn_company_customers()} gets customer information.
+\item \code{lxr_cn_company_suppliers()} gets supplier information.
 }
 }

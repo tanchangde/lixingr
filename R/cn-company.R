@@ -41,6 +41,7 @@
 #'   shareholding information.
 #' * `lxr_cn_company_allotment()` gets allotment information.
 #' * `lxr_cn_company_customers()` gets customer information.
+#' * `lxr_cn_company_suppliers()` gets supplier information.
 #'
 #' @return A string of the API endpoint.
 #' @rdname lxr_cn_company
@@ -209,5 +210,11 @@ lxr_cn_company_fund_collection_shareholders <- function() {
 #' @export
 lxr_cn_company_customers <- function() {
   "https://open.lixinger.com/api/cn/company/customers"
+}
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_suppliers <- function() {
+  "https://open.lixinger.com/api/cn/company/suppliers"
 }
 
