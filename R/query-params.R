@@ -78,6 +78,7 @@ lxr_query_params <- function(endpoint) {
     cn_company_inquiry = common_params,
     cn_company_majority_shareholders = common_params,
     cn_company_nolimit_shareholders = common_params,
-    cn_company_fund_shareholders = common_params
+    cn_company_fund_shareholders = common_params,
+    cn_company_fund_collection_shareholders = common_params
   )
 }
