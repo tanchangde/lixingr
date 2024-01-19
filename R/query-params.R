@@ -91,6 +91,7 @@ lxr_query_params <- function(endpoint) {
     cn_company_suppliers = common_params,
     cn_company_fundamental_non_financial = fundamental_params,
     cn_company_fundamental_bank = fundamental_params,
-    cn_company_fundamental_security = fundamental_params
+    cn_company_fundamental_security = fundamental_params,
+    cn_company_fundamental_insurance = fundamental_params
   )
 }

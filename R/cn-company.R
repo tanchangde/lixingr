@@ -48,6 +48,8 @@
 #'   PE, PB, etc.
 #' * `lxr_cn_company_fundamental_security()` gets fundamental data for 
 #'   securities, such as PE, PB, etc.
+#' * `lxr_cn_company_fundamental_insurance()` gets fundamental data for 
+#'   insurance company, such as PE, PB, etc.
 #'
 #' @return A string of the API endpoint.
 #' @rdname lxr_cn_company
@@ -240,5 +242,11 @@ lxr_cn_company_fundamental_bank <- function() {
 #' @export
 lxr_cn_company_fundamental_security <- function() {
   "https://open.lixinger.com/api/cn/company/fundamental/security"
+}
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_fundamental_insurance <- function() {
+  "https://open.lixinger.com/api/cn/company/fundamental/insurance"
 }
 
