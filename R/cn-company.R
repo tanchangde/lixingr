@@ -44,6 +44,8 @@
 #' * `lxr_cn_company_suppliers()` gets supplier information.
 #' * `lxr_cn_company_fundamental_non_financial()` gets fundamental data for 
 #'   non-financial companies, such as PE, PB, etc.
+#' * `lxr_cn_company_fundamental_bank()` gets fundamental data for bank, such as
+#'   PE, PB, etc.
 #'
 #' @return A string of the API endpoint.
 #' @rdname lxr_cn_company
@@ -225,3 +227,10 @@ lxr_cn_company_suppliers <- function() {
 lxr_cn_company_fundamental_non_financial <- function() {
   "https://open.lixinger.com/api/cn/company/fundamental/non_financial"
 }
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_fundamental_bank <- function() {
+  "https://open.lixinger.com/api/cn/company/fundamental/bank"
+}
+
