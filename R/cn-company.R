@@ -42,6 +42,8 @@
 #' * `lxr_cn_company_allotment()` gets allotment information.
 #' * `lxr_cn_company_customers()` gets customer information.
 #' * `lxr_cn_company_suppliers()` gets supplier information.
+#' * `lxr_cn_company_fundamental_non_financial()` gets fundamental data for 
+#'   non-financial companies, such as PE, PB, etc.
 #'
 #' @return A string of the API endpoint.
 #' @rdname lxr_cn_company
@@ -218,3 +220,8 @@ lxr_cn_company_suppliers <- function() {
   "https://open.lixinger.com/api/cn/company/suppliers"
 }
 
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_fundamental_non_financial <- function() {
+  "https://open.lixinger.com/api/cn/company/fundamental/non_financial"
+}

@@ -29,6 +29,12 @@ lxr_query_params <- function(endpoint) {
     ),
     required_params = c("stockCodes", "metricsList")
   )
+  fundamental_params <- list(
+      valid_params = c(
+        "date", "startDate", "endDate", "adjustForwardDate",
+        "adjustBackwardDate", "limit", "stockCodes", "metricsList"),
+      required_params = c("stockCodes", "metricsList")
+    )
 
   switch(endpoint_name,
     cn_company = list(
@@ -82,6 +88,7 @@ lxr_query_params <- function(endpoint) {
     cn_company_fund_collection_shareholders = common_params,
     cn_company_allotment = common_params,
     cn_company_customers = common_params,
-    cn_company_suppliers = common_params
+    cn_company_suppliers = common_params,
+    cn_company_fundamental_non_financial = fundamental_params
   )
 }

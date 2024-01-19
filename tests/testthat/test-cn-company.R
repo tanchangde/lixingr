@@ -211,3 +211,13 @@ test_that("test cn_company_suppliers", {
   )
   expect_s3_class(result, "tbl_df")
 })
+
+test_that("test cn_company_fundamental_non_financial", {
+  result <- lxr_query(
+    endpoint = lxr_cn_company_fundamental_non_financial(),
+    date = "2024-01-18",
+    stock_codes = c("300750", "600519", "600157"),
+    metrics_list = c("pe_ttm", "mc")
+  )
+  expect_s3_class(result, "tbl_df")
+})
