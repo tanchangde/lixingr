@@ -241,3 +241,13 @@ test_that("test cn_company_fundamental_security", {
   )
   expect_s3_class(result, "tbl_df")
 })
+
+test_that("test cn_company_fundamental_other_financial", {
+  result <- lxr_query(
+    endpoint = lxr_cn_company_fundamental_other_financial(),
+    date = "2024-01-09",
+    stock_codes = c("600901"),
+    metrics_list = c("pe_ttm", "mc")
+  )
+  expect_s3_class(result, "tbl_df")
+}) 

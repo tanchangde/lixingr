@@ -34,6 +34,7 @@
 \alias{lxr_cn_company_fundamental_bank}
 \alias{lxr_cn_company_fundamental_security}
 \alias{lxr_cn_company_fundamental_insurance}
+\alias{lxr_cn_company_fundamental_other_financial}
 \title{China Mainland company API endpoints}
 \usage{
 lxr_cn_company()
@@ -101,6 +102,8 @@ lxr_cn_company_fundamental_bank()
 lxr_cn_company_fundamental_security()
 
 lxr_cn_company_fundamental_insurance()
+
+lxr_cn_company_fundamental_other_financial()
 }
 \value{
 A string of the API endpoint.
@@ -155,5 +158,7 @@ PE, PB, etc.
 securities, such as PE, PB, etc.
 \item \code{lxr_cn_company_fundamental_insurance()} gets fundamental data for
 insurance company, such as PE, PB, etc.
+\item \code{lxr_cn_company_fundamental_other_financial()} gets fundamental data for
+other financial companies, such as PE, PB, etc.
 }
 }
