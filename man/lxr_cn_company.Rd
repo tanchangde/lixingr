@@ -32,6 +32,7 @@
 \alias{lxr_cn_company_suppliers}
 \alias{lxr_cn_company_fundamental_non_financial}
 \alias{lxr_cn_company_fundamental_bank}
+\alias{lxr_cn_company_fundamental_security}
 \title{China Mainland company API endpoints}
 \usage{
 lxr_cn_company()
@@ -95,6 +96,8 @@ lxr_cn_company_suppliers()
 lxr_cn_company_fundamental_non_financial()
 
 lxr_cn_company_fundamental_bank()
+
+lxr_cn_company_fundamental_security()
 }
 \value{
 A string of the API endpoint.
@@ -145,5 +148,7 @@ shareholding information.
 non-financial companies, such as PE, PB, etc.
 \item \code{lxr_cn_company_fundamental_bank()} gets fundamental data for bank, such as
 PE, PB, etc.
+\item \code{lxr_cn_company_fundamental_security()} gets fundamental data for
+securities, such as PE, PB, etc.
 }
 }
