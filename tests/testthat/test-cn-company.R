@@ -98,6 +98,42 @@ test_that("test cn_company_fs_non_financial", {
   expect_s3_class(result, "tbl_df")
 })
 
+test_that("test cn_company_fs_bank", {
+  result <- lxr_query(
+    endpoint = lxr_cn_company_fs_bank(),
+    date = "2023-09-30", stock_codes = c("600016", "601398"),
+    metrics_list = c("q.ps.oi.t")
+  )
+  expect_s3_class(result, "tbl_df")
+})
+
+test_that("test cn_company_fs_security", {
+  result <- lxr_query(
+    endpoint = lxr_cn_company_fs_security(),
+    date = "2023-09-30", stock_codes = "600030",
+    metrics_list = c("q.ps.oi.t")
+  )
+  expect_s3_class(result, "tbl_df")
+})
+
+test_that("test cn_company_fs_insurance", {
+  result <- lxr_query(
+    endpoint = lxr_cn_company_fs_insurance(),
+    date = "2023-09-30", stock_codes = "601318",
+    metrics_list = c("q.ps.oi.t")
+  )
+  expect_s3_class(result, "tbl_df")
+})
+
+test_that("test cn_company_fs_other_financial", {
+  result <- lxr_query(
+    endpoint = lxr_cn_company_fs_other_financial(),
+    date = "2023-09-30", stock_codes = "600901",
+    metrics_list = c("q.ps.oi.t")
+  )
+  expect_s3_class(result, "tbl_df")
+})
+
 test_that("test cn_company_indices", {
   result <- lxr_query(
     endpoint = lxr_cn_company_indices(),
