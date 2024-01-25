@@ -48,16 +48,6 @@
 #'   endpoint = lxr_cn_company(),
 #'   stock_codes = c("300750", "600519", "600157"))
 #'
-#' @importFrom jsonlite unbox
-#' @importFrom httr2 request req_timeout req_retry req_headers req_body_json
-#'   req_perform resp_body_json
-#' @importFrom magrittr "%>%"
-#' @importFrom rlang list2
-#' @importFrom purrr imap discard map_chr
-#' @importFrom stringr str_sub str_replace_all
-#' @importFrom usethis ui_stop
-#' @importFrom glue glue
-#'
 #' @export
 lxr_query <- function(
     endpoint, token = Sys.getenv("TOKEN_LIXINGER"),

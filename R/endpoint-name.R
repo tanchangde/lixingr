@@ -6,8 +6,6 @@
 #'
 #' @param endpoint A string of the Lixinger endpoint URL.
 #' @return A string of the endpoint name.
-#'
-#' @importFrom magrittr extract2
 lxr_endpoint_name <- function(endpoint) {
   endpoint_name <- stringr::str_match(endpoint, "api/(.*$)") %>%
     magrittr::extract2(2) %>%
