@@ -46,7 +46,8 @@
 #' # Retrieve information for specific stocks
 #' lxr_query(
 #'   endpoint = lxr_cn_company(),
-#'   stock_codes = c("300750", "600519", "600157"))
+#'   stock_codes = c("300750", "600519", "600157")
+#' )
 #'
 #' @export
 lxr_query <- function(
