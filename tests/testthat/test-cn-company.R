@@ -286,4 +286,13 @@ test_that("test cn_company_fundamental_other_financial", {
     metrics_list = c("pe_ttm", "mc")
   )
   expect_s3_class(result, "tbl_df")
-}) 
+})
+
+test_that("test cn_company_hot_tr_dri", {
+  result <- lxr_query(
+    endpoint = lxr_cn_company_hot_tr_dri(),
+    stock_codes = c("300750", "600519", "600157")
+  )
+  expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
+})

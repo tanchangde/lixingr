@@ -52,6 +52,7 @@
 #'   insurance company, such as PE, PB, etc.
 #' * `lxr_cn_company_fundamental_other_financial()` gets fundamental data for
 #'   other financial companies, such as PE, PB, etc.
+#' * `lxr_cn_company_hot_tr_dri()` gets dividend reinvestment yield data.
 #'
 #' @return A string of the API endpoint.
 #' @rdname lxr_cn_company
@@ -256,4 +257,10 @@ lxr_cn_company_fs_insurance <- function() {
 #' @export
 lxr_cn_company_fs_other_financial <- function() {
   "https://open.lixinger.com/api/cn/company/fs/other_financial"
+}
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_hot_tr_dri <- function() {
+  "https://open.lixinger.com/api/cn/company/hot/tr_dri"
 }
