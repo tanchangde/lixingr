@@ -12,11 +12,6 @@
 \alias{lxr_cn_company_operating_data}
 \alias{lxr_cn_company_dividend}
 \alias{lxr_cn_company_allotment}
-\alias{lxr_cn_company_fs_non_financial}
-\alias{lxr_cn_company_fs_bank}
-\alias{lxr_cn_company_fs_security}
-\alias{lxr_cn_company_fs_insurance}
-\alias{lxr_cn_company_fs_other_financial}
 \alias{lxr_cn_company_indices}
 \alias{lxr_cn_company_industries}
 \alias{lxr_cn_company_fundamental_statistics}
@@ -35,6 +30,11 @@
 \alias{lxr_cn_company_fundamental_security}
 \alias{lxr_cn_company_fundamental_insurance}
 \alias{lxr_cn_company_fundamental_other_financial}
+\alias{lxr_cn_company_fs_non_financial}
+\alias{lxr_cn_company_fs_bank}
+\alias{lxr_cn_company_fs_security}
+\alias{lxr_cn_company_fs_insurance}
+\alias{lxr_cn_company_fs_other_financial}
 \title{China Mainland company API endpoints}
 \usage{
 lxr_cn_company()
@@ -58,16 +58,6 @@ lxr_cn_company_operating_data()
 lxr_cn_company_dividend()
 
 lxr_cn_company_allotment()
-
-lxr_cn_company_fs_non_financial()
-
-lxr_cn_company_fs_bank()
-
-lxr_cn_company_fs_security()
-
-lxr_cn_company_fs_insurance()
-
-lxr_cn_company_fs_other_financial()
 
 lxr_cn_company_indices()
 
@@ -104,6 +94,16 @@ lxr_cn_company_fundamental_security()
 lxr_cn_company_fundamental_insurance()
 
 lxr_cn_company_fundamental_other_financial()
+
+lxr_cn_company_fs_non_financial()
+
+lxr_cn_company_fs_bank()
+
+lxr_cn_company_fs_security()
+
+lxr_cn_company_fs_insurance()
+
+lxr_cn_company_fs_other_financial()
 }
 \value{
 A string of the API endpoint.

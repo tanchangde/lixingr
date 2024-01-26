@@ -42,13 +42,13 @@
 #' * `lxr_cn_company_allotment()` gets allotment information.
 #' * `lxr_cn_company_customers()` gets customer information.
 #' * `lxr_cn_company_suppliers()` gets supplier information.
-#' * `lxr_cn_company_fundamental_non_financial()` gets fundamental data for 
+#' * `lxr_cn_company_fundamental_non_financial()` gets fundamental data for
 #'   non-financial companies, such as PE, PB, etc.
 #' * `lxr_cn_company_fundamental_bank()` gets fundamental data for bank, such as
 #'   PE, PB, etc.
-#' * `lxr_cn_company_fundamental_security()` gets fundamental data for 
+#' * `lxr_cn_company_fundamental_security()` gets fundamental data for
 #'   securities, such as PE, PB, etc.
-#' * `lxr_cn_company_fundamental_insurance()` gets fundamental data for 
+#' * `lxr_cn_company_fundamental_insurance()` gets fundamental data for
 #'   insurance company, such as PE, PB, etc.
 #' * `lxr_cn_company_fundamental_other_financial()` gets fundamental data for
 #'   other financial companies, such as PE, PB, etc.
@@ -118,36 +118,6 @@ lxr_cn_company_dividend <- function() {
 #' @export
 lxr_cn_company_allotment <- function() {
   "https://open.lixinger.com/api/cn/company/allotment"
-}
-
-#' @rdname lxr_cn_company
-#' @export
-lxr_cn_company_fs_non_financial <- function() {
-  "https://open.lixinger.com/api/cn/company/fs/non_financial"
-}
-
-#' @rdname lxr_cn_company
-#' @export
-lxr_cn_company_fs_bank <- function() {
-  "https://open.lixinger.com/api/cn/company/fs/bank"
-}
-
-#' @rdname lxr_cn_company
-#' @export
-lxr_cn_company_fs_security <- function() {
-  "https://open.lixinger.com/api/cn/company/fs/security"
-}
-
-#' @rdname lxr_cn_company
-#' @export
-lxr_cn_company_fs_insurance <- function() {
-  "https://open.lixinger.com/api/cn/company/fs/insurance"
-}
-
-#' @rdname lxr_cn_company
-#' @export
-lxr_cn_company_fs_other_financial <- function() {
-  "https://open.lixinger.com/api/cn/company/fs/other_financial"
 }
 
 #' @rdname lxr_cn_company
@@ -256,4 +226,34 @@ lxr_cn_company_fundamental_insurance <- function() {
 #' @export
 lxr_cn_company_fundamental_other_financial <- function() {
   "https://open.lixinger.com/api/cn/company/fundamental/other_financial"
+}
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_fs_non_financial <- function() {
+  "https://open.lixinger.com/api/cn/company/fs/non_financial"
+}
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_fs_bank <- function() {
+  "https://open.lixinger.com/api/cn/company/fs/bank"
+}
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_fs_security <- function() {
+  "https://open.lixinger.com/api/cn/company/fs/security"
+}
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_fs_insurance <- function() {
+  "https://open.lixinger.com/api/cn/company/fs/insurance"
+}
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_fs_other_financial <- function() {
+  "https://open.lixinger.com/api/cn/company/fs/other_financial"
 }
