@@ -59,6 +59,8 @@
 #'   included in the calculation is the circulating A-shares.
 #' * `lxr_cn_company_hot_shnc()` obtaining data on changes in the number of
 #'   shareholders.
+#' * `lxr_cn_company_hot_esc()` get executive share trading data, calculated as
+#'   part of the circulating A-shares.
 #'
 #' @return A string of the API endpoint.
 #' @rdname lxr_cn_company
@@ -287,4 +289,10 @@ lxr_cn_company_hot_mtasl <- function() {
 #' @export
 lxr_cn_company_hot_shnc <- function() {
   "https://open.lixinger.com/api/cn/company/hot/shnc"
+}
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_hot_esc <- function() {
+  "https://open.lixinger.com/api/cn/company/hot/esc"
 }
