@@ -68,6 +68,7 @@
 #'   data.
 #'
 #' @return A string of the API endpoint.
+
 #' @rdname lxr_cn_company
 #' @export
 lxr_cn_company <- function() {
