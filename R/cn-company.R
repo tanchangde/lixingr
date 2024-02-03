@@ -55,6 +55,8 @@
 #' * `lxr_cn_company_hot_tr_dri()` gets dividend reinvestment yield data.
 #' * `lxr_cn_company_hot_mm_ha()` gets interconnection data, with the capital
 #'   included in the calculation being circulating A-shares.
+#' * `lxr_cn_company_hot_mtasl()` get margin trading data, the capital stock
+#'   included in the calculation is the circulating A-shares.
 #'
 #' @return A string of the API endpoint.
 #' @rdname lxr_cn_company
@@ -271,4 +273,10 @@ lxr_cn_company_hot_tr_dri <- function() {
 #' @export
 lxr_cn_company_hot_mm_ha <- function() {
   "https://open.lixinger.com/api/cn/company/hot/mm_ha"
+}
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_hot_mtasl <- function() {
+  "https://open.lixinger.com/api/cn/company/hot/mtasl"
 }

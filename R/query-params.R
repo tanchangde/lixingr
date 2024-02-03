@@ -100,6 +100,9 @@ lxr_query_params <- function(endpoint) {
     ),
     cn_company_hot_mm_ha = list(
       valid_params = "stockCodes", required_params = "stockCodes"
+    ),
+    cn_company_hot_mtasl = list(
+      valid_params = "stockCodes", required_params = "stockCodes"
     )
   )
 }
