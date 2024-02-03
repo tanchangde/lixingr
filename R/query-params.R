@@ -148,6 +148,7 @@ lxr_query_params <- function(endpoint) {
     hk_company_fundamental_statistics = list(
       valid_params = c("stockCodes", "granularity", "metricsList"),
       required_params = c("stockCodes", "granularity", "metricsList")
-    )
+    ),
+    hk_company_announcement = common_params
   )
 }

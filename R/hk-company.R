@@ -20,6 +20,7 @@
 #'   belongs to.
 #' * `lxr_hk_company_fundamental_statistics()` get fundamental analysis
 #'   statistical data.
+#' * `lxr_hk_company_announcement()` get the announcement information.
 #'
 #' @return A string of the API endpoint.
 
@@ -75,4 +76,10 @@ lxr_hk_company_industries <- function() {
 #' @export
 lxr_hk_company_fundamental_statistics <- function() {
   "https://open.lixinger.com/api/hk/company/fundamental-statistics"
+}
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_announcement <- function() {
+  "https://open.lixinger.com/api/hk/company/announcement"
 }
