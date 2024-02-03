@@ -13,6 +13,8 @@
 #'   capital as the total of H shares.
 #' * `lxr_hk_company_short_selling()` retrieve short-selling data, with the
 #'   capital stock calculated being the total H shares.
+#' * `lxr_hk_company_operation_revenue_constitution()` obtain revenue
+#'   composition data.
 #'
 #' @return A string of the API endpoint.
 
@@ -44,4 +46,10 @@ lxr_hk_company_repurchase <- function() {
 #' @export
 lxr_hk_company_short_selling <- function() {
   "https://open.lixinger.com/api/hk/company/short-selling"
+}
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_operation_revenue_constitution <- function() {
+  "https://open.lixinger.com/api/hk/company/operation-revenue-constitution"
 }
