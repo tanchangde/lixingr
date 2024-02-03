@@ -63,6 +63,7 @@
 #'   part of the circulating A-shares.
 #' * `lxr_cn_company_hot_elr()` get restricted stock release data.
 #' * `lxr_cn_company_hot_ple()` get equity pledge data.
+#' * `lxr_cn_company_hot_df()` get dividend financing data.
 #'
 #' @return A string of the API endpoint.
 #' @rdname lxr_cn_company
@@ -309,4 +310,10 @@ lxr_cn_company_hot_elr <- function() {
 #' @export
 lxr_cn_company_hot_ple <- function() {
   "https://open.lixinger.com/api/cn/company/hot/ple"
+}
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_hot_df <- function() {
+  "https://open.lixinger.com/api/cn/company/hot/df"
 }
