@@ -152,6 +152,7 @@ lxr_query_params <- function(endpoint) {
     hk_company_announcement = common_params,
     hk_company_fund_shareholders = common_params,
     hk_company_fund_collection_shareholders = common_params,
-    hk_company_dividend = common_params
+    hk_company_dividend = common_params,
+    hk_company_split = common_params
   )
 }
