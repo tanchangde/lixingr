@@ -2,12 +2,12 @@
 % Please edit documentation in R/query-params.R
 \name{lxr_query_params}
 \alias{lxr_query_params}
-\title{Generate query parameters for Lixinger API}
+\title{Generate query parameters for lixinger API}
 \usage{
 lxr_query_params(endpoint)
 }
 \arguments{
-\item{endpoint}{A function representing the Lixinger API.}
+\item{endpoint}{A function representing the lixinger API.}
 }
 \value{
 A list containing two elements: 'valid_params' and 'required_params'.
@@ -17,7 +17,7 @@ the names of the required parameters for the API.
 }
 \description{
 This function generates a list of valid and required parameters for the
-specified Lixinger API. The parameters are determined based on the API
+specified lixinger API. The parameters are determined based on the API
 function.
 }
 \examples{

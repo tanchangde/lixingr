@@ -1,4 +1,4 @@
-#' China Hong Kong company API endpoints
+#' Hong Kong company API endpoints
 #'
 #' @description
 #' These functions return the API endpoints for different aspects of a China

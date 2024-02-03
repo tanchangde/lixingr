@@ -1,4 +1,4 @@
-#' Check Query Parameters
+#' Check query parameters
 #'
 #' This function checks if the provided query parameters are valid and complete.
 #' It compares the names of the query parameters with the valid and required

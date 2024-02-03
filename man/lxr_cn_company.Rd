@@ -44,7 +44,7 @@
 \alias{lxr_cn_company_hot_ple}
 \alias{lxr_cn_company_hot_df}
 \alias{lxr_cn_company_margin_trading_and_securities_lending}
-\title{China Mainland company API endpoints}
+\title{China mainland company API endpoints}
 \usage{
 lxr_cn_company()
 

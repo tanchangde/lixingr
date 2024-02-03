@@ -2,7 +2,7 @@
 % Please edit documentation in R/unnest.R
 \name{lxr_unnest}
 \alias{lxr_unnest}
-\title{Unnest Dataframes in List Columns}
+\title{Unnest dataframes in list columns}
 \usage{
 lxr_unnest(df)
 }

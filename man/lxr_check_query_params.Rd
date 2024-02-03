@@ -2,7 +2,7 @@
 % Please edit documentation in R/check-query-params.R
 \name{lxr_check_query_params}
 \alias{lxr_check_query_params}
-\title{Check Query Parameters}
+\title{Check query parameters}
 \usage{
 lxr_check_query_params(
   query_params,

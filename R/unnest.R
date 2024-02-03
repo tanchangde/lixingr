@@ -1,4 +1,4 @@
-#' Unnest Dataframes in List Columns
+#' Unnest dataframes in list columns
 #'
 #' @description Unnest a dataframe with list columns, where the list columns
 #'   contain nested dataframes.

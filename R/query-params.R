@@ -1,10 +1,10 @@
-#' Generate query parameters for Lixinger API
+#' Generate query parameters for lixinger API
 #'
 #' This function generates a list of valid and required parameters for the
-#' specified Lixinger API. The parameters are determined based on the API
+#' specified lixinger API. The parameters are determined based on the API
 #' function.
 #'
-#' @param endpoint A function representing the Lixinger API.
+#' @param endpoint A function representing the lixinger API.
 #'
 #' @return A list containing two elements: 'valid_params' and 'required_params'.
 #' 'valid_params' is a vector of strings representing the names of the valid

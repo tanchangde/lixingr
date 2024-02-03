@@ -1,4 +1,4 @@
-#' China Mainland company API endpoints
+#' China mainland company API endpoints
 #'
 #' @description
 #' These functions return the API endpoints for different aspects of a Mainland

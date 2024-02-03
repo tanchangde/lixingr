@@ -11,7 +11,7 @@
 \alias{lxr_hk_company_industries}
 \alias{lxr_hk_company_fundamental_statistics}
 \alias{lxr_hk_company_announcement}
-\title{China Hong Kong company API endpoints}
+\title{Hong Kong company API endpoints}
 \usage{
 lxr_hk_company()
 

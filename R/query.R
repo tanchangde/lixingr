@@ -1,15 +1,15 @@
-#' Perform Lixinger API Query
+#' Perform lixinger API query
 #'
-#' Sends a request to the Lixinger API to retrieve financial data.
+#' Sends a request to the lixinger API to retrieve financial data.
 #'
 #' @details
-#' The function constructs an HTTP request to the specified Lixinger API
+#' The function constructs an HTTP request to the specified lixinger API
 #' endpoint. It validates the query parameters against the parameters
 #' defined in 'lxr_query_params'. It supports automatic retries and
 #' timeout settings. The function also handles the conversion of
 #' additional query parameters to the required JSON format.
 #'
-#' @param endpoint endpoint URL for the Lixinger API.
+#' @param endpoint endpoint URL for the lixinger API.
 #' @param token API authentication token. If not provided, the function will
 #'   attempt to use the 'TOKEN_LIXINGER' environment variable.
 #' @param flatten Logical flag indicating whether to return the API response as
@@ -27,12 +27,12 @@
 #'   For example, both 'stock_codes' and 'stockCodes' are acceptable.
 #'
 #' @return If `flatten` is `TRUE` (default), the function returns a flattened
-#'   data frame containing the Lixinger API response data. If `flatten` is
+#'   data frame containing the lixinger API response data. If `flatten` is
 #'   `FALSE`, the function returns the raw JSON response.
 #'
 #' @references
-#' For more detailed information about the parameters and usage of the Lixinger
-#' API that this function interfaces with, please visit the Lixinger
+#' For more detailed information about the parameters and usage of the lixinger
+#' API that this function interfaces with, please visit the lixinger
 #' [API documentation](https://www.lixinger.com/open/api/).
 #'
 #' @examples

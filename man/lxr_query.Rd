@@ -2,7 +2,7 @@
 % Please edit documentation in R/query.R
 \name{lxr_query}
 \alias{lxr_query}
-\title{Perform Lixinger API Query}
+\title{Perform lixinger API query}
 \usage{
 lxr_query(
   endpoint,
@@ -14,7 +14,7 @@ lxr_query(
 )
 }
 \arguments{
-\item{endpoint}{endpoint URL for the Lixinger API.}
+\item{endpoint}{endpoint URL for the lixinger API.}
 
 \item{token}{API authentication token. If not provided, the function will
 attempt to use the 'TOKEN_LIXINGER' environment variable.}
@@ -38,14 +38,14 @@ For example, both 'stock_codes' and 'stockCodes' are acceptable.}
 }
 \value{
 If \code{flatten} is \code{TRUE} (default), the function returns a flattened
-data frame containing the Lixinger API response data. If \code{flatten} is
+data frame containing the lixinger API response data. If \code{flatten} is
 \code{FALSE}, the function returns the raw JSON response.
 }
 \description{
-Sends a request to the Lixinger API to retrieve financial data.
+Sends a request to the lixinger API to retrieve financial data.
 }
 \details{
-The function constructs an HTTP request to the specified Lixinger API
+The function constructs an HTTP request to the specified lixinger API
 endpoint. It validates the query parameters against the parameters
 defined in 'lxr_query_params'. It supports automatic retries and
 timeout settings. The function also handles the conversion of
@@ -67,7 +67,7 @@ lxr_query(
 
 }
 \references{
-For more detailed information about the parameters and usage of the Lixinger
-API that this function interfaces with, please visit the Lixinger
+For more detailed information about the parameters and usage of the lixinger
+API that this function interfaces with, please visit the lixinger
 \href{https://www.lixinger.com/open/api/}{API documentation}.
 }
