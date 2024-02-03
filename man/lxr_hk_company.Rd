@@ -8,6 +8,8 @@
 \alias{lxr_hk_company_short_selling}
 \alias{lxr_hk_company_operation_revenue_constitution}
 \alias{lxr_hk_company_indices}
+\alias{lxr_hk_company_industries}
+\alias{lxr_hk_company_fundamental_statistics}
 \title{China Hong Kong company API endpoints}
 \usage{
 lxr_hk_company()
@@ -23,6 +25,10 @@ lxr_hk_company_short_selling()
 lxr_hk_company_operation_revenue_constitution()
 
 lxr_hk_company_indices()
+
+lxr_hk_company_industries()
+
+lxr_hk_company_fundamental_statistics()
 }
 \value{
 A string of the API endpoint.
@@ -43,5 +49,9 @@ capital stock calculated being the total H shares.
 \item \code{lxr_hk_company_operation_revenue_constitution()} obtain revenue
 composition data.
 \item \code{lxr_hk_company_indices()} get information on the stock index it belongs to.
+\item \code{lxr_hk_company_industries()} get information on the industry the stock
+belongs to.
+\item \code{lxr_hk_company_fundamental_statistics()} get fundamental analysis
+statistical data.
 }
 }

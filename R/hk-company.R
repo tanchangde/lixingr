@@ -18,6 +18,8 @@
 #' * `lxr_hk_company_indices()` get information on the stock index it belongs to.
 #' * `lxr_hk_company_industries()` get information on the industry the stock
 #'   belongs to.
+#' * `lxr_hk_company_fundamental_statistics()` get fundamental analysis
+#'   statistical data.
 #'
 #' @return A string of the API endpoint.
 
@@ -67,4 +69,10 @@ lxr_hk_company_indices <- function() {
 #' @export
 lxr_hk_company_industries <- function() {
   "https://open.lixinger.com/api/hk/company/industries"
+}
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_fundamental_statistics <- function() {
+  "https://open.lixinger.com/api/hk/company/fundamental-statistics"
 }
