@@ -13,6 +13,7 @@
 \alias{lxr_hk_company_announcement}
 \alias{lxr_hk_company_fund_shareholders}
 \alias{lxr_hk_company_fund_collection_shareholders}
+\alias{lxr_hk_company_dividend}
 \title{Hong Kong company API endpoints}
 \usage{
 lxr_hk_company()
@@ -38,6 +39,8 @@ lxr_hk_company_announcement()
 lxr_hk_company_fund_shareholders()
 
 lxr_hk_company_fund_collection_shareholders()
+
+lxr_hk_company_dividend()
 }
 \value{
 A string of the API endpoint.
@@ -67,5 +70,6 @@ statistical data.
 holdings.
 \item \code{lxr_hk_company_fund_collection_shareholders()} obtain the shareholding
 information of domestic fund companies."
+\item \code{lxr_hk_company_dividend()} get dividend information.
 }
 }

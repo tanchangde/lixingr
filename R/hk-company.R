@@ -25,6 +25,7 @@
 #'   holdings.
 #' * `lxr_hk_company_fund_collection_shareholders()` obtain the shareholding
 #'   information of domestic fund companies."
+#' * `lxr_hk_company_dividend()` get dividend information.
 #'
 #' @return A string of the API endpoint.
 
@@ -100,3 +101,8 @@ lxr_hk_company_fund_collection_shareholders <- function() {
   "https://open.lixinger.com/api/hk/company/fund-collection-shareholders"
 }
 
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_dividend <- function() {
+  "https://open.lixinger.com/api/hk/company/dividend"
+}
