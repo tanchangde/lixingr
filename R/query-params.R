@@ -109,6 +109,9 @@ lxr_query_params <- function(endpoint) {
     ),
     cn_company_hot_esc = list(
       valid_params = "stockCodes", required_params = "stockCodes"
+    ),
+    cn_company_hot_elr = list(
+      valid_params = "stockCodes", required_params = "stockCodes"
     )
   )
 }

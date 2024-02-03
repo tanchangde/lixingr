@@ -61,6 +61,7 @@
 #'   shareholders.
 #' * `lxr_cn_company_hot_esc()` get executive share trading data, calculated as
 #'   part of the circulating A-shares.
+#' * `lxr_cn_company_hot_elr()` get restricted stock release data.
 #'
 #' @return A string of the API endpoint.
 #' @rdname lxr_cn_company
@@ -295,4 +296,10 @@ lxr_cn_company_hot_shnc <- function() {
 #' @export
 lxr_cn_company_hot_esc <- function() {
   "https://open.lixinger.com/api/cn/company/hot/esc"
+}
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_hot_elr <- function() {
+  "https://open.lixinger.com/api/cn/company/hot/elr"
 }
