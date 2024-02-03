@@ -27,6 +27,7 @@
 #'   information of domestic fund companies."
 #' * `lxr_hk_company_dividend()` get dividend information.
 #' * `lxr_hk_company_split()` get split data.
+#' * `lxr_hk_company_allotment()` obtain rights issue information.
 #'
 #' @return A string of the API endpoint.
 
@@ -112,4 +113,10 @@ lxr_hk_company_dividend <- function() {
 #' @export
 lxr_hk_company_split <- function() {
   "https://open.lixinger.com/api/hk/company/split"
+}
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_allotment <- function() {
+  "https://open.lixinger.com/api/hk/company/allotment"
 }

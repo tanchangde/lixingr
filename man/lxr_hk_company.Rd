@@ -15,6 +15,7 @@
 \alias{lxr_hk_company_fund_collection_shareholders}
 \alias{lxr_hk_company_dividend}
 \alias{lxr_hk_company_split}
+\alias{lxr_hk_company_allotment}
 \title{Hong Kong company API endpoints}
 \usage{
 lxr_hk_company()
@@ -44,6 +45,8 @@ lxr_hk_company_fund_collection_shareholders()
 lxr_hk_company_dividend()
 
 lxr_hk_company_split()
+
+lxr_hk_company_allotment()
 }
 \value{
 A string of the API endpoint.
@@ -75,5 +78,6 @@ holdings.
 information of domestic fund companies."
 \item \code{lxr_hk_company_dividend()} get dividend information.
 \item \code{lxr_hk_company_split()} get split data.
+\item \code{lxr_hk_company_allotment()} obtain rights issue information.
 }
 }
