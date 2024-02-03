@@ -37,6 +37,12 @@
 \alias{lxr_cn_company_fs_other_financial}
 \alias{lxr_cn_company_hot_tr_dri}
 \alias{lxr_cn_company_hot_mm_ha}
+\alias{lxr_cn_company_hot_mtasl}
+\alias{lxr_cn_company_hot_shnc}
+\alias{lxr_cn_company_hot_esc}
+\alias{lxr_cn_company_hot_elr}
+\alias{lxr_cn_company_hot_ple}
+\alias{lxr_cn_company_hot_df}
 \title{China Mainland company API endpoints}
 \usage{
 lxr_cn_company()
@@ -110,6 +116,18 @@ lxr_cn_company_fs_other_financial()
 lxr_cn_company_hot_tr_dri()
 
 lxr_cn_company_hot_mm_ha()
+
+lxr_cn_company_hot_mtasl()
+
+lxr_cn_company_hot_shnc()
+
+lxr_cn_company_hot_esc()
+
+lxr_cn_company_hot_elr()
+
+lxr_cn_company_hot_ple()
+
+lxr_cn_company_hot_df()
 }
 \value{
 A string of the API endpoint.
@@ -169,5 +187,14 @@ other financial companies, such as PE, PB, etc.
 \item \code{lxr_cn_company_hot_tr_dri()} gets dividend reinvestment yield data.
 \item \code{lxr_cn_company_hot_mm_ha()} gets interconnection data, with the capital
 included in the calculation being circulating A-shares.
+\item \code{lxr_cn_company_hot_mtasl()} get margin trading data, the capital stock
+included in the calculation is the circulating A-shares.
+\item \code{lxr_cn_company_hot_shnc()} obtaining data on changes in the number of
+shareholders.
+\item \code{lxr_cn_company_hot_esc()} get executive share trading data, calculated as
+part of the circulating A-shares.
+\item \code{lxr_cn_company_hot_elr()} get restricted stock release data.
+\item \code{lxr_cn_company_hot_ple()} get equity pledge data.
+\item \code{lxr_cn_company_hot_df()} get dividend financing data.
 }
 }
