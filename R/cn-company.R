@@ -53,6 +53,8 @@
 #' * `lxr_cn_company_fundamental_other_financial()` gets fundamental data for
 #'   other financial companies, such as PE, PB, etc.
 #' * `lxr_cn_company_hot_tr_dri()` gets dividend reinvestment yield data.
+#' * `lxr_cn_company_hot_mm_ha()` gets interconnection data, with the capital
+#'   included in the calculation being circulating A-shares.
 #'
 #' @return A string of the API endpoint.
 #' @rdname lxr_cn_company
@@ -263,4 +265,10 @@ lxr_cn_company_fs_other_financial <- function() {
 #' @export
 lxr_cn_company_hot_tr_dri <- function() {
   "https://open.lixinger.com/api/cn/company/hot/tr_dri"
+}
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_hot_mm_ha <- function() {
+  "https://open.lixinger.com/api/cn/company/hot/mm_ha"
 }

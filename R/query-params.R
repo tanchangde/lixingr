@@ -97,6 +97,9 @@ lxr_query_params <- function(endpoint) {
     cn_company_fundamental_other_financial = fundamental_params,
     cn_company_hot_tr_dri = list(
       valid_params = "stockCodes", required_params = "stockCodes"
+    ),
+    cn_company_hot_mm_ha = list(
+      valid_params = "stockCodes", required_params = "stockCodes"
     )
   )
 }

@@ -36,6 +36,7 @@
 \alias{lxr_cn_company_fs_insurance}
 \alias{lxr_cn_company_fs_other_financial}
 \alias{lxr_cn_company_hot_tr_dri}
+\alias{lxr_cn_company_hot_mm_ha}
 \title{China Mainland company API endpoints}
 \usage{
 lxr_cn_company()
@@ -107,6 +108,8 @@ lxr_cn_company_fs_insurance()
 lxr_cn_company_fs_other_financial()
 
 lxr_cn_company_hot_tr_dri()
+
+lxr_cn_company_hot_mm_ha()
 }
 \value{
 A string of the API endpoint.
@@ -164,5 +167,7 @@ insurance company, such as PE, PB, etc.
 \item \code{lxr_cn_company_fundamental_other_financial()} gets fundamental data for
 other financial companies, such as PE, PB, etc.
 \item \code{lxr_cn_company_hot_tr_dri()} gets dividend reinvestment yield data.
+\item \code{lxr_cn_company_hot_mm_ha()} gets interconnection data, with the capital
+included in the calculation being circulating A-shares.
 }
 }

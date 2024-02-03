@@ -296,3 +296,12 @@ test_that("test cn_company_hot_tr_dri", {
   expect_s3_class(result, "tbl_df")
   expect_true(nrow(result) > 0)
 })
+
+test_that("test cn_company_hot_mm_ha", {
+  result <- lxr_query(
+    endpoint = lxr_cn_company_hot_mm_ha(),
+    stock_codes = c("300750", "600519", "600157")
+  )
+  expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
+})
