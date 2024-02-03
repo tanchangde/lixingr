@@ -133,6 +133,7 @@ lxr_query_params <- function(endpoint) {
       ),
       required_params = c("type", "startDate", "stockCode")
     ),
-    hk_company_employee = common_params
+    hk_company_employee = common_params,
+    hk_company_repurchase = common_params
   )
 }

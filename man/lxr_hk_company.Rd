@@ -4,6 +4,7 @@
 \alias{lxr_hk_company}
 \alias{lxr_hk_company_candlestick}
 \alias{lxr_hk_company_employee}
+\alias{lxr_hk_company_repurchase}
 \title{China Hong Kong company API endpoints}
 \usage{
 lxr_hk_company()
@@ -11,6 +12,8 @@ lxr_hk_company()
 lxr_hk_company_candlestick()
 
 lxr_hk_company_employee()
+
+lxr_hk_company_repurchase()
 }
 \value{
 A string of the API endpoint.
@@ -24,5 +27,7 @@ Hong Kong company.
 calculation is only applied to the prices for the selected time period;
 trading volume is not adjusted for ex-rights.
 \item \code{lxr_hk_company_employee()} obtain employee data.
+\item \code{lxr_hk_company_repurchase()} obtain repurchase data. Calculate the share
+capital as the total of H shares.
 }
 }

@@ -9,6 +9,8 @@
 #'   calculation is only applied to the prices for the selected time period;
 #'   trading volume is not adjusted for ex-rights.
 #' * `lxr_hk_company_employee()` obtain employee data.
+#' * `lxr_hk_company_repurchase()` obtain repurchase data. Calculate the share
+#'   capital as the total of H shares.
 #'
 #' @return A string of the API endpoint.
 
@@ -28,4 +30,10 @@ lxr_hk_company_candlestick <- function() {
 #' @export
 lxr_hk_company_employee <- function() {
   "https://open.lixinger.com/api/hk/company/employee"
+}
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_repurchase <- function() {
+  "https://open.lixinger.com/api/hk/company/repurchase"
 }
