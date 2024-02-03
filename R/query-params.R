@@ -140,6 +140,10 @@ lxr_query_params <- function(endpoint) {
     hk_company_indices = list(
       valid_params = c("stockCode", "date"),
       required_params = c("stockCode")
+    ),
+    hk_company_industries = list(
+      valid_params = c("stockCode", "date"),
+      required_params = c("stockCode")
     )
   )
 }

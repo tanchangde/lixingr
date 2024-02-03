@@ -16,6 +16,8 @@
 #' * `lxr_hk_company_operation_revenue_constitution()` obtain revenue
 #'   composition data.
 #' * `lxr_hk_company_indices()` get information on the stock index it belongs to.
+#' * `lxr_hk_company_industries()` get information on the industry the stock
+#'   belongs to.
 #'
 #' @return A string of the API endpoint.
 
@@ -59,4 +61,10 @@ lxr_hk_company_operation_revenue_constitution <- function() {
 #' @export
 lxr_hk_company_indices <- function() {
   "https://open.lixinger.com/api/hk/company/indices"
+}
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_industries <- function() {
+  "https://open.lixinger.com/api/hk/company/industries"
 }
