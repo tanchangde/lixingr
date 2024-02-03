@@ -21,6 +21,8 @@
 #' * `lxr_hk_company_fundamental_statistics()` get fundamental analysis
 #'   statistical data.
 #' * `lxr_hk_company_announcement()` get the announcement information.
+#' * `lxr_hk_company_fund_shareholders()` obtain information on domestic fund
+#'   holdings.
 #'
 #' @return A string of the API endpoint.
 
@@ -82,4 +84,10 @@ lxr_hk_company_fundamental_statistics <- function() {
 #' @export
 lxr_hk_company_announcement <- function() {
   "https://open.lixinger.com/api/hk/company/announcement"
+}
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_fund_shareholders <- function() {
+  "https://open.lixinger.com/api/hk/company/fund-shareholders"
 }

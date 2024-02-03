@@ -11,6 +11,7 @@
 \alias{lxr_hk_company_industries}
 \alias{lxr_hk_company_fundamental_statistics}
 \alias{lxr_hk_company_announcement}
+\alias{lxr_hk_company_fund_shareholders}
 \title{Hong Kong company API endpoints}
 \usage{
 lxr_hk_company()
@@ -32,6 +33,8 @@ lxr_hk_company_industries()
 lxr_hk_company_fundamental_statistics()
 
 lxr_hk_company_announcement()
+
+lxr_hk_company_fund_shareholders()
 }
 \value{
 A string of the API endpoint.
@@ -57,5 +60,7 @@ belongs to.
 \item \code{lxr_hk_company_fundamental_statistics()} get fundamental analysis
 statistical data.
 \item \code{lxr_hk_company_announcement()} get the announcement information.
+\item \code{lxr_hk_company_fund_shareholders()} obtain information on domestic fund
+holdings.
 }
 }
