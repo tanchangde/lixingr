@@ -64,6 +64,8 @@
 #' * `lxr_cn_company_hot_elr()` get restricted stock release data.
 #' * `lxr_cn_company_hot_ple()` get equity pledge data.
 #' * `lxr_cn_company_hot_df()` get dividend financing data.
+#' * `lxr_cn_company_margin_trading_and_securities_lending()` get margin trading
+#'   data.
 #'
 #' @return A string of the API endpoint.
 #' @rdname lxr_cn_company
@@ -316,4 +318,10 @@ lxr_cn_company_hot_ple <- function() {
 #' @export
 lxr_cn_company_hot_df <- function() {
   "https://open.lixinger.com/api/cn/company/hot/df"
+}
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_margin_trading_and_securities_lending <- function() {
+  "https://open.lixinger.com/api/cn/company/margin-trading-and-securities-lending"
 }

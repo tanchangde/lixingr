@@ -359,3 +359,12 @@ test_that("test cn_company_hot_df", {
   expect_s3_class(result, "tbl_df")
   expect_true(nrow(result) > 0)
 })
+
+test_that("test cn_company_margin_trading_and_securities_lending", {
+  result <- lxr_query(
+    endpoint = lxr_cn_company_margin_trading_and_securities_lending(),
+    start_date = "2022-10-01", end_date = "2024-02-03", stock_code = "603259"
+  )
+  expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
+})

@@ -43,6 +43,7 @@
 \alias{lxr_cn_company_hot_elr}
 \alias{lxr_cn_company_hot_ple}
 \alias{lxr_cn_company_hot_df}
+\alias{lxr_cn_company_margin_trading_and_securities_lending}
 \title{China Mainland company API endpoints}
 \usage{
 lxr_cn_company()
@@ -128,6 +129,8 @@ lxr_cn_company_hot_elr()
 lxr_cn_company_hot_ple()
 
 lxr_cn_company_hot_df()
+
+lxr_cn_company_margin_trading_and_securities_lending()
 }
 \value{
 A string of the API endpoint.
@@ -196,5 +199,7 @@ part of the circulating A-shares.
 \item \code{lxr_cn_company_hot_elr()} get restricted stock release data.
 \item \code{lxr_cn_company_hot_ple()} get equity pledge data.
 \item \code{lxr_cn_company_hot_df()} get dividend financing data.
+\item \code{lxr_cn_company_margin_trading_and_securities_lending()} get margin trading
+data.
 }
 }

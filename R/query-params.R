@@ -118,6 +118,7 @@ lxr_query_params <- function(endpoint) {
     ),
     cn_company_hot_df = list(
       valid_params = "stockCodes", required_params = "stockCodes"
-    )
+    ),
+    cn_company_margin_trading_and_securities_lending = common_params
   )
 }
