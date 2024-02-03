@@ -57,6 +57,8 @@
 #'   included in the calculation being circulating A-shares.
 #' * `lxr_cn_company_hot_mtasl()` get margin trading data, the capital stock
 #'   included in the calculation is the circulating A-shares.
+#' * `lxr_cn_company_hot_shnc()` obtaining data on changes in the number of
+#'   shareholders.
 #'
 #' @return A string of the API endpoint.
 #' @rdname lxr_cn_company
@@ -279,4 +281,10 @@ lxr_cn_company_hot_mm_ha <- function() {
 #' @export
 lxr_cn_company_hot_mtasl <- function() {
   "https://open.lixinger.com/api/cn/company/hot/mtasl"
+}
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_hot_shnc <- function() {
+  "https://open.lixinger.com/api/cn/company/hot/shnc"
 }
