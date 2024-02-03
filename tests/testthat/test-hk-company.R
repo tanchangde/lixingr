@@ -62,3 +62,12 @@ test_that("test hk_company_operation_revenue_constitution", {
   expect_s3_class(result, "tbl_df")
   expect_true(nrow(result) > 0)
 })
+
+test_that("test hk_company_indices", {
+  result <- lxr_query(
+    endpoint = lxr_hk_company_indices(),
+    stock_code = "00700"
+  )
+  expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
+})

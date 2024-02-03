@@ -7,6 +7,7 @@
 \alias{lxr_hk_company_repurchase}
 \alias{lxr_hk_company_short_selling}
 \alias{lxr_hk_company_operation_revenue_constitution}
+\alias{lxr_hk_company_indices}
 \title{China Hong Kong company API endpoints}
 \usage{
 lxr_hk_company()
@@ -20,6 +21,8 @@ lxr_hk_company_repurchase()
 lxr_hk_company_short_selling()
 
 lxr_hk_company_operation_revenue_constitution()
+
+lxr_hk_company_indices()
 }
 \value{
 A string of the API endpoint.
@@ -39,5 +42,6 @@ capital as the total of H shares.
 capital stock calculated being the total H shares.
 \item \code{lxr_hk_company_operation_revenue_constitution()} obtain revenue
 composition data.
+\item \code{lxr_hk_company_indices()} get information on the stock index it belongs to.
 }
 }

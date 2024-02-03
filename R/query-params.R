@@ -136,6 +136,10 @@ lxr_query_params <- function(endpoint) {
     hk_company_employee = common_params,
     hk_company_repurchase = common_params,
     hk_company_short_selling = common_params,
-    hk_company_operation_revenue_constitution = common_params
+    hk_company_operation_revenue_constitution = common_params,
+    hk_company_indices = list(
+      valid_params = c("stockCode", "date"),
+      required_params = c("stockCode")
+    )
   )
 }

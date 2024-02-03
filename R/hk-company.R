@@ -15,6 +15,7 @@
 #'   capital stock calculated being the total H shares.
 #' * `lxr_hk_company_operation_revenue_constitution()` obtain revenue
 #'   composition data.
+#' * `lxr_hk_company_indices()` get information on the stock index it belongs to.
 #'
 #' @return A string of the API endpoint.
 
@@ -52,4 +53,10 @@ lxr_hk_company_short_selling <- function() {
 #' @export
 lxr_hk_company_operation_revenue_constitution <- function() {
   "https://open.lixinger.com/api/hk/company/operation-revenue-constitution"
+}
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_indices <- function() {
+  "https://open.lixinger.com/api/hk/company/indices"
 }
