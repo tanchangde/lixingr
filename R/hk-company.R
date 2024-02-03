@@ -23,6 +23,8 @@
 #' * `lxr_hk_company_announcement()` get the announcement information.
 #' * `lxr_hk_company_fund_shareholders()` obtain information on domestic fund
 #'   holdings.
+#' * `lxr_hk_company_fund_collection_shareholders()` obtain the shareholding
+#'   information of domestic fund companies."
 #'
 #' @return A string of the API endpoint.
 
@@ -91,3 +93,10 @@ lxr_hk_company_announcement <- function() {
 lxr_hk_company_fund_shareholders <- function() {
   "https://open.lixinger.com/api/hk/company/fund-shareholders"
 }
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_fund_collection_shareholders <- function() {
+  "https://open.lixinger.com/api/hk/company/fund-collection-shareholders"
+}
+
