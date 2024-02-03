@@ -2,9 +2,15 @@
 % Please edit documentation in R/hk-company.R
 \name{lxr_hk_company}
 \alias{lxr_hk_company}
+\alias{lxr_hk_company_candlestick}
+\alias{lxr_hk_company_employee}
 \title{China Hong Kong company API endpoints}
 \usage{
 lxr_hk_company()
+
+lxr_hk_company_candlestick()
+
+lxr_hk_company_employee()
 }
 \value{
 A string of the API endpoint.
@@ -14,5 +20,9 @@ These functions return the API endpoints for different aspects of a China
 Hong Kong company.
 \itemize{
 \item \code{lxr_hk_company()} retrieve stock details.
+\item \code{lxr_hk_company_candlestick()} obtain candlestick data.The ex-rights
+calculation is only applied to the prices for the selected time period;
+trading volume is not adjusted for ex-rights.
+\item \code{lxr_hk_company_employee()} obtain employee data.
 }
 }

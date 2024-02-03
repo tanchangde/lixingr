@@ -125,6 +125,14 @@ lxr_query_params <- function(endpoint) {
         "fsType", "mutualMarkets", "stockCodes", "includeDelisted"
       ),
       required_params = NULL
-    )
+    ),
+    hk_company_candlestick = list(
+      valid_params = c(
+        "type", "startDate", "endDate", "adjustForwardDate",
+        "adjustBackwardDate", "limit", "stockCode"
+      ),
+      required_params = c("type", "startDate", "stockCode")
+    ),
+    hk_company_employee = common_params
   )
 }
