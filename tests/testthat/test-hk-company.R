@@ -40,3 +40,14 @@ test_that("test hk_company_repurchase", {
   expect_s3_class(result, "tbl_df")
   expect_true(nrow(result) > 0)
 })
+
+test_that("test hk_company_short_selling", {
+  result <- lxr_query(
+    endpoint = lxr_hk_company_short_selling(),
+    start_date = "2024-01-01",
+    end_date = "2024-02-03",
+    stock_code = "02269"
+  )
+  expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
+})

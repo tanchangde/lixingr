@@ -11,6 +11,8 @@
 #' * `lxr_hk_company_employee()` obtain employee data.
 #' * `lxr_hk_company_repurchase()` obtain repurchase data. Calculate the share
 #'   capital as the total of H shares.
+#' * `lxr_hk_company_short_selling()` retrieve short-selling data, with the
+#'   capital stock calculated being the total H shares.
 #'
 #' @return A string of the API endpoint.
 
@@ -36,4 +38,10 @@ lxr_hk_company_employee <- function() {
 #' @export
 lxr_hk_company_repurchase <- function() {
   "https://open.lixinger.com/api/hk/company/repurchase"
+}
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_short_selling <- function() {
+  "https://open.lixinger.com/api/hk/company/short-selling"
 }

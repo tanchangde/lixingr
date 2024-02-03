@@ -5,6 +5,7 @@
 \alias{lxr_hk_company_candlestick}
 \alias{lxr_hk_company_employee}
 \alias{lxr_hk_company_repurchase}
+\alias{lxr_hk_company_short_selling}
 \title{China Hong Kong company API endpoints}
 \usage{
 lxr_hk_company()
@@ -14,6 +15,8 @@ lxr_hk_company_candlestick()
 lxr_hk_company_employee()
 
 lxr_hk_company_repurchase()
+
+lxr_hk_company_short_selling()
 }
 \value{
 A string of the API endpoint.
@@ -29,5 +32,7 @@ trading volume is not adjusted for ex-rights.
 \item \code{lxr_hk_company_employee()} obtain employee data.
 \item \code{lxr_hk_company_repurchase()} obtain repurchase data. Calculate the share
 capital as the total of H shares.
+\item \code{lxr_hk_company_short_selling()} retrieve short-selling data, with the
+capital stock calculated being the total H shares.
 }
 }
