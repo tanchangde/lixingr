@@ -8,7 +8,7 @@
 coverage](https://codecov.io/gh/tanchangde/lixingr/branch/main/graph/badge.svg)](https://app.codecov.io/gh/tanchangde/lixingr?branch=main)
 <!-- badges: end -->
 
-An R language wrapper for the Lixinger API.
+An R language wrapper for the lixinger API.
 
 ## User Guide
 
@@ -27,7 +27,7 @@ devtools::install_github('tanchangde/lixingr')
 
 ### Configuration
 
-- Register and log in to Lixinger, then acquire a `Token` from the [Open
+- Register and log in to lixinger, then acquire a `Token` from the [Open
   Platform](https://www.lixinger.com/open/api/token).
 - Enter `file.edit("~/.Renviron")` in the R console, then append a new
   line to the opened file: `TOKEN_LIXINGER = "acquired Token"`, save and
@@ -53,7 +53,7 @@ devtools::install_github('tanchangde/lixingr')
 - [x] Advanced Intermediate, package into an R package.
 - [ ] Advanced, provide interactive analysis services.
 
-## Why Choose Lixinger
+## Why Choose lixinger
 
 - [Product, Code and Investment — Product
   Chapter](https://www.lixinger.com/marketing/about-us-product)
