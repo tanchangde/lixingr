@@ -24,8 +24,7 @@ lxr_query_params <- function(endpoint) {
   )
   fs_params <- list(
     valid_params = c(
-      "date", "startDate", "endDate", "limit", "stockCodes",
-      "metricsList"
+      "date", "startDate", "endDate", "limit", "stockCodes", "metricsList"
     ),
     required_params = c("stockCodes", "metricsList")
   )
@@ -159,6 +158,7 @@ lxr_query_params <- function(endpoint) {
     hk_company_fundamental_bank = fundamental_params,
     hk_company_fundamental_security = fundamental_params,
     hk_company_fundamental_insurance = fundamental_params,
-    hk_company_fundamental_reit = fundamental_params
+    hk_company_fundamental_reit = fundamental_params,
+    hk_company_fs_non_financial = fs_params
   )
 }
