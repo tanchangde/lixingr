@@ -28,6 +28,8 @@
 #' * `lxr_hk_company_dividend()` get dividend information.
 #' * `lxr_hk_company_split()` get split data.
 #' * `lxr_hk_company_allotment()` obtain rights issue information.
+#' * `lxr_hk_company_fundamental_non_financial()` gets fundamental data for
+#'   non-financial companies, such as PE, PB, etc.
 #'
 #' @return A string of the API endpoint.
 
@@ -119,4 +121,10 @@ lxr_hk_company_split <- function() {
 #' @export
 lxr_hk_company_allotment <- function() {
   "https://open.lixinger.com/api/hk/company/allotment"
+}
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_fundamental_non_financial <- function() {
+  "https://open.lixinger.com/api/hk/company/fundamental/non_financial"
 }
