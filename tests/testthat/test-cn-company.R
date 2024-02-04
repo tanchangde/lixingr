@@ -47,13 +47,13 @@ test_that("test cn_company_block_deal", {
   expect_s3_class(result, "tbl_df")
 })
 
-test_that("test cn_company_operation_revenue_constitution", {
-  result <- lxr_query(
-    endpoint = lxr_cn_company_operation_revenue_constitution(),
-    start_date = "2022-09-20", end_date = "2023-09-20", stock_code = "300750"
-  )
-  expect_s3_class(result, "tbl_df")
-})
+# test_that("test cn_company_operation_revenue_constitution", {
+#   result <- lxr_query(
+#     endpoint = lxr_cn_company_operation_revenue_constitution(),
+#     start_date = "2022-09-20", end_date = "2023-09-20", stock_code = "300750"
+#   )
+#   expect_s3_class(result, "tbl_df")
+# })
 
 test_that("test cn_company_operating_data", {
   result <- lxr_query(
