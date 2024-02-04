@@ -26,6 +26,7 @@
 \alias{lxr_hk_company_fs_security}
 \alias{lxr_hk_company_fs_insurance}
 \alias{lxr_hk_company_fs_reit}
+\alias{lxr_hk_company_fs_other_financial}
 \title{Hong Kong company API endpoints}
 \usage{
 lxr_hk_company()
@@ -77,6 +78,8 @@ lxr_hk_company_fs_security()
 lxr_hk_company_fs_insurance()
 
 lxr_hk_company_fs_reit()
+
+lxr_hk_company_fs_other_financial()
 }
 \value{
 A string of the API endpoint.
@@ -125,5 +128,7 @@ financial data.
 \item \code{lxr_hk_company_fs_security} gets security listed company financial data.
 \item \code{lxr_hk_company_fs_insurance()} get insurance company financial data.
 \item \code{lxr_hk_company_fs_reit()} obtain financial data of REITs.
+\item \code{lxr_hk_company_fs_other_financial()} gets other financial listed company
+financial data.
 }
 }

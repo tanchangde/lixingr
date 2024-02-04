@@ -44,6 +44,8 @@
 #' * `lxr_hk_company_fs_security` gets security listed company financial data.
 #' * `lxr_hk_company_fs_insurance()` get insurance company financial data.
 #' * `lxr_hk_company_fs_reit()` obtain financial data of REITs.
+#' * `lxr_hk_company_fs_other_financial()` gets other financial listed company
+#'   financial data.
 #'
 #' @return A string of the API endpoint.
 
@@ -195,4 +197,10 @@ lxr_hk_company_fs_insurance <- function() {
 #' @export
 lxr_hk_company_fs_reit <- function() {
   "https://open.lixinger.com/api/hk/company/fs/reit"
+}
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_fs_other_financial <- function() {
+  "https://open.lixinger.com/api/hk/company/fs/other_financial"
 }
