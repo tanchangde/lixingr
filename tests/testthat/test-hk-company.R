@@ -167,3 +167,14 @@ test_that("test hk_company_fundamental_non_financial", {
   )
   expect_s3_class(result, "tbl_df")
 })
+
+test_that("test hk_company_fundamental_bank", {
+  result <- lxr_query(
+    endpoint = lxr_hk_company_fundamental_non_financial(),
+    date = "2024-01-18",
+    stock_codes = "01398",
+    metrics_list = c("pe_ttm", "mc")
+  )
+  expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
+})
