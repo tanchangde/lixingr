@@ -4,6 +4,7 @@ test_that("test cn_company", {
     stock_codes = c("300750", "600519", "600157")
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_equity_change", {
@@ -12,6 +13,7 @@ test_that("test cn_company_equity_change", {
     start_date = "2022-09-20", end_date = "2023-09-20", stock_code = "300750"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_candlestick", {
@@ -21,6 +23,7 @@ test_that("test cn_company_candlestick", {
     stock_code = "300750"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_shareholders_num", {
@@ -29,6 +32,7 @@ test_that("test cn_company_shareholders_num", {
     start_date = "2022-09-20", end_date = "2023-09-20", stock_code = "300750"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_senior_executive_shares_change", {
@@ -37,6 +41,7 @@ test_that("test cn_company_senior_executive_shares_change", {
     start_date = "2021-09-20", end_date = "2023-09-20", stock_code = "300750"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_block_deal", {
@@ -45,6 +50,7 @@ test_that("test cn_company_block_deal", {
     start_date = "2022-09-20", end_date = "2023-09-20", stock_code = "300750"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_operation_revenue_constitution", {
@@ -53,6 +59,7 @@ test_that("test cn_company_operation_revenue_constitution", {
     start_date = "2022-09-20", end_date = "2023-09-20", stock_code = "300750"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_operating_data", {
@@ -61,6 +68,7 @@ test_that("test cn_company_operating_data", {
     start_date = "2022-09-20", end_date = "2023-09-20", stock_code = "600157"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_pledge", {
@@ -69,6 +77,7 @@ test_that("test cn_company_pledge", {
     start_date = "2022-09-20", end_date = "2023-09-20", stock_code = "300750"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_dividend", {
@@ -77,6 +86,7 @@ test_that("test cn_company_dividend", {
     start_date = "2023-01-11", end_date = "2024-01-11", stock_code = "300750"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("error on no data after successful query", {
@@ -96,6 +106,7 @@ test_that("test cn_company_fs_non_financial", {
     metrics_list = c("q.ps.toi.t")
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_fs_bank", {
@@ -105,6 +116,7 @@ test_that("test cn_company_fs_bank", {
     metrics_list = c("q.ps.oi.t")
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_fs_security", {
@@ -114,6 +126,7 @@ test_that("test cn_company_fs_security", {
     metrics_list = c("q.ps.oi.t")
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_fs_insurance", {
@@ -123,6 +136,7 @@ test_that("test cn_company_fs_insurance", {
     metrics_list = c("q.ps.oi.t")
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_fs_other_financial", {
@@ -132,6 +146,7 @@ test_that("test cn_company_fs_other_financial", {
     metrics_list = c("q.ps.oi.t")
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_indices", {
@@ -140,6 +155,7 @@ test_that("test cn_company_indices", {
     stock_code = "300750"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_industries", {
@@ -148,6 +164,7 @@ test_that("test cn_company_industries", {
     stock_code = "300750"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_fundamental_statistics", {
@@ -158,6 +175,7 @@ test_that("test cn_company_fundamental_statistics", {
     metrics_list = "pe_ttm"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_trading_abnormal", {
@@ -166,6 +184,7 @@ test_that("test cn_company_trading_abnormal", {
     start_date = "2014-09-20", end_date = "2023-09-20", stock_code = "300750"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_announcement", {
@@ -174,6 +193,7 @@ test_that("test cn_company_announcement", {
     start_date = "2022-09-20", end_date = "2022-09-30", stock_code = "300750"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_measures", {
@@ -182,6 +202,7 @@ test_that("test cn_company_measures", {
     start_date = "2016-01-16", end_date = "2024-01-16", stock_code = "600519"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_inquiry", {
@@ -190,6 +211,7 @@ test_that("test cn_company_inquiry", {
     start_date = "2023-01-17", end_date = "2024-01-17", stock_code = "688337"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_majority_shareholders", {
@@ -198,6 +220,7 @@ test_that("test cn_company_majority_shareholders", {
     start_date = "2023-01-17", end_date = "2024-01-17", stock_code = "300750"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_nolimit_shareholders", {
@@ -206,6 +229,7 @@ test_that("test cn_company_nolimit_shareholders", {
     start_date = "2023-01-17", end_date = "2024-01-17", stock_code = "300750"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_fund_shareholders", {
@@ -214,6 +238,7 @@ test_that("test cn_company_fund_shareholders", {
     start_date = "2023-11-01", end_date = "2024-01-17", stock_code = "300750"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_fund_collection_shareholders", {
@@ -222,6 +247,7 @@ test_that("test cn_company_fund_collection_shareholders", {
     start_date = "2023-11-01", end_date = "2024-01-17", stock_code = "300750"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_allotment", {
@@ -230,6 +256,7 @@ test_that("test cn_company_allotment", {
     start_date = "2022-01-18", end_date = "2024-01-18", stock_code = "600958"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_customers", {
@@ -238,6 +265,7 @@ test_that("test cn_company_customers", {
     start_date = "2022-01-18", end_date = "2024-01-18", stock_code = "300750"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_suppliers", {
@@ -246,6 +274,7 @@ test_that("test cn_company_suppliers", {
     start_date = "2022-01-18", end_date = "2024-01-18", stock_code = "300750"
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_fundamental_non_financial", {
@@ -256,6 +285,7 @@ test_that("test cn_company_fundamental_non_financial", {
     metrics_list = c("pe_ttm", "mc")
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_fundamental_bank", {
@@ -266,6 +296,7 @@ test_that("test cn_company_fundamental_bank", {
     metrics_list = c("pe_ttm", "mc")
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_fundamental_security", {
@@ -276,6 +307,7 @@ test_that("test cn_company_fundamental_security", {
     metrics_list = c("pe_ttm", "mc")
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_fundamental_other_financial", {
@@ -286,6 +318,7 @@ test_that("test cn_company_fundamental_other_financial", {
     metrics_list = c("pe_ttm", "mc")
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test cn_company_hot_tr_dri", {
