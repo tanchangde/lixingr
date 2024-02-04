@@ -308,3 +308,14 @@ test_that("test hk_company_hot_ss", {
   expect_s3_class(result, "tbl_df")
   expect_true(nrow(result) > 0)
 })
+
+test_that("test hk_company_mutual_market", {
+  result <- lxr_query(
+    endpoint = lxr_hk_company_mutual_market(),
+    start_date = "2023-02-04",
+    end_date = "2024-02-04",
+    stock_code = "00700"
+  )
+  expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
+})

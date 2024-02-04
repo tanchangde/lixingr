@@ -31,6 +31,7 @@
 \alias{lxr_hk_company_hot_tr_dri}
 \alias{lxr_hk_company_hot_mm_ah}
 \alias{lxr_hk_company_hot_ss}
+\alias{lxr_hk_company_mutual_market}
 \title{Hong Kong company API endpoints}
 \usage{
 lxr_hk_company()
@@ -92,6 +93,8 @@ lxr_hk_company_hot_tr_dri()
 lxr_hk_company_hot_mm_ah()
 
 lxr_hk_company_hot_ss()
+
+lxr_hk_company_mutual_market()
 }
 \value{
 A string of the API endpoint.
@@ -146,5 +149,6 @@ financial data.
 \item \code{lxr_hk_company_hot_tr_dri()} obtain dividend reinvestment yield data.
 \item \code{lxr_hk_company_hot_mm_ah()} obtain interconnectivity data.
 \item \code{lxr_hk_company_hot_ss()} get the short-selling data.
+\item \code{lxr_hk_company_mutual_market()} obtain interconnectivity data.
 }
 }

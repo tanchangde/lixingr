@@ -155,6 +155,7 @@ lxr_query_params <- function(endpoint) {
     hk_company_fs_other_financial = fs_params,
     hk_company_hot_tr_dri = min_params,
     hk_company_hot_mm_ah = min_params,
-    hk_company_hot_ss = min_params
+    hk_company_hot_ss = min_params,
+    hk_company_mutual_market = common_params
   )
 }
