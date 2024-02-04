@@ -18,6 +18,9 @@
 lxr_query_params <- function(endpoint) {
   endpoint_name <- lxr_endpoint_name(endpoint)
 
+  min_params <- list(
+    valid_params = "stockCodes", required_params = "stockCodes"
+  )
   common_params <- list(
     valid_params = c("startDate", "endDate", "limit", "stockCode"),
     required_params = c("startDate", "stockCode")
@@ -94,30 +97,14 @@ lxr_query_params <- function(endpoint) {
     cn_company_fundamental_security = fundamental_params,
     cn_company_fundamental_insurance = fundamental_params,
     cn_company_fundamental_other_financial = fundamental_params,
-    cn_company_hot_tr_dri = list(
-      valid_params = "stockCodes", required_params = "stockCodes"
-    ),
-    cn_company_hot_mm_ha = list(
-      valid_params = "stockCodes", required_params = "stockCodes"
-    ),
-    cn_company_hot_mtasl = list(
-      valid_params = "stockCodes", required_params = "stockCodes"
-    ),
-    cn_company_hot_shnc = list(
-      valid_params = "stockCodes", required_params = "stockCodes"
-    ),
-    cn_company_hot_esc = list(
-      valid_params = "stockCodes", required_params = "stockCodes"
-    ),
-    cn_company_hot_elr = list(
-      valid_params = "stockCodes", required_params = "stockCodes"
-    ),
-    cn_company_hot_ple = list(
-      valid_params = "stockCodes", required_params = "stockCodes"
-    ),
-    cn_company_hot_df = list(
-      valid_params = "stockCodes", required_params = "stockCodes"
-    ),
+    cn_company_hot_tr_dri = min_params,
+    cn_company_hot_mm_ha = min_params,
+    cn_company_hot_mtasl = min_params,
+    cn_company_hot_shnc = min_params,
+    cn_company_hot_esc = min_params,
+    cn_company_hot_elr = min_params,
+    cn_company_hot_ple = min_params,
+    cn_company_hot_df = min_params,
     cn_company_margin_trading_and_securities_lending = common_params,
     hk_company = list(
       valid_params = c(
@@ -125,9 +112,7 @@ lxr_query_params <- function(endpoint) {
       ),
       required_params = NULL
     ),
-    hk_company_profile = list(
-      valid_params = "stockCodes", required_params = "stockCodes"
-    ),
+    hk_company_profile = min_params,
     hk_company_candlestick = list(
       valid_params = c(
         "type", "startDate", "endDate", "adjustForwardDate",
@@ -168,11 +153,7 @@ lxr_query_params <- function(endpoint) {
     hk_company_fs_insurance = fs_params,
     hk_company_fs_reit = fs_params,
     hk_company_fs_other_financial = fs_params,
-    hk_company_hot_tr_dri = list(
-      valid_params = "stockCodes", required_params = "stockCodes"
-    ),
-    hk_company_hot_mm_ah = list(
-      valid_params = "stockCodes", required_params = "stockCodes"
-    )
+    hk_company_hot_tr_dri = min_params,
+    hk_company_hot_mm_ah = min_params
   )
 }
