@@ -49,6 +49,7 @@
 #'   financial data.
 #' * `lxr_hk_company_hot_tr_dri()` obtain dividend reinvestment yield data.
 #' * `lxr_hk_company_hot_mm_ah()` obtain interconnectivity data.
+#' * `lxr_hk_company_hot_ss()` get the short-selling data.
 #'
 #' @return A string of the API endpoint.
 
@@ -224,4 +225,10 @@ lxr_hk_company_hot_tr_dri <- function() {
 #' @export
 lxr_hk_company_hot_mm_ah <- function() {
   "https://open.lixinger.com/api/hk/company/hot/mm_ah"
+}
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_hot_ss <- function() {
+  "https://open.lixinger.com/api/hk/company/hot/ss"
 }
