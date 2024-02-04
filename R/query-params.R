@@ -170,6 +170,9 @@ lxr_query_params <- function(endpoint) {
     hk_company_fs_other_financial = fs_params,
     hk_company_hot_tr_dri = list(
       valid_params = "stockCodes", required_params = "stockCodes"
+    ),
+    hk_company_hot_mm_ah = list(
+      valid_params = "stockCodes", required_params = "stockCodes"
     )
   )
 }
