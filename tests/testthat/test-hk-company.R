@@ -166,6 +166,7 @@ test_that("test hk_company_fundamental_non_financial", {
     metrics_list = c("pe_ttm", "mc")
   )
   expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
 })
 
 test_that("test hk_company_fundamental_bank", {
