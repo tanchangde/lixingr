@@ -182,3 +182,9 @@ lxr_hk_company_fs_bank <- function() {
 lxr_hk_company_fs_security <- function() {
   "https://open.lixinger.com/api/hk/company/fs/security"
 }
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_fs_insurance <- function() {
+  "https://open.lixinger.com/api/hk/company/fs/insurance"
+}

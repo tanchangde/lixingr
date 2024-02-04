@@ -241,3 +241,13 @@ test_that("test hk_company_fs_security", {
   expect_s3_class(result, "tbl_df")
   expect_true(nrow(result) > 0)
 })
+
+test_that("test hk_company_fs_insurance", {
+  result <- lxr_query(
+    endpoint = lxr_hk_company_fs_insurance(),
+    date = "2023-09-30", stock_codes = "01336",
+    metrics_list = "q.ps.oi.t"
+  )
+  expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
+})
