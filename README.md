@@ -53,6 +53,22 @@ devtools::install_github('tanchangde/lixingr')
 - [x] Advanced Intermediate, package into an R package.
 - [ ] Advanced, provide interactive analysis services.
 
+## Contributing Code
+
+The commit logs for this project follow this [style
+guide](https://open.leancloud.cn/git-commit-message/). Please try to
+adhere to it. The optional scopes are:
+
+- cn-company
+- cn-index
+- cn-industry
+- cn-fund
+- hk-company
+- hk-index
+- hk-industry
+- us-index
+- macro
+
 ## Why Choose lixinger
 
 - [Product, Code and Investment — Product
@@ -66,6 +82,8 @@ devtools::install_github('tanchangde/lixingr')
   Research](https://cosx.org/2012/06/reproducible-research-with-knitr/)
 - [Lixinger Open Platform API
   Documentation](https://www.lixinger.com/open/api/doc)
+- [Package Development ::
+  Cheatsheet](https://rstudio.github.io/cheatsheets/html/package-development.html)
 
 ## ChangeLog
 
