@@ -234,7 +234,7 @@ test_that("test hk_company_fs_bank", {
 
 test_that("test hk_company_fs_security", {
   result <- lxr_query(
-    endpoint = lxr_hk_company_fs_bank(),
+    endpoint = lxr_hk_company_fs_security(),
     date = "2023-09-30", stock_codes = "06030",
     metrics_list = "q.ps.oi.t"
   )
