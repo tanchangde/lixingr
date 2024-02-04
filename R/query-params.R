@@ -125,6 +125,9 @@ lxr_query_params <- function(endpoint) {
       ),
       required_params = NULL
     ),
+    hk_company_profile = list(
+      valid_params = "stockCodes", required_params = "stockCodes"
+    ),
     hk_company_candlestick = list(
       valid_params = c(
         "type", "startDate", "endDate", "adjustForwardDate",

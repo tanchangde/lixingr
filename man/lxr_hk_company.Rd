@@ -2,6 +2,7 @@
 % Please edit documentation in R/hk-company.R
 \name{lxr_hk_company}
 \alias{lxr_hk_company}
+\alias{lxr_hk_company_profile}
 \alias{lxr_hk_company_candlestick}
 \alias{lxr_hk_company_employee}
 \alias{lxr_hk_company_repurchase}
@@ -31,6 +32,8 @@
 \title{Hong Kong company API endpoints}
 \usage{
 lxr_hk_company()
+
+lxr_hk_company_profile()
 
 lxr_hk_company_candlestick()
 
@@ -92,6 +95,7 @@ These functions return the API endpoints for different aspects of a China
 Hong Kong company.
 \itemize{
 \item \code{lxr_hk_company()} retrieve stock details.
+\item \code{hk_company_profile()} obtain company profile.
 \item \code{lxr_hk_company_candlestick()} obtain candlestick data.The ex-rights
 calculation is only applied to the prices for the selected time period;
 trading volume is not adjusted for ex-rights.

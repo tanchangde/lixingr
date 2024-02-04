@@ -5,6 +5,7 @@
 #' Hong Kong company.
 #'
 #' * `lxr_hk_company()` retrieve stock details.
+#' * `hk_company_profile()` obtain company profile.
 #' * `lxr_hk_company_candlestick()` obtain candlestick data.The ex-rights
 #'   calculation is only applied to the prices for the selected time period;
 #'   trading volume is not adjusted for ex-rights.
@@ -54,6 +55,12 @@
 #' @export
 lxr_hk_company <- function() {
   "https://open.lixinger.com/api/hk/company"
+}
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_profile <- function() {
+  "https://open.lixinger.com/api/hk/company/profile"
 }
 
 #' @rdname lxr_hk_company
