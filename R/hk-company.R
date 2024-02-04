@@ -32,6 +32,8 @@
 #'   non-financial companies, such as PE, PB, etc.
 #' * `lxr_hk_company_fundamental_bank()` gets fundamental data for bank, such as
 #'   PE, PB, etc.
+#' * `lxr_hk_company_fundamental_security()` gets fundamental data for
+#'   securities, such as PE, PB, etc.
 #'
 #' @return A string of the API endpoint.
 
@@ -135,4 +137,10 @@ lxr_hk_company_fundamental_non_financial <- function() {
 #' @export
 lxr_hk_company_fundamental_bank <- function() {
   "https://open.lixinger.com/api/hk/company/fundamental/bank"
+}
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_fundamental_security <- function() {
+  "https://open.lixinger.com/api/hk/company/fundamental/security"
 }

@@ -18,6 +18,7 @@
 \alias{lxr_hk_company_allotment}
 \alias{lxr_hk_company_fundamental_non_financial}
 \alias{lxr_hk_company_fundamental_bank}
+\alias{lxr_hk_company_fundamental_security}
 \title{Hong Kong company API endpoints}
 \usage{
 lxr_hk_company()
@@ -53,6 +54,8 @@ lxr_hk_company_allotment()
 lxr_hk_company_fundamental_non_financial()
 
 lxr_hk_company_fundamental_bank()
+
+lxr_hk_company_fundamental_security()
 }
 \value{
 A string of the API endpoint.
@@ -89,5 +92,7 @@ information of domestic fund companies."
 non-financial companies, such as PE, PB, etc.
 \item \code{lxr_hk_company_fundamental_bank()} gets fundamental data for bank, such as
 PE, PB, etc.
+\item \code{lxr_hk_company_fundamental_security()} gets fundamental data for
+securities, such as PE, PB, etc.
 }
 }
