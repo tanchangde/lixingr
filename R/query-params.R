@@ -159,6 +159,7 @@ lxr_query_params <- function(endpoint) {
     hk_company_fundamental_security = fundamental_params,
     hk_company_fundamental_insurance = fundamental_params,
     hk_company_fundamental_reit = fundamental_params,
-    hk_company_fs_non_financial = fs_params
+    hk_company_fs_non_financial = fs_params,
+    hk_company_fs_bank = fs_params
   )
 }

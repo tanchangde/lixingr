@@ -40,6 +40,7 @@
 #'   as PE, PB, etc.
 #' * `lxr_hk_company_fs_non_financial()` gets non-financial listed company
 #'   financial data.
+#' * `lxr_hk_company_fs_bank()` gets bank listed company financial data.
 #'
 #' @return A string of the API endpoint.
 
@@ -167,4 +168,10 @@ lxr_hk_company_fundamental_reit <- function() {
 #' @export
 lxr_hk_company_fs_non_financial <- function() {
   "https://open.lixinger.com/api/hk/company/fs/non_financial"
+}
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_fs_bank <- function() {
+  "https://open.lixinger.com/api/hk/company/fs/bank"
 }
