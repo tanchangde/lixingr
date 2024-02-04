@@ -36,6 +36,8 @@
 #'   securities, such as PE, PB, etc.
 #' * `lxr_hk_company_fundamental_insurance()` gets fundamental data for
 #'   insurance company, such as PE, PB, etc.
+#' * `lxr_hk_company_fundamental_reit()` obtain fundamental data of REITs, such
+#'   as PE, PB, etc.
 #'
 #' @return A string of the API endpoint.
 
@@ -151,4 +153,10 @@ lxr_hk_company_fundamental_security <- function() {
 #' @export
 lxr_hk_company_fundamental_insurance <- function() {
   "https://open.lixinger.com/api/hk/company/fundamental/insurance"
+}
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_fundamental_reit <- function() {
+  "https://open.lixinger.com/api/hk/company/fundamental/reit"
 }
