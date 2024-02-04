@@ -43,7 +43,7 @@
 #' * `lxr_hk_company_fs_bank()` gets bank listed company financial data.
 #' * `lxr_hk_company_fs_security` gets security listed company financial data.
 #' * `lxr_hk_company_fs_insurance()` get insurance company financial data.
-#' * `lxr_hk_company_fs_reit()` obtain financial data of REITs
+#' * `lxr_hk_company_fs_reit()` obtain financial data of REITs.
 #'
 #' @return A string of the API endpoint.
 
