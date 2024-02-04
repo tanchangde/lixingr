@@ -46,6 +46,7 @@
 #' * `lxr_hk_company_fs_reit()` obtain financial data of REITs.
 #' * `lxr_hk_company_fs_other_financial()` gets other financial listed company
 #'   financial data.
+#' * `lxr_hk_company_hot_tr_dri()` obtain dividend reinvestment yield data.
 #'
 #' @return A string of the API endpoint.
 
@@ -203,4 +204,10 @@ lxr_hk_company_fs_reit <- function() {
 #' @export
 lxr_hk_company_fs_other_financial <- function() {
   "https://open.lixinger.com/api/hk/company/fs/other_financial"
+}
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_hot_tr_dri <- function() {
+  "https://open.lixinger.com/api/hk/company/hot/tr_dri"
 }

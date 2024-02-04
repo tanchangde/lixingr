@@ -27,6 +27,7 @@
 \alias{lxr_hk_company_fs_insurance}
 \alias{lxr_hk_company_fs_reit}
 \alias{lxr_hk_company_fs_other_financial}
+\alias{lxr_hk_company_hot_tr_dri}
 \title{Hong Kong company API endpoints}
 \usage{
 lxr_hk_company()
@@ -80,6 +81,8 @@ lxr_hk_company_fs_insurance()
 lxr_hk_company_fs_reit()
 
 lxr_hk_company_fs_other_financial()
+
+lxr_hk_company_hot_tr_dri()
 }
 \value{
 A string of the API endpoint.
@@ -130,5 +133,6 @@ financial data.
 \item \code{lxr_hk_company_fs_reit()} obtain financial data of REITs.
 \item \code{lxr_hk_company_fs_other_financial()} gets other financial listed company
 financial data.
+\item \code{lxr_hk_company_hot_tr_dri()} obtain dividend reinvestment yield data.
 }
 }
