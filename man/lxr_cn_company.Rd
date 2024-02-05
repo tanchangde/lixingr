@@ -2,6 +2,7 @@
 % Please edit documentation in R/cn-company.R
 \name{lxr_cn_company}
 \alias{lxr_cn_company}
+\alias{lxr_cn_company_profile}
 \alias{lxr_cn_company_equity_change}
 \alias{lxr_cn_company_candlestick}
 \alias{lxr_cn_company_shareholders_num}
@@ -47,6 +48,8 @@
 \title{China mainland company API endpoints}
 \usage{
 lxr_cn_company()
+
+lxr_cn_company_profile()
 
 lxr_cn_company_equity_change()
 
@@ -140,6 +143,7 @@ These functions return the API endpoints for different aspects of a Mainland
 company.
 \itemize{
 \item \code{lxr_cn_company()} gets stock detailed information.
+\item \code{lxr_cn_company_profile()} obtain company profile.
 \item \code{lxr_cn_company_equity_change()} gets equity change data.
 \item \code{lxr_cn_company_candlestick()} gets stock K line data.
 \item \code{lxr_cn_company_shareholders_num()} gets number of shareholders data.

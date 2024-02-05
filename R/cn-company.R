@@ -5,6 +5,7 @@
 #' company.
 #'
 #' * `lxr_cn_company()` gets stock detailed information.
+#' * `lxr_cn_company_profile()` obtain company profile.
 #' * `lxr_cn_company_equity_change()` gets equity change data.
 #' * `lxr_cn_company_candlestick()` gets stock K line data.
 #' * `lxr_cn_company_shareholders_num()` gets number of shareholders data.
@@ -73,6 +74,12 @@
 #' @export
 lxr_cn_company <- function() {
   "https://open.lixinger.com/api/cn/company"
+}
+
+#' @rdname lxr_cn_company
+#' @export
+lxr_cn_company_profile <- function() {
+  "https://open.lixinger.com/api/cn/company/profile"
 }
 
 #' @rdname lxr_cn_company

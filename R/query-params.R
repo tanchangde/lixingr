@@ -46,6 +46,7 @@ lxr_query_params <- function(endpoint) {
       ),
       required_params = NULL
     ),
+    cn_company_profile = min_params,
     cn_company_equity_change = common_params,
     cn_company_candlestick = list(
       valid_params = c(

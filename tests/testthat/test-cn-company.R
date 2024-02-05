@@ -7,6 +7,15 @@ test_that("test cn_company", {
   expect_true(nrow(result) > 0)
 })
 
+test_that("test cn_company_profile", {
+  result <- lxr_query(
+    endpoint = lxr_cn_company_profile(),
+    stock_codes = c("300750", "600519", "600157")
+  )
+  expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
+})
+
 test_that("test cn_company_equity_change", {
   result <- lxr_query(
     endpoint = lxr_cn_company_equity_change(),
