@@ -4,18 +4,14 @@
 \alias{lxr_check_query_params}
 \title{Check query parameters}
 \usage{
-lxr_check_query_params(
-  query_params,
-  endpoint_valid_params,
-  endpoint_required_params
-)
+lxr_check_query_params(query_params, valid_params, required_params)
 }
 \arguments{
 \item{query_params}{A named list of query parameters.}
 
-\item{endpoint_valid_params}{A character vector of valid parameter names.}
+\item{valid_params}{A character vector of valid parameter names.}
 
-\item{endpoint_required_params}{A character vector of required parameter
+\item{required_params}{A character vector of required parameter
 names.}
 }
 \value{
