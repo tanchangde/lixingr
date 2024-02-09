@@ -5,7 +5,7 @@
 #' @details
 #' The function constructs an HTTP request to the specified lixinger API
 #' endpoint. It validates the query parameters against the parameters
-#' defined in 'lxr_query_params'. It supports automatic retries and
+#' defined in \link{lxr_query_params}. It supports automatic retries and
 #' timeout settings. The function also handles the conversion of
 #' additional query parameters to the required JSON format.
 #'
