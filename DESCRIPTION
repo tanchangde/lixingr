@@ -1,7 +1,7 @@
 Package: lixingr
 Type: Package
 Title: R wrapper for Lixinger's Web API
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: 
     person("Changde", "Tan", , "tanchangde@gmail.com", role = c("aut", "cre"))
 Description: In the vision of its creator, Lixinger is both excellent code and 
