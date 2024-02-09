@@ -7,7 +7,7 @@
 #'
 #' @return A list containing two elements: "valid_params" and "required_params".
 #' "valid_params" is a vector of strings representing the names of the valid
-#' parameters for the API endpoint. "required_params" is a vector of strings 
+#' parameters for the API endpoint. "required_params" is a vector of strings
 #' representing the names of the required parameters for the API endpoint.
 #'
 #' @examples

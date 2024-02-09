@@ -1,7 +1,7 @@
 #' API endpoints for companies listed in mainland china
 #'
 #' @description
-#' These functions return the API endpoints for different aspects of companies 
+#' These functions return the API endpoints for different aspects of companies
 #' listed in mainland China.
 #'
 #' * `lxr_cn_company()` gets stock detailed information.
