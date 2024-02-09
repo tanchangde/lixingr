@@ -1,15 +1,14 @@
-#' Generate query parameters for lixinger API
+#' Return query parameters for lixinger API endpoints
 #'
-#' This function generates a list of valid and required parameters for the
-#' specified lixinger API. The parameters are determined based on the API
-#' function.
+#' This function returns a list of valid and required parameters for the
+#' specified lixinger API endpoint.
 #'
-#' @param endpoint A function representing the lixinger API.
+#' @param endpoint A function representing the lixinger API endpoint.
 #'
-#' @return A list containing two elements: 'valid_params' and 'required_params'.
-#' 'valid_params' is a vector of strings representing the names of the valid
-#' parameters for the API. 'required_params' is a vector of strings representing
-#' the names of the required parameters for the API.
+#' @return A list containing two elements: "valid_params" and "required_params".
+#' "valid_params" is a vector of strings representing the names of the valid
+#' parameters for the API endpoint. "required_params" is a vector of strings 
+#' representing the names of the required parameters for the API endpoint.
 #'
 #' @examples
 #' lxr_query_params(endpoint = lxr_cn_company())

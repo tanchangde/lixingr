@@ -2,23 +2,22 @@
 % Please edit documentation in R/query-params.R
 \name{lxr_query_params}
 \alias{lxr_query_params}
-\title{Generate query parameters for lixinger API}
+\title{Return query parameters for lixinger API endpoints}
 \usage{
 lxr_query_params(endpoint)
 }
 \arguments{
-\item{endpoint}{A function representing the lixinger API.}
+\item{endpoint}{A function representing the lixinger API endpoint.}
 }
 \value{
-A list containing two elements: 'valid_params' and 'required_params'.
-'valid_params' is a vector of strings representing the names of the valid
-parameters for the API. 'required_params' is a vector of strings representing
-the names of the required parameters for the API.
+A list containing two elements: "valid_params" and "required_params".
+"valid_params" is a vector of strings representing the names of the valid
+parameters for the API endpoint. "required_params" is a vector of strings
+representing the names of the required parameters for the API endpoint.
 }
 \description{
-This function generates a list of valid and required parameters for the
-specified lixinger API. The parameters are determined based on the API
-function.
+This function returns a list of valid and required parameters for the
+specified lixinger API endpoint.
 }
 \examples{
 lxr_query_params(endpoint = lxr_cn_company())
