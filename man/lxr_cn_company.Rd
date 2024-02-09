@@ -45,7 +45,7 @@
 \alias{lxr_cn_company_hot_ple}
 \alias{lxr_cn_company_hot_df}
 \alias{lxr_cn_company_margin_trading_and_securities_lending}
-\title{China mainland company API endpoints}
+\title{API endpoints for companies listed in mainland china}
 \usage{
 lxr_cn_company()
 
@@ -139,8 +139,8 @@ lxr_cn_company_margin_trading_and_securities_lending()
 A string of the API endpoint.
 }
 \description{
-These functions return the API endpoints for different aspects of a Mainland
-company.
+These functions return the API endpoints for different aspects of companies
+listed in mainland China.
 \itemize{
 \item \code{lxr_cn_company()} gets stock detailed information.
 \item \code{lxr_cn_company_profile()} obtain company profile.
