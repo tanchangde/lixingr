@@ -32,7 +32,7 @@
 \alias{lxr_hk_company_hot_mm_ah}
 \alias{lxr_hk_company_hot_ss}
 \alias{lxr_hk_company_mutual_market}
-\title{Hong Kong company API endpoints}
+\title{API endpoints for companies listed in Hong Kong}
 \usage{
 lxr_hk_company()
 
@@ -100,8 +100,8 @@ lxr_hk_company_mutual_market()
 A string of the API endpoint.
 }
 \description{
-These functions return the API endpoints for different aspects of a China
-Hong Kong company.
+These functions return the API endpoints for different aspects of companies
+listed in Hong Kong.
 \itemize{
 \item \code{lxr_hk_company()} retrieve stock details.
 \item \code{hk_company_profile()} obtain company profile.
