@@ -13,7 +13,8 @@ lxr_endpoint_name(endpoint)
 A string of the endpoint name.
 }
 \description{
-This function takes a Lixinger endpoint URL as input, and returns the
-endpoint name, which is the part of the URL after "api/". All slashes ("/")
-in the endpoint name are replaced with underscores ("_").
+This function takes a lixinger endpoint URL as input. It first extracts the
+part of the URL after "api/". Then, all slashes ("/") and hyphens ("-") in
+this part are replaced with underscores ("_"). The result is returned as the
+endpoint name.
 }
