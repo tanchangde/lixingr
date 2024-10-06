@@ -1,7 +1,7 @@
 #' API endpoints for companies listed in Hong Kong
 #'
 #' @description
-#' These functions return the API endpoints for different aspects of companies 
+#' These functions return the API endpoints for different aspects of companies
 #' listed in Hong Kong.
 #'
 #' * `lxr_hk_company()` retrieve stock details.
