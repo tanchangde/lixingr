@@ -176,17 +176,6 @@ test_that("test cn_company_industries", {
   expect_true(nrow(result) > 0)
 })
 
-test_that("test cn_company_fundamental_statistics", {
-  result <- lxr_query(
-    endpoint = lxr_cn_company_fundamental_statistics(),
-    stock_codes = c("300750", "600519", "600157"),
-    granularity = "y3",
-    metrics_list = "pe_ttm"
-  )
-  expect_s3_class(result, "tbl_df")
-  expect_true(nrow(result) > 0)
-})
-
 test_that("test cn_company_trading_abnormal", {
   result <- lxr_query(
     endpoint = lxr_cn_company_trading_abnormal(),

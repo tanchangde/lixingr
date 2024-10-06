@@ -74,10 +74,6 @@ lxr_query_params <- function(endpoint) {
       valid_params = c("stockCode", "date"),
       required_params = c("stockCode")
     ),
-    cn_company_fundamental_statistics = list(
-      valid_params = c("stockCodes", "granularity", "metricsList"),
-      required_params = c("stockCodes", "granularity", "metricsList")
-    ),
     cn_company_trading_abnormal = list(
       valid_params = c("startDate", "endDate", "limit", "stockCode"),
       required_params = c("startDate", "stockCode")
@@ -131,10 +127,6 @@ lxr_query_params <- function(endpoint) {
     hk_company_industries = list(
       valid_params = c("stockCode", "date"),
       required_params = c("stockCode")
-    ),
-    hk_company_fundamental_statistics = list(
-      valid_params = c("stockCodes", "granularity", "metricsList"),
-      required_params = c("stockCodes", "granularity", "metricsList")
     ),
     hk_company_announcement = common_params,
     hk_company_fund_shareholders = common_params,

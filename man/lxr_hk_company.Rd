@@ -10,7 +10,6 @@
 \alias{lxr_hk_company_operation_revenue_constitution}
 \alias{lxr_hk_company_indices}
 \alias{lxr_hk_company_industries}
-\alias{lxr_hk_company_fundamental_statistics}
 \alias{lxr_hk_company_announcement}
 \alias{lxr_hk_company_fund_shareholders}
 \alias{lxr_hk_company_fund_collection_shareholders}
@@ -51,8 +50,6 @@ lxr_hk_company_operation_revenue_constitution()
 lxr_hk_company_indices()
 
 lxr_hk_company_industries()
-
-lxr_hk_company_fundamental_statistics()
 
 lxr_hk_company_announcement()
 
@@ -118,8 +115,6 @@ composition data.
 \item \code{lxr_hk_company_indices()} get information on the stock index it belongs to.
 \item \code{lxr_hk_company_industries()} get information on the industry the stock
 belongs to.
-\item \code{lxr_hk_company_fundamental_statistics()} get fundamental analysis
-statistical data.
 \item \code{lxr_hk_company_announcement()} get the announcement information.
 \item \code{lxr_hk_company_fund_shareholders()} obtain information on domestic fund
 holdings.

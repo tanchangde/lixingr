@@ -19,8 +19,6 @@
 #' * `lxr_hk_company_indices()` get information on the stock index it belongs to.
 #' * `lxr_hk_company_industries()` get information on the industry the stock
 #'   belongs to.
-#' * `lxr_hk_company_fundamental_statistics()` get fundamental analysis
-#'   statistical data.
 #' * `lxr_hk_company_announcement()` get the announcement information.
 #' * `lxr_hk_company_fund_shareholders()` obtain information on domestic fund
 #'   holdings.
@@ -106,12 +104,6 @@ lxr_hk_company_indices <- function() {
 #' @export
 lxr_hk_company_industries <- function() {
   "https://open.lixinger.com/api/hk/company/industries"
-}
-
-#' @rdname lxr_hk_company
-#' @export
-lxr_hk_company_fundamental_statistics <- function() {
-  "https://open.lixinger.com/api/hk/company/fundamental-statistics"
 }
 
 #' @rdname lxr_hk_company

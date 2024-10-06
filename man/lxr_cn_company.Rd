@@ -15,7 +15,6 @@
 \alias{lxr_cn_company_allotment}
 \alias{lxr_cn_company_indices}
 \alias{lxr_cn_company_industries}
-\alias{lxr_cn_company_fundamental_statistics}
 \alias{lxr_cn_company_trading_abnormal}
 \alias{lxr_cn_company_announcement}
 \alias{lxr_cn_company_measures}
@@ -74,8 +73,6 @@ lxr_cn_company_allotment()
 lxr_cn_company_indices()
 
 lxr_cn_company_industries()
-
-lxr_cn_company_fundamental_statistics()
 
 lxr_cn_company_trading_abnormal()
 
@@ -164,8 +161,6 @@ financial data.
 financial data.
 \item \code{lxr_cn_company_indices()} gets stock indices information.
 \item \code{lxr_cn_company_industries()} gets stock industry information.
-\item \code{lxr_cn_company_fundamental_statistics()} gets stock fundamental
-statistics data.
 \item \code{lxr_cn_company_trading_abnormal()} gets trading abnormal data.
 \item \code{lxr_cn_company_announcement()} gets announcement data.
 \item \code{lxr_cn_company_measures()} gets regulatory measures information.

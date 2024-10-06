@@ -90,17 +90,6 @@ test_that("test hk_company_industries", {
   expect_true(nrow(result) > 0)
 })
 
-test_that("test hk_company_fundamental_statistics", {
-  result <- lxr_query(
-    endpoint = lxr_hk_company_fundamental_statistics(),
-    stock_codes = "00700",
-    granularity = "y3",
-    metrics_list = "pe_ttm"
-  )
-  expect_s3_class(result, "tbl_df")
-  expect_true(nrow(result) > 0)
-})
-
 test_that("test hk_company_announcement", {
   result <- lxr_query(
     endpoint = lxr_hk_company_announcement(),

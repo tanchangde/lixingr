@@ -26,8 +26,6 @@
 #'   financial data.
 #' * `lxr_cn_company_indices()` gets stock indices information.
 #' * `lxr_cn_company_industries()` gets stock industry information.
-#' * `lxr_cn_company_fundamental_statistics()` gets stock fundamental
-#'   statistics data.
 #' * `lxr_cn_company_trading_abnormal()` gets trading abnormal data.
 #' * `lxr_cn_company_announcement()` gets announcement data.
 #' * `lxr_cn_company_measures()` gets regulatory measures information.
@@ -152,12 +150,6 @@ lxr_cn_company_indices <- function() {
 #' @export
 lxr_cn_company_industries <- function() {
   "https://open.lixinger.com/api/cn/company/industries"
-}
-
-#' @rdname lxr_cn_company
-#' @export
-lxr_cn_company_fundamental_statistics <- function() {
-  "https://open.lixinger.com/api/cn/company/fundamental-statistics"
 }
 
 #' @rdname lxr_cn_company
