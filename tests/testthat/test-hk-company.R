@@ -211,6 +211,17 @@ test_that("test hk_company_fundamental_reit", {
   expect_true(nrow(result) > 0)
 })
 
+test_that("test hk_company_fundamental_other_financial", {
+  result <- lxr_query(
+    endpoint = lxr_hk_company_fundamental_other_financial(),
+    date = "2024-09-24",
+    stock_codes = "03877",
+    metrics_list = c("pe_ttm", "mc")
+  )
+  expect_s3_class(result, "tbl_df")
+  expect_true(nrow(result) > 0)
+})
+
 test_that("test hk_company_fs_non_financial", {
   result <- lxr_query(
     endpoint = lxr_hk_company_fs_non_financial(),

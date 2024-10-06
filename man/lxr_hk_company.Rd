@@ -21,6 +21,7 @@
 \alias{lxr_hk_company_fundamental_security}
 \alias{lxr_hk_company_fundamental_insurance}
 \alias{lxr_hk_company_fundamental_reit}
+\alias{lxr_hk_company_fundamental_other_financial}
 \alias{lxr_hk_company_fs_non_financial}
 \alias{lxr_hk_company_fs_bank}
 \alias{lxr_hk_company_fs_security}
@@ -72,6 +73,8 @@ lxr_hk_company_fundamental_security()
 lxr_hk_company_fundamental_insurance()
 
 lxr_hk_company_fundamental_reit()
+
+lxr_hk_company_fundamental_other_financial()
 
 lxr_hk_company_fs_non_financial()
 
@@ -133,6 +136,8 @@ securities, such as PE, PB, etc.
 insurance company, such as PE, PB, etc.
 \item \code{lxr_hk_company_fundamental_reit()} obtain fundamental data of REITs, such
 as PE, PB, etc.
+\item \code{lxr_hk_company_fundamental_other_financial()} obtain fundamental data of
+other financial companies, such as PE, PB, etc.
 \item \code{lxr_hk_company_fs_non_financial()} gets non-financial listed company
 financial data.
 \item \code{lxr_hk_company_fs_bank()} gets bank listed company financial data.

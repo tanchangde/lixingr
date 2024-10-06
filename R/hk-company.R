@@ -37,6 +37,8 @@
 #'   insurance company, such as PE, PB, etc.
 #' * `lxr_hk_company_fundamental_reit()` obtain fundamental data of REITs, such
 #'   as PE, PB, etc.
+#' * `lxr_hk_company_fundamental_other_financial()` obtain fundamental data of
+#'   other financial companies, such as PE, PB, etc.
 #' * `lxr_hk_company_fs_non_financial()` gets non-financial listed company
 #'   financial data.
 #' * `lxr_hk_company_fs_bank()` gets bank listed company financial data.
@@ -170,6 +172,12 @@ lxr_hk_company_fundamental_insurance <- function() {
 #' @export
 lxr_hk_company_fundamental_reit <- function() {
   "https://open.lixinger.com/api/hk/company/fundamental/reit"
+}
+
+#' @rdname lxr_hk_company
+#' @export
+lxr_hk_company_fundamental_other_financial <- function() {
+  "https://open.lixinger.com/api/hk/company/fundamental/other_financial"
 }
 
 #' @rdname lxr_hk_company
